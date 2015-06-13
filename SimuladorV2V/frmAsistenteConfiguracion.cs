@@ -33,7 +33,9 @@ namespace SimuladorV2V
             {
                 intPagina = 0;
                 ActualizarPagina();
-            } catch (Exception exception) {
+            }
+            catch (Exception exception)
+            {
                 MessageBox.Show(exception.Message);
             }
         }
@@ -57,7 +59,7 @@ namespace SimuladorV2V
         {
             try
             {
-                switch(intPagina)
+                switch (intPagina)
                 {
                     case 0: // Bienvenido
                         lblBienvenido.ForeColor = Color.White;
@@ -88,6 +90,8 @@ namespace SimuladorV2V
                         Application.Idle += ProcesarImagen;
                         Globales.listadoVertices = null;
                         webCam = new Capture();
+                        webCam.SetCaptureProperty(CAP_PROP.CV_CAP_PROP_FRAME_WIDTH, 640);
+                        webCam.SetCaptureProperty(CAP_PROP.CV_CAP_PROP_FRAME_HEIGHT, 480);
                         blnCapturandoImagenes = true;
                         lblTitulo.Text = "Circuito";
                         panBienvenido.Visible = false;
@@ -98,35 +102,39 @@ namespace SimuladorV2V
                         btnVolverYCerrar.Text = "Volver";
                         break;
                 }
-            } catch (Exception exception) {
+            }
+            catch (Exception exception)
+            {
                 MessageBox.Show(exception.Message);
             }
         }
 
         private void ProcesarImagen(object sender, EventArgs e)
         {
-           try
-           {
-               imgOriginal = webCam.QueryFrame();
-               if(imgOriginal == null)
-               {
-                   return;
-               }
+            try
+            {
+                imgOriginal = webCam.QueryFrame();
+                if (imgOriginal == null)
+                {
+                    return;
+                }
 
-               Globales.listadoVertices = null;
-               Globales.listadoVertices = Camara.BuscarRectangulo(imgOriginal);
-               if(Globales.listadoVertices != null && Globales.listadoVertices.Count == 4)
-               {
-                   Globales.listadoVertices = Camara.ReordenarPuntos(Globales.listadoVertices);
-                   Globales.imgCircuito = Camara.CorregirPerspectiva(imgOriginal, Globales.listadoVertices);
-                   imgOriginal = Camara.DibujarRectangulo(imgOriginal, Globales.listadoVertices);
-               }
+                Globales.listadoVertices = null;
+                Globales.listadoVertices = Camara.BuscarRectangulo(imgOriginal);
+                if (Globales.listadoVertices != null && Globales.listadoVertices.Count == 4)
+                {
+                    Globales.listadoVertices = Camara.ReordenarPuntos(Globales.listadoVertices);
+                    Globales.imgCircuito = Camara.CorregirPerspectiva(imgOriginal, Globales.listadoVertices);
+                    imgOriginal = Camara.DibujarRectangulo(imgOriginal, Globales.listadoVertices);
+                }
 
-               ibCamara.Image = imgOriginal;
+                ibCamara.Image = imgOriginal;
 
-           } catch (Exception exception) {
-               MessageBox.Show(exception.Message);
-           }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
 
@@ -138,23 +146,25 @@ namespace SimuladorV2V
             {
                 string rutaManual = Path.Combine(Application.StartupPath, "Documentos\\Manual.pdf");
                 Process.Start(rutaManual);
-            } catch (Exception exception) {
+            }
+            catch (Exception exception)
+            {
                 MessageBox.Show(exception.Message);
             }
         }
 
         private void btnSiguienteYTerminar_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
-                switch(intPagina)
+                switch (intPagina)
                 {
                     case 0:
                         intPagina = 1;
                         ActualizarPagina();
                         break;
                     case 1:
-                        if(Globales.listadoVertices != null) 
+                        if (Globales.listadoVertices != null)
                         {
                             DialogResult result = MessageBox.Show("A partir de este momento el circuito ni la cámara no se podrán mover." + Environment.NewLine + "¿Deseas continuar?", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                             if (result == DialogResult.Yes)
@@ -162,13 +172,17 @@ namespace SimuladorV2V
                                 intPagina = 2;
                                 ActualizarPagina();
                             }
-                        } else {
+                        }
+                        else
+                        {
                             MessageBox.Show("No se ha encontrado el circuito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         break;
                 }
 
-            } catch (Exception exception) {
+            }
+            catch (Exception exception)
+            {
                 MessageBox.Show(exception.Message);
             }
         }
@@ -181,7 +195,9 @@ namespace SimuladorV2V
                 if (intPagina == 0)
                 {
                     Application.Exit();
-                } else {
+                }
+                else
+                {
                     DialogResult result = MessageBox.Show("Se perderán los datos modificados." + Environment.NewLine + "¿Deseas continuar?", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
@@ -195,6 +211,6 @@ namespace SimuladorV2V
                 MessageBox.Show(exception.Message);
             }
         }
-        
+
     }
 }
