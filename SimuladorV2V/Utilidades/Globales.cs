@@ -12,13 +12,14 @@ namespace SimuladorV2V.Utilidades
     {
         // CIRCUITO
         public static Image<Bgr, Byte> imgCircuito = null;
-        public static List<Point> listadoVertices = null;
+        public static List<Point> ListadoVertices = null;
 
         // PUNTOS DE REFERENCIA
-        public static List<Point> listadoIntersecciones = new List<Point>();
+        public static int Margen = 30;
+        public static List<Rectangle> ListadoIntersecciones = new List<Rectangle>();
 
         // BLUETOOTH
-        public static String puertoSerie = String.Empty;
-        public static int baudrate = 0;
+        public static String PuertoSerie = String.Empty;
+        public static int VelocidadTransmision = 0;
     }
 }

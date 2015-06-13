@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.IO.Ports;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -39,7 +40,7 @@ namespace SimuladorV2V
             }
         }
 
-        private void FrmAsistenteConfiguracion_FormClosed(object sender, FormClosedEventArgs e)
+        private void FrmAsistenteConfiguracion_FormClosing(object sender, EventArgs e)
         {
             try
             {
@@ -47,6 +48,7 @@ namespace SimuladorV2V
                 {
                     webCam.Dispose();
                 }
+                Application.Exit();
             }
             catch (Exception exception)
             {
@@ -66,7 +68,6 @@ namespace SimuladorV2V
                         lblReferencias.ForeColor = Color.LightGray;
                         lblComunicacion.ForeColor = Color.LightGray;
                         lblCompletado.ForeColor = Color.LightGray;
-
                         lblTitulo.Text = "Asistente de configuración del sistema";
                         panBienvenido.Visible = true;
                         panCircuito.Visible = false;
@@ -86,9 +87,8 @@ namespace SimuladorV2V
                         lblReferencias.ForeColor = Color.LightGray;
                         lblComunicacion.ForeColor = Color.LightGray;
                         lblCompletado.ForeColor = Color.LightGray;
-                        Application.Idle += ProcesarImagen;
-                        Globales.listadoVertices = null;
                         webCam = new Capture();
+                        Application.Idle += ProcesarImagen;
                         webCam.SetCaptureProperty(CAP_PROP.CV_CAP_PROP_FRAME_WIDTH, 640);
                         webCam.SetCaptureProperty(CAP_PROP.CV_CAP_PROP_FRAME_HEIGHT, 480);
                         lblTitulo.Text = "Circuito";
@@ -105,7 +105,7 @@ namespace SimuladorV2V
                         lblReferencias.ForeColor = Color.White;
                         lblComunicacion.ForeColor = Color.LightGray;
                         lblCompletado.ForeColor = Color.LightGray;
-                        Globales.listadoIntersecciones = null;
+                        Globales.ListadoIntersecciones = new List<Rectangle>();
                         ibCircuito.Image = Globales.imgCircuito;
                         lblTitulo.Text = "Referencias";
                         panBienvenido.Visible = false;
@@ -119,7 +119,11 @@ namespace SimuladorV2V
                             Application.Idle -= ProcesarImagen;
                         }
                         break;
-                    case 2: // Comunicacion
+                    case 3: // Comunicacion
+                        Globales.PuertoSerie = String.Empty;
+                        Globales.VelocidadTransmision = 0;
+                        CargarPuertosSerie();
+                        cboVelocidadTransmision.SelectedIndex = 0;
                         lblBienvenido.ForeColor = Color.LightGray;
                         lblCircuito.ForeColor = Color.LightGray;
                         lblReferencias.ForeColor = Color.LightGray;
@@ -131,6 +135,21 @@ namespace SimuladorV2V
                         panReferencias.Visible = false;
                         panComunicacion.Visible = true;
                         panCompletado.Visible = false;
+                        btnSiguienteYTerminar.Text = "Siguiente";
+                        break;
+                    case 4: // Completado
+                        lblBienvenido.ForeColor = Color.LightGray;
+                        lblCircuito.ForeColor = Color.LightGray;
+                        lblReferencias.ForeColor = Color.LightGray;
+                        lblComunicacion.ForeColor = Color.LightGray;
+                        lblCompletado.ForeColor = Color.White;
+                        lblTitulo.Text = "Completado";
+                        panBienvenido.Visible = false;
+                        panCircuito.Visible = false;
+                        panReferencias.Visible = false;
+                        panComunicacion.Visible = false;
+                        panCompletado.Visible = true;
+                        btnSiguienteYTerminar.Text = "Terminar";
                         break;
                 }
             }
@@ -150,17 +169,16 @@ namespace SimuladorV2V
                     return;
                 }
 
-                Globales.listadoVertices = null;
-                Globales.listadoVertices = Camara.BuscarRectangulo(imgOriginal);
-                if (Globales.listadoVertices != null && Globales.listadoVertices.Count == 4)
+                Globales.ListadoVertices = null;
+                Globales.ListadoVertices = Camara.BuscarRectangulo(imgOriginal);
+                if (Globales.ListadoVertices != null && Globales.ListadoVertices.Count == 4)
                 {
-                    Globales.listadoVertices = Camara.ReordenarPuntos(Globales.listadoVertices);
-                    Globales.imgCircuito = Camara.CorregirPerspectiva(imgOriginal, Globales.listadoVertices);
-                    imgOriginal = Camara.DibujarRectangulo(imgOriginal, Globales.listadoVertices);
+                    Globales.ListadoVertices = Camara.ReordenarPuntos(Globales.ListadoVertices);
+                    Globales.imgCircuito = Camara.CorregirPerspectiva(imgOriginal, Globales.ListadoVertices);
+                    imgOriginal = Camara.DibujarRectangulo(imgOriginal, Globales.ListadoVertices);
                 }
 
                 ibCamara.Image = imgOriginal;
-
             }
             catch (Exception exception)
             {
@@ -168,7 +186,25 @@ namespace SimuladorV2V
             }
         }
 
-
+        private void CargarPuertosSerie()
+        {
+            try
+            {
+                cboPuertoSerie.Items.Clear();
+                foreach (String puerto in SerialPort.GetPortNames())
+                {
+                    cboPuertoSerie.Items.Add(puerto);
+                }
+                if (cboPuertoSerie.Items.Count > 0)
+                {
+                    cboPuertoSerie.SelectedIndex = 0;
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
 
         #region Botones
         private void linkManual_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -177,6 +213,18 @@ namespace SimuladorV2V
             {
                 string rutaManual = Path.Combine(Application.StartupPath, "Documentos\\Manual.pdf");
                 Process.Start(rutaManual);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void btnRefrescarPuertosSerie_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CargarPuertosSerie();
             }
             catch (Exception exception)
             {
@@ -195,7 +243,7 @@ namespace SimuladorV2V
                         ActualizarPagina();
                         break;
                     case 1:
-                        if (Globales.listadoVertices != null)
+                        if (Globales.ListadoVertices != null)
                         {
                             DialogResult result = MessageBox.Show("A partir de este momento el circuito ni la cámara no se podrán mover." + Environment.NewLine + "¿Deseas continuar?", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                             if (result == DialogResult.Yes)
@@ -212,6 +260,29 @@ namespace SimuladorV2V
                     case 2:
                         intPagina = 3;
                         ActualizarPagina();
+                        break;
+                    case 3:
+                        if (cboPuertoSerie.SelectedItem == null || cboPuertoSerie.SelectedItem.ToString() == String.Empty)
+                        {
+                            MessageBox.Show("Debes seleccionar un puerto serie.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+
+                        if (cboVelocidadTransmision.SelectedItem == null || cboVelocidadTransmision.SelectedItem.ToString() == String.Empty)
+                        {
+                            MessageBox.Show("Debes seleccionar una velocidad de transmisión.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+
+                        Globales.PuertoSerie = cboPuertoSerie.SelectedItem.ToString();
+                        Globales.VelocidadTransmision = Convert.ToInt32(cboVelocidadTransmision.SelectedItem.ToString());
+                        intPagina = 4;
+                        ActualizarPagina();
+                        break;
+                    case 4:
+                        this.Close();
+                        frmPanelPrincipal frmPrincipal = new frmPanelPrincipal();
+                        frmPrincipal.Show();
                         break;
                 }
 
@@ -254,6 +325,38 @@ namespace SimuladorV2V
         {
             try
             {
+                MouseEventArgs evento = (MouseEventArgs)e;
+                Point punto = new Point(evento.X, evento.Y);
+                // Se comprueba que no se haya seleccionado ninguna referencia
+                for (int i = 0; i < Globales.ListadoIntersecciones.Count; i++)
+                {
+                    if (Globales.ListadoIntersecciones[i].Contains(punto))
+                    {
+                        Globales.ListadoIntersecciones.RemoveAt(i);
+                        ibCircuito.Image = Camara.DibujarRectangulos(Globales.imgCircuito.Clone(), Globales.ListadoIntersecciones);
+                        return;
+                    }
+                }
+
+                // Se comprueba que no se salga de la imagen
+                if (punto.X - Globales.Margen / 2 > 0 && punto.X + Globales.Margen / 2 < 640 && punto.Y - Globales.Margen / 2 > 0 && punto.Y - Globales.Margen / 2 < 480)
+                {
+                    // Se crea el rectangulo
+                    Rectangle rectangulo = new Rectangle(new Point(punto.X - Globales.Margen / 2, punto.Y - Globales.Margen / 2), new Size(Globales.Margen, Globales.Margen));
+
+                    // Se comprueba que no interseccione con los rectangulos existentes
+                    for (int i = 0; i < Globales.ListadoIntersecciones.Count; i++)
+                    {
+                        if (rectangulo.IntersectsWith(Globales.ListadoIntersecciones[i]))
+                        {
+                            return;
+                        }
+                    }
+
+                    // Si no intersecciona con ninguno se añade y se refresca la imagen
+                    Globales.ListadoIntersecciones.Add(rectangulo);
+                    ibCircuito.Image = Camara.DibujarRectangulos(Globales.imgCircuito.Clone(), Globales.ListadoIntersecciones);
+                }
 
             }
             catch (Exception exception)

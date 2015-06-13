@@ -158,9 +158,26 @@ namespace SimuladorV2V.Utilidades
         {
             try
             {
-                imgOriginal.DrawPolyline(listadoPuntos.ToArray(), true, new Bgr(0, 255, 0), 2);
+                imgOriginal.DrawPolyline(listadoPuntos.ToArray(), true, new Bgr(0, 255, 0), 3);
                 return imgOriginal;
             } catch (Exception exception) {
+                MessageBox.Show(exception.Message);
+                return null;
+            }
+        }
+        
+        public static Image<Bgr, Byte> DibujarRectangulos(Image<Bgr, Byte> imgOriginal, List<Rectangle> listadoRectangulos)
+        {
+            try
+            {
+                foreach (Rectangle rectangle in listadoRectangulos)
+                {
+                    imgOriginal.Draw(rectangle, new Bgr(255, 0, 0), 2);
+                }
+                return imgOriginal;
+            }
+            catch (Exception exception)
+            {
                 MessageBox.Show(exception.Message);
                 return null;
             }

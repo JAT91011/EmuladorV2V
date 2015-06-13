@@ -29,25 +29,33 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            ManiXButton.Office2010Yellow office2010Yellow3 = new ManiXButton.Office2010Yellow();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsistenteConfiguracion));
+            ManiXButton.Office2010Yellow office2010Yellow1 = new ManiXButton.Office2010Yellow();
             this.panIzquierdo = new System.Windows.Forms.Panel();
+            this.pbIcono = new System.Windows.Forms.PictureBox();
             this.lblCompletado = new System.Windows.Forms.Label();
             this.lblComunicacion = new System.Windows.Forms.Label();
             this.lblReferencias = new System.Windows.Forms.Label();
             this.lblCircuito = new System.Windows.Forms.Label();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.panDerecho = new System.Windows.Forms.Panel();
-            this.panReferencias = new System.Windows.Forms.Panel();
-            this.ibCircuito = new Emgu.CV.UI.ImageBox();
-            this.panCircuito = new System.Windows.Forms.Panel();
-            this.ibCamara = new Emgu.CV.UI.ImageBox();
+            this.panComunicacion = new System.Windows.Forms.Panel();
+            this.btnRefrescarPuertosSerie = new System.Windows.Forms.Button();
+            this.pbBluetooth = new System.Windows.Forms.PictureBox();
+            this.cboVelocidadTransmision = new System.Windows.Forms.ComboBox();
+            this.cboPuertoSerie = new System.Windows.Forms.ComboBox();
+            this.lblVelocidadTransmision = new System.Windows.Forms.Label();
+            this.lblPuertoSerie = new System.Windows.Forms.Label();
             this.panBienvenido = new System.Windows.Forms.Panel();
             this.lblParaObtener = new System.Windows.Forms.Label();
             this.linkManual = new System.Windows.Forms.LinkLabel();
             this.lblConsulte = new System.Windows.Forms.Label();
             this.lblEsteAsistente = new System.Windows.Forms.Label();
             this.lblBienvenidoAlAsistente = new System.Windows.Forms.Label();
-            this.panComunicacion = new System.Windows.Forms.Panel();
+            this.panReferencias = new System.Windows.Forms.Panel();
+            this.ibCircuito = new Emgu.CV.UI.ImageBox();
+            this.panCircuito = new System.Windows.Forms.Panel();
+            this.ibCamara = new Emgu.CV.UI.ImageBox();
             this.panCompletado = new System.Windows.Forms.Panel();
             this.panCabecera = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -55,12 +63,15 @@
             this.btnSiguienteYTerminar = new ManiXButton.MyButton();
             this.btnVolverYCerrar = new ManiXButton.MyButton();
             this.panIzquierdo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIcono)).BeginInit();
             this.panDerecho.SuspendLayout();
+            this.panComunicacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBluetooth)).BeginInit();
+            this.panBienvenido.SuspendLayout();
             this.panReferencias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibCircuito)).BeginInit();
             this.panCircuito.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibCamara)).BeginInit();
-            this.panBienvenido.SuspendLayout();
             this.panCabecera.SuspendLayout();
             this.panBotonera.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +79,7 @@
             // panIzquierdo
             // 
             this.panIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.panIzquierdo.Controls.Add(this.pbIcono);
             this.panIzquierdo.Controls.Add(this.lblCompletado);
             this.panIzquierdo.Controls.Add(this.lblComunicacion);
             this.panIzquierdo.Controls.Add(this.lblReferencias);
@@ -78,6 +90,15 @@
             this.panIzquierdo.Name = "panIzquierdo";
             this.panIzquierdo.Size = new System.Drawing.Size(200, 662);
             this.panIzquierdo.TabIndex = 0;
+            // 
+            // pbIcono
+            // 
+            this.pbIcono.Image = ((System.Drawing.Image)(resources.GetObject("pbIcono.Image")));
+            this.pbIcono.Location = new System.Drawing.Point(12, 12);
+            this.pbIcono.Name = "pbIcono";
+            this.pbIcono.Size = new System.Drawing.Size(171, 144);
+            this.pbIcono.TabIndex = 5;
+            this.pbIcono.TabStop = false;
             // 
             // lblCompletado
             // 
@@ -137,10 +158,10 @@
             // panDerecho
             // 
             this.panDerecho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panDerecho.Controls.Add(this.panComunicacion);
+            this.panDerecho.Controls.Add(this.panBienvenido);
             this.panDerecho.Controls.Add(this.panReferencias);
             this.panDerecho.Controls.Add(this.panCircuito);
-            this.panDerecho.Controls.Add(this.panBienvenido);
-            this.panDerecho.Controls.Add(this.panComunicacion);
             this.panDerecho.Controls.Add(this.panCompletado);
             this.panDerecho.Controls.Add(this.panCabecera);
             this.panDerecho.Controls.Add(this.panBotonera);
@@ -150,47 +171,92 @@
             this.panDerecho.Size = new System.Drawing.Size(864, 662);
             this.panDerecho.TabIndex = 1;
             // 
-            // panReferencias
+            // panComunicacion
             // 
-            this.panReferencias.Controls.Add(this.ibCircuito);
-            this.panReferencias.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panReferencias.Location = new System.Drawing.Point(0, 80);
-            this.panReferencias.Name = "panReferencias";
-            this.panReferencias.Size = new System.Drawing.Size(864, 523);
-            this.panReferencias.TabIndex = 5;
+            this.panComunicacion.Controls.Add(this.btnRefrescarPuertosSerie);
+            this.panComunicacion.Controls.Add(this.pbBluetooth);
+            this.panComunicacion.Controls.Add(this.cboVelocidadTransmision);
+            this.panComunicacion.Controls.Add(this.cboPuertoSerie);
+            this.panComunicacion.Controls.Add(this.lblVelocidadTransmision);
+            this.panComunicacion.Controls.Add(this.lblPuertoSerie);
+            this.panComunicacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panComunicacion.Location = new System.Drawing.Point(0, 80);
+            this.panComunicacion.Name = "panComunicacion";
+            this.panComunicacion.Size = new System.Drawing.Size(864, 523);
+            this.panComunicacion.TabIndex = 0;
             // 
-            // ibCircuito
+            // btnRefrescarPuertosSerie
             // 
-            this.ibCircuito.FunctionalMode = Emgu.CV.UI.ImageBox.FunctionalModeOption.Minimum;
-            this.ibCircuito.Location = new System.Drawing.Point(120, 30);
-            this.ibCircuito.MaximumSize = new System.Drawing.Size(640, 480);
-            this.ibCircuito.MinimumSize = new System.Drawing.Size(640, 480);
-            this.ibCircuito.Name = "ibCircuito";
-            this.ibCircuito.Size = new System.Drawing.Size(640, 480);
-            this.ibCircuito.TabIndex = 2;
-            this.ibCircuito.TabStop = false;
-            this.ibCircuito.Click += new System.EventHandler(this.ibCircuito_Click);
+            this.btnRefrescarPuertosSerie.Image = global::SimuladorV2V.Properties.Resources.refresh_icon;
+            this.btnRefrescarPuertosSerie.Location = new System.Drawing.Point(792, 31);
+            this.btnRefrescarPuertosSerie.Name = "btnRefrescarPuertosSerie";
+            this.btnRefrescarPuertosSerie.Size = new System.Drawing.Size(40, 40);
+            this.btnRefrescarPuertosSerie.TabIndex = 6;
+            this.btnRefrescarPuertosSerie.UseVisualStyleBackColor = true;
+            this.btnRefrescarPuertosSerie.Click += new System.EventHandler(this.btnRefrescarPuertosSerie_Click);
             // 
-            // panCircuito
+            // pbBluetooth
             // 
-            this.panCircuito.Controls.Add(this.ibCamara);
-            this.panCircuito.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panCircuito.Location = new System.Drawing.Point(0, 80);
-            this.panCircuito.Name = "panCircuito";
-            this.panCircuito.Size = new System.Drawing.Size(864, 523);
-            this.panCircuito.TabIndex = 5;
+            this.pbBluetooth.Image = global::SimuladorV2V.Properties.Resources.bluetooth;
+            this.pbBluetooth.Location = new System.Drawing.Point(297, 190);
+            this.pbBluetooth.Name = "pbBluetooth";
+            this.pbBluetooth.Size = new System.Drawing.Size(267, 261);
+            this.pbBluetooth.TabIndex = 5;
+            this.pbBluetooth.TabStop = false;
             // 
-            // ibCamara
+            // cboVelocidadTransmision
             // 
-            this.ibCamara.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ibCamara.FunctionalMode = Emgu.CV.UI.ImageBox.FunctionalModeOption.Minimum;
-            this.ibCamara.Location = new System.Drawing.Point(120, 30);
-            this.ibCamara.MaximumSize = new System.Drawing.Size(640, 480);
-            this.ibCamara.MinimumSize = new System.Drawing.Size(640, 480);
-            this.ibCamara.Name = "ibCamara";
-            this.ibCamara.Size = new System.Drawing.Size(640, 480);
-            this.ibCamara.TabIndex = 2;
-            this.ibCamara.TabStop = false;
+            this.cboVelocidadTransmision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboVelocidadTransmision.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboVelocidadTransmision.FormattingEnabled = true;
+            this.cboVelocidadTransmision.Items.AddRange(new object[] {
+            "2400",
+            "4800",
+            "9600",
+            "14400",
+            "19200",
+            "28800",
+            "38400",
+            "57600",
+            "76800",
+            "115200",
+            "230400"});
+            this.cboVelocidadTransmision.Location = new System.Drawing.Point(144, 77);
+            this.cboVelocidadTransmision.Name = "cboVelocidadTransmision";
+            this.cboVelocidadTransmision.Size = new System.Drawing.Size(180, 28);
+            this.cboVelocidadTransmision.TabIndex = 4;
+            // 
+            // cboPuertoSerie
+            // 
+            this.cboPuertoSerie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPuertoSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboPuertoSerie.FormattingEnabled = true;
+            this.cboPuertoSerie.Location = new System.Drawing.Point(144, 37);
+            this.cboPuertoSerie.Name = "cboPuertoSerie";
+            this.cboPuertoSerie.Size = new System.Drawing.Size(640, 28);
+            this.cboPuertoSerie.TabIndex = 3;
+            // 
+            // lblVelocidadTransmision
+            // 
+            this.lblVelocidadTransmision.AutoSize = true;
+            this.lblVelocidadTransmision.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVelocidadTransmision.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblVelocidadTransmision.Location = new System.Drawing.Point(40, 80);
+            this.lblVelocidadTransmision.Name = "lblVelocidadTransmision";
+            this.lblVelocidadTransmision.Size = new System.Drawing.Size(83, 20);
+            this.lblVelocidadTransmision.TabIndex = 2;
+            this.lblVelocidadTransmision.Text = "Velocidad:";
+            // 
+            // lblPuertoSerie
+            // 
+            this.lblPuertoSerie.AutoSize = true;
+            this.lblPuertoSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPuertoSerie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblPuertoSerie.Location = new System.Drawing.Point(40, 40);
+            this.lblPuertoSerie.Name = "lblPuertoSerie";
+            this.lblPuertoSerie.Size = new System.Drawing.Size(98, 20);
+            this.lblPuertoSerie.TabIndex = 1;
+            this.lblPuertoSerie.Text = "Puerto serie:";
             // 
             // panBienvenido
             // 
@@ -262,13 +328,47 @@
             this.lblBienvenidoAlAsistente.TabIndex = 0;
             this.lblBienvenidoAlAsistente.Text = "Bienvenido al Asistente de configuración del sistema.";
             // 
-            // panComunicacion
+            // panReferencias
             // 
-            this.panComunicacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panComunicacion.Location = new System.Drawing.Point(0, 80);
-            this.panComunicacion.Name = "panComunicacion";
-            this.panComunicacion.Size = new System.Drawing.Size(864, 523);
-            this.panComunicacion.TabIndex = 0;
+            this.panReferencias.Controls.Add(this.ibCircuito);
+            this.panReferencias.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panReferencias.Location = new System.Drawing.Point(0, 80);
+            this.panReferencias.Name = "panReferencias";
+            this.panReferencias.Size = new System.Drawing.Size(864, 523);
+            this.panReferencias.TabIndex = 5;
+            // 
+            // ibCircuito
+            // 
+            this.ibCircuito.FunctionalMode = Emgu.CV.UI.ImageBox.FunctionalModeOption.Minimum;
+            this.ibCircuito.Location = new System.Drawing.Point(120, 30);
+            this.ibCircuito.MaximumSize = new System.Drawing.Size(640, 480);
+            this.ibCircuito.MinimumSize = new System.Drawing.Size(640, 480);
+            this.ibCircuito.Name = "ibCircuito";
+            this.ibCircuito.Size = new System.Drawing.Size(640, 480);
+            this.ibCircuito.TabIndex = 2;
+            this.ibCircuito.TabStop = false;
+            this.ibCircuito.Click += new System.EventHandler(this.ibCircuito_Click);
+            // 
+            // panCircuito
+            // 
+            this.panCircuito.Controls.Add(this.ibCamara);
+            this.panCircuito.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panCircuito.Location = new System.Drawing.Point(0, 80);
+            this.panCircuito.Name = "panCircuito";
+            this.panCircuito.Size = new System.Drawing.Size(864, 523);
+            this.panCircuito.TabIndex = 5;
+            // 
+            // ibCamara
+            // 
+            this.ibCamara.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ibCamara.FunctionalMode = Emgu.CV.UI.ImageBox.FunctionalModeOption.Minimum;
+            this.ibCamara.Location = new System.Drawing.Point(120, 30);
+            this.ibCamara.MaximumSize = new System.Drawing.Size(640, 480);
+            this.ibCamara.MinimumSize = new System.Drawing.Size(640, 480);
+            this.ibCamara.Name = "ibCamara";
+            this.ibCamara.Size = new System.Drawing.Size(640, 480);
+            this.ibCamara.TabIndex = 2;
+            this.ibCamara.TabStop = false;
             // 
             // panCompletado
             // 
@@ -312,24 +412,24 @@
             // 
             // btnSiguienteYTerminar
             // 
-            office2010Yellow3.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Yellow3.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Yellow3.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Yellow3.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Yellow3.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Yellow3.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Yellow3.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
-            office2010Yellow3.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
-            office2010Yellow3.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
-            office2010Yellow3.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
-            office2010Yellow3.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Yellow3.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Yellow3.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Yellow3.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Yellow3.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Yellow3.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Yellow3.TextColor = System.Drawing.Color.Black;
-            this.btnSiguienteYTerminar.ColorTable = office2010Yellow3;
+            office2010Yellow1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Yellow1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Yellow1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Yellow1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Yellow1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Yellow1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Yellow1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
+            office2010Yellow1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
+            office2010Yellow1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
+            office2010Yellow1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
+            office2010Yellow1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Yellow1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Yellow1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Yellow1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Yellow1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Yellow1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Yellow1.TextColor = System.Drawing.Color.Black;
+            this.btnSiguienteYTerminar.ColorTable = office2010Yellow1;
             this.btnSiguienteYTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguienteYTerminar.Location = new System.Drawing.Point(771, 16);
             this.btnSiguienteYTerminar.Name = "btnSiguienteYTerminar";
@@ -371,13 +471,17 @@
             this.Load += new System.EventHandler(this.FrmAsistenteConfiguracion_Load);
             this.panIzquierdo.ResumeLayout(false);
             this.panIzquierdo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIcono)).EndInit();
             this.panDerecho.ResumeLayout(false);
+            this.panComunicacion.ResumeLayout(false);
+            this.panComunicacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBluetooth)).EndInit();
+            this.panBienvenido.ResumeLayout(false);
+            this.panBienvenido.PerformLayout();
             this.panReferencias.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ibCircuito)).EndInit();
             this.panCircuito.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ibCamara)).EndInit();
-            this.panBienvenido.ResumeLayout(false);
-            this.panBienvenido.PerformLayout();
             this.panCabecera.ResumeLayout(false);
             this.panCabecera.PerformLayout();
             this.panBotonera.ResumeLayout(false);
@@ -411,6 +515,13 @@
         private Emgu.CV.UI.ImageBox ibCamara;
         private ManiXButton.MyButton btnSiguienteYTerminar;
         private Emgu.CV.UI.ImageBox ibCircuito;
+        private System.Windows.Forms.Label lblVelocidadTransmision;
+        private System.Windows.Forms.Label lblPuertoSerie;
+        private System.Windows.Forms.ComboBox cboPuertoSerie;
+        private System.Windows.Forms.ComboBox cboVelocidadTransmision;
+        private System.Windows.Forms.PictureBox pbBluetooth;
+        private System.Windows.Forms.Button btnRefrescarPuertosSerie;
+        private System.Windows.Forms.PictureBox pbIcono;
 
     }
 }
