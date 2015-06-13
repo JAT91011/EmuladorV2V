@@ -19,7 +19,6 @@ namespace SimuladorV2V
     {
         Capture webCam = null;
         Image<Bgr, Byte> imgOriginal;
-        bool blnCapturandoImagenes = false;
         int intPagina;
 
         public frmAsistenteConfiguracion()
@@ -92,7 +91,6 @@ namespace SimuladorV2V
                         webCam = new Capture();
                         webCam.SetCaptureProperty(CAP_PROP.CV_CAP_PROP_FRAME_WIDTH, 640);
                         webCam.SetCaptureProperty(CAP_PROP.CV_CAP_PROP_FRAME_HEIGHT, 480);
-                        blnCapturandoImagenes = true;
                         lblTitulo.Text = "Circuito";
                         panBienvenido.Visible = false;
                         panCircuito.Visible = true;
@@ -100,6 +98,39 @@ namespace SimuladorV2V
                         panComunicacion.Visible = false;
                         panCompletado.Visible = false;
                         btnVolverYCerrar.Text = "Volver";
+                        break;
+                    case 2: // Referencias
+                        lblBienvenido.ForeColor = Color.LightGray;
+                        lblCircuito.ForeColor = Color.LightGray;
+                        lblReferencias.ForeColor = Color.White;
+                        lblComunicacion.ForeColor = Color.LightGray;
+                        lblCompletado.ForeColor = Color.LightGray;
+                        Globales.listadoIntersecciones = null;
+                        ibCircuito.Image = Globales.imgCircuito;
+                        lblTitulo.Text = "Referencias";
+                        panBienvenido.Visible = false;
+                        panCircuito.Visible = false;
+                        panReferencias.Visible = true;
+                        panComunicacion.Visible = false;
+                        panCompletado.Visible = false;
+                        if (webCam != null)
+                        {
+                            webCam.Dispose();
+                            Application.Idle -= ProcesarImagen;
+                        }
+                        break;
+                    case 2: // Comunicacion
+                        lblBienvenido.ForeColor = Color.LightGray;
+                        lblCircuito.ForeColor = Color.LightGray;
+                        lblReferencias.ForeColor = Color.LightGray;
+                        lblComunicacion.ForeColor = Color.White;
+                        lblCompletado.ForeColor = Color.LightGray;
+                        lblTitulo.Text = "Comunicación";
+                        panBienvenido.Visible = false;
+                        panCircuito.Visible = false;
+                        panReferencias.Visible = false;
+                        panComunicacion.Visible = true;
+                        panCompletado.Visible = false;
                         break;
                 }
             }
@@ -178,6 +209,10 @@ namespace SimuladorV2V
                             MessageBox.Show("No se ha encontrado el circuito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         break;
+                    case 2:
+                        intPagina = 3;
+                        ActualizarPagina();
+                        break;
                 }
 
             }
@@ -186,8 +221,7 @@ namespace SimuladorV2V
                 MessageBox.Show(exception.Message);
             }
         }
-        #endregion
-
+        
         private void btnVolverYCerrar_Click(object sender, EventArgs e)
         {
             try
@@ -211,6 +245,24 @@ namespace SimuladorV2V
                 MessageBox.Show(exception.Message);
             }
         }
+ 
+        #endregion
+
+        #region Eventos
+
+        private void ibCircuito_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        #endregion
 
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            ManiXButton.Office2010Yellow office2010Yellow1 = new ManiXButton.Office2010Yellow();
+            ManiXButton.Office2010Yellow office2010Yellow3 = new ManiXButton.Office2010Yellow();
             this.panIzquierdo = new System.Windows.Forms.Panel();
             this.lblCompletado = new System.Windows.Forms.Label();
             this.lblComunicacion = new System.Windows.Forms.Label();
@@ -37,6 +37,8 @@
             this.lblCircuito = new System.Windows.Forms.Label();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.panDerecho = new System.Windows.Forms.Panel();
+            this.panReferencias = new System.Windows.Forms.Panel();
+            this.ibCircuito = new Emgu.CV.UI.ImageBox();
             this.panCircuito = new System.Windows.Forms.Panel();
             this.ibCamara = new Emgu.CV.UI.ImageBox();
             this.panBienvenido = new System.Windows.Forms.Panel();
@@ -45,7 +47,6 @@
             this.lblConsulte = new System.Windows.Forms.Label();
             this.lblEsteAsistente = new System.Windows.Forms.Label();
             this.lblBienvenidoAlAsistente = new System.Windows.Forms.Label();
-            this.panReferencias = new System.Windows.Forms.Panel();
             this.panComunicacion = new System.Windows.Forms.Panel();
             this.panCompletado = new System.Windows.Forms.Panel();
             this.panCabecera = new System.Windows.Forms.Panel();
@@ -55,6 +56,8 @@
             this.btnVolverYCerrar = new ManiXButton.MyButton();
             this.panIzquierdo.SuspendLayout();
             this.panDerecho.SuspendLayout();
+            this.panReferencias.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ibCircuito)).BeginInit();
             this.panCircuito.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibCamara)).BeginInit();
             this.panBienvenido.SuspendLayout();
@@ -134,9 +137,9 @@
             // panDerecho
             // 
             this.panDerecho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panDerecho.Controls.Add(this.panReferencias);
             this.panDerecho.Controls.Add(this.panCircuito);
             this.panDerecho.Controls.Add(this.panBienvenido);
-            this.panDerecho.Controls.Add(this.panReferencias);
             this.panDerecho.Controls.Add(this.panComunicacion);
             this.panDerecho.Controls.Add(this.panCompletado);
             this.panDerecho.Controls.Add(this.panCabecera);
@@ -146,6 +149,27 @@
             this.panDerecho.Name = "panDerecho";
             this.panDerecho.Size = new System.Drawing.Size(864, 662);
             this.panDerecho.TabIndex = 1;
+            // 
+            // panReferencias
+            // 
+            this.panReferencias.Controls.Add(this.ibCircuito);
+            this.panReferencias.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panReferencias.Location = new System.Drawing.Point(0, 80);
+            this.panReferencias.Name = "panReferencias";
+            this.panReferencias.Size = new System.Drawing.Size(864, 523);
+            this.panReferencias.TabIndex = 5;
+            // 
+            // ibCircuito
+            // 
+            this.ibCircuito.FunctionalMode = Emgu.CV.UI.ImageBox.FunctionalModeOption.Minimum;
+            this.ibCircuito.Location = new System.Drawing.Point(120, 30);
+            this.ibCircuito.MaximumSize = new System.Drawing.Size(640, 480);
+            this.ibCircuito.MinimumSize = new System.Drawing.Size(640, 480);
+            this.ibCircuito.Name = "ibCircuito";
+            this.ibCircuito.Size = new System.Drawing.Size(640, 480);
+            this.ibCircuito.TabIndex = 2;
+            this.ibCircuito.TabStop = false;
+            this.ibCircuito.Click += new System.EventHandler(this.ibCircuito_Click);
             // 
             // panCircuito
             // 
@@ -159,7 +183,8 @@
             // ibCamara
             // 
             this.ibCamara.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ibCamara.Location = new System.Drawing.Point(122, 37);
+            this.ibCamara.FunctionalMode = Emgu.CV.UI.ImageBox.FunctionalModeOption.Minimum;
+            this.ibCamara.Location = new System.Drawing.Point(120, 30);
             this.ibCamara.MaximumSize = new System.Drawing.Size(640, 480);
             this.ibCamara.MinimumSize = new System.Drawing.Size(640, 480);
             this.ibCamara.Name = "ibCamara";
@@ -237,14 +262,6 @@
             this.lblBienvenidoAlAsistente.TabIndex = 0;
             this.lblBienvenidoAlAsistente.Text = "Bienvenido al Asistente de configuración del sistema.";
             // 
-            // panReferencias
-            // 
-            this.panReferencias.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panReferencias.Location = new System.Drawing.Point(0, 80);
-            this.panReferencias.Name = "panReferencias";
-            this.panReferencias.Size = new System.Drawing.Size(864, 523);
-            this.panReferencias.TabIndex = 5;
-            // 
             // panComunicacion
             // 
             this.panComunicacion.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -295,24 +312,24 @@
             // 
             // btnSiguienteYTerminar
             // 
-            office2010Yellow1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Yellow1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Yellow1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Yellow1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Yellow1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Yellow1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Yellow1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
-            office2010Yellow1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
-            office2010Yellow1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
-            office2010Yellow1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
-            office2010Yellow1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Yellow1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Yellow1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Yellow1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Yellow1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Yellow1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Yellow1.TextColor = System.Drawing.Color.Black;
-            this.btnSiguienteYTerminar.ColorTable = office2010Yellow1;
+            office2010Yellow3.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Yellow3.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Yellow3.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Yellow3.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Yellow3.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Yellow3.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Yellow3.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
+            office2010Yellow3.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
+            office2010Yellow3.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
+            office2010Yellow3.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
+            office2010Yellow3.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Yellow3.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Yellow3.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Yellow3.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Yellow3.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Yellow3.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Yellow3.TextColor = System.Drawing.Color.Black;
+            this.btnSiguienteYTerminar.ColorTable = office2010Yellow3;
             this.btnSiguienteYTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguienteYTerminar.Location = new System.Drawing.Point(771, 16);
             this.btnSiguienteYTerminar.Name = "btnSiguienteYTerminar";
@@ -355,6 +372,8 @@
             this.panIzquierdo.ResumeLayout(false);
             this.panIzquierdo.PerformLayout();
             this.panDerecho.ResumeLayout(false);
+            this.panReferencias.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ibCircuito)).EndInit();
             this.panCircuito.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ibCamara)).EndInit();
             this.panBienvenido.ResumeLayout(false);
@@ -391,6 +410,7 @@
         private System.Windows.Forms.Panel panCompletado;
         private Emgu.CV.UI.ImageBox ibCamara;
         private ManiXButton.MyButton btnSiguienteYTerminar;
+        private Emgu.CV.UI.ImageBox ibCircuito;
 
     }
 }

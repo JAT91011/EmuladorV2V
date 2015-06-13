@@ -13,7 +13,7 @@ namespace SimuladorV2V.Utilidades
         {
             try
             {
-                Point[] puntos = new Point[1];
+                Point[] puntos = new Point[4];
                 List<Point> listadoVertices = new List<Point>();
 
                 // Se combierte la imagen a escala de grises
@@ -25,7 +25,7 @@ namespace SimuladorV2V.Utilidades
                 // Se buscan los contornos
                 using (MemStorage storage = new MemStorage())
                 {
-                    for (Contour<Point> contours = imgGris.FindContours(Emgu.CV.CvEnum.CHAIN_APPROX_METHOD.CV_CHAIN_APPROX_SIMPLE, Emgu.CV.CvEnum.RETR_TYPE.CV_RETR_LIST, storage); contours != null; contours = contours.HNext)
+                    for(Contour<Point> contours = imgGris.FindContours(Emgu.CV.CvEnum.CHAIN_APPROX_METHOD.CV_CHAIN_APPROX_SIMPLE, Emgu.CV.CvEnum.RETR_TYPE.CV_RETR_LIST, storage); contours != null; contours = contours.HNext)
                     {
                         Contour<Point> currentContour = contours.ApproxPoly(contours.Perimeter * 0.05, storage);
 
@@ -35,27 +35,26 @@ namespace SimuladorV2V.Utilidades
                             bool esRectangulo = true;
                             puntos = currentContour.ToArray();
                             LineSegment2D[] vertices = PointCollection.PolyLine(puntos, true);
-                            for (int i = 0; i < vertices.Length - 1; i++)
+                            for (int i = 0; i < vertices.Length; i++)
                             {
-                                // Se comprueba que el angulo entre los vertices sea entre 80 y 100 grados
+                                // Se comprueba que el angulo entre los vertices sea entre 85 y 95 grados
                                 double angulo = Math.Abs(vertices[(i + 1) % vertices.Length].GetExteriorAngleDegree(vertices[i]));
-                                if (angulo < 80 || angulo > 100)
+                                if (angulo < 85 || angulo > 95)
                                 {
-                                    esRectangulo = true;
+                                    esRectangulo = false;
                                     break;
                                 }
                             }
                             if (esRectangulo)
                             {
-                                for (int i = 0; i < puntos.Length - 1; i++)
+                                for (int i = 0; i < puntos.Length; i++)
                                 {
                                     listadoVertices.Add(puntos[i]);
                                 }
                                 return listadoVertices;
                             }
                         }
-                    }
-
+                    }          
                 }
                 return null;
             }
@@ -96,13 +95,13 @@ namespace SimuladorV2V.Utilidades
 
                 if (puntoAuxiliar1.Y < puntoAuxiliar2.Y)
                 {
-                    listadoOrdenados.Insert(0, puntoAuxiliar1);
-                    listadoOrdenados.Insert(3, puntoAuxiliar2);
+                    listadoOrdenados[0] = puntoAuxiliar1;
+                    listadoOrdenados[3] = puntoAuxiliar2;
                 }
                 else
                 {
-                    listadoOrdenados.Insert(0, puntoAuxiliar2);
-                    listadoOrdenados.Insert(3, puntoAuxiliar1);
+                    listadoOrdenados[0] = puntoAuxiliar2;
+                    listadoOrdenados[3] = puntoAuxiliar1;
                 }
 
                 puntosOriginales.Remove(puntoAuxiliar1);
@@ -110,13 +109,13 @@ namespace SimuladorV2V.Utilidades
 
                 if (puntosOriginales[0].Y < puntosOriginales[1].Y)
                 {
-                    listadoOrdenados.Insert(1, puntosOriginales[0]);
-                    listadoOrdenados.Insert(2, puntosOriginales[1]);
+                    listadoOrdenados[1] = puntosOriginales[0];
+                    listadoOrdenados[2] = puntosOriginales[1];
                 }
                 else
                 {
-                    listadoOrdenados.Insert(2, puntosOriginales[0]);
-                    listadoOrdenados.Insert(1, puntosOriginales[1]);
+                    listadoOrdenados[2] = puntosOriginales[0];
+                    listadoOrdenados[1] = puntosOriginales[1];
                 }
 
                 return listadoOrdenados;
@@ -140,10 +139,10 @@ namespace SimuladorV2V.Utilidades
                 puntosExpandidos[3] = new PointF(0,480);
 
                 PointF[] puntosOriginales = new PointF[4];
-                puntosExpandidos[0] = new PointF(listadoPuntos[0].X, listadoPuntos[0].Y);
-                puntosExpandidos[0] = new PointF(listadoPuntos[1].X, listadoPuntos[1].Y);
-                puntosExpandidos[0] = new PointF(listadoPuntos[2].X, listadoPuntos[2].Y);
-                puntosExpandidos[0] = new PointF(listadoPuntos[3].X, listadoPuntos[3].Y);
+                puntosOriginales[0] = new PointF(listadoPuntos[0].X, listadoPuntos[0].Y);
+                puntosOriginales[1] = new PointF(listadoPuntos[1].X, listadoPuntos[1].Y);
+                puntosOriginales[2] = new PointF(listadoPuntos[2].X, listadoPuntos[2].Y);
+                puntosOriginales[3] = new PointF(listadoPuntos[3].X, listadoPuntos[3].Y);
 
                 HomographyMatrix homography = CameraCalibration.GetPerspectiveTransform(puntosOriginales, puntosExpandidos);
 

@@ -12,7 +12,7 @@ namespace SimuladorV2V.Utilidades
     {
         // CIRCUITO
         public static Image<Bgr, Byte> imgCircuito = null;
-        public static List<Point> listadoVertices = new List<Point>();
+        public static List<Point> listadoVertices = null;
 
         // PUNTOS DE REFERENCIA
         public static List<Point> listadoIntersecciones = new List<Point>();
