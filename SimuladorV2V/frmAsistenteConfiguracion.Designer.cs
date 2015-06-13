@@ -321,6 +321,7 @@
             this.btnSiguienteYTerminar.Text = "Siguiente";
             this.btnSiguienteYTerminar.Theme = ManiXButton.Theme.MSOffice2010_Yellow;
             this.btnSiguienteYTerminar.UseVisualStyleBackColor = true;
+            this.btnSiguienteYTerminar.Click += new System.EventHandler(this.btnSiguienteYTerminar_Click);
             // 
             // btnVolverYCerrar
             // 
@@ -333,6 +334,7 @@
             this.btnVolverYCerrar.Text = "Cerrar";
             this.btnVolverYCerrar.Theme = ManiXButton.Theme.MSOffice2010_Yellow;
             this.btnVolverYCerrar.UseVisualStyleBackColor = true;
+            this.btnVolverYCerrar.Click += new System.EventHandler(this.btnVolverYCerrar_Click);
             // 
             // frmAsistenteConfiguracion
             // 
