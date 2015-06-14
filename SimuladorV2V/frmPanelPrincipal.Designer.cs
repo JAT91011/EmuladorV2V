@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panIzquierdo = new System.Windows.Forms.Panel();
             this.panBotones = new System.Windows.Forms.Panel();
             this.btnIniciarParar = new System.Windows.Forms.Button();
@@ -37,19 +36,22 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.listRobots = new System.Windows.Forms.ListView();
             this.splitDerecho = new System.Windows.Forms.SplitContainer();
+            this.pbCamara = new System.Windows.Forms.PictureBox();
+            this.txtEnviar = new System.Windows.Forms.TextBox();
+            this.btnEnviar = new System.Windows.Forms.Button();
+            this.lblEnviar = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnBorrarTexto = new System.Windows.Forms.Button();
             this.cboMensajes = new System.Windows.Forms.ComboBox();
             this.lblMostrarDesde = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.ibCamara = new Emgu.CV.UI.ImageBox();
+            this.textBoxConsola = new System.Windows.Forms.TextBox();
             this.panIzquierdo.SuspendLayout();
             this.panBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitDerecho)).BeginInit();
             this.splitDerecho.Panel1.SuspendLayout();
             this.splitDerecho.Panel2.SuspendLayout();
             this.splitDerecho.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ibCamara)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCamara)).BeginInit();
             this.SuspendLayout();
             // 
             // panIzquierdo
@@ -106,12 +108,14 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Image = global::SimuladorV2V.Properties.Resources.add_icon;
+            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevo.BackgroundImage = global::SimuladorV2V.Properties.Resources.add_icon;
+            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnNuevo.Location = new System.Drawing.Point(12, 12);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(42, 42);
             this.btnNuevo.TabIndex = 0;
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // listRobots
@@ -135,19 +139,70 @@
             // splitDerecho.Panel1
             // 
             this.splitDerecho.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.splitDerecho.Panel1.Controls.Add(this.ibCamara);
+            this.splitDerecho.Panel1.Controls.Add(this.pbCamara);
             // 
             // splitDerecho.Panel2
             // 
             this.splitDerecho.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.splitDerecho.Panel2.Controls.Add(this.txtEnviar);
+            this.splitDerecho.Panel2.Controls.Add(this.btnEnviar);
+            this.splitDerecho.Panel2.Controls.Add(this.lblEnviar);
             this.splitDerecho.Panel2.Controls.Add(this.button1);
             this.splitDerecho.Panel2.Controls.Add(this.btnBorrarTexto);
             this.splitDerecho.Panel2.Controls.Add(this.cboMensajes);
             this.splitDerecho.Panel2.Controls.Add(this.lblMostrarDesde);
-            this.splitDerecho.Panel2.Controls.Add(this.textBox1);
+            this.splitDerecho.Panel2.Controls.Add(this.textBoxConsola);
             this.splitDerecho.Size = new System.Drawing.Size(919, 661);
             this.splitDerecho.SplitterDistance = 485;
             this.splitDerecho.TabIndex = 1;
+            // 
+            // pbCamara
+            // 
+            this.pbCamara.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbCamara.Location = new System.Drawing.Point(6, 12);
+            this.pbCamara.Name = "pbCamara";
+            this.pbCamara.Size = new System.Drawing.Size(903, 467);
+            this.pbCamara.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCamara.TabIndex = 0;
+            this.pbCamara.TabStop = false;
+            // 
+            // txtEnviar
+            // 
+            this.txtEnviar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEnviar.Location = new System.Drawing.Point(54, 144);
+            this.txtEnviar.Name = "txtEnviar";
+            this.txtEnviar.Size = new System.Drawing.Size(791, 22);
+            this.txtEnviar.TabIndex = 8;
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.Location = new System.Drawing.Point(851, 143);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(60, 25);
+            this.btnEnviar.TabIndex = 7;
+            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
+            // 
+            // lblEnviar
+            // 
+            this.lblEnviar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblEnviar.AutoEllipsis = true;
+            this.lblEnviar.AutoSize = true;
+            this.lblEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnviar.ForeColor = System.Drawing.Color.LightGray;
+            this.lblEnviar.Location = new System.Drawing.Point(0, 147);
+            this.lblEnviar.Name = "lblEnviar";
+            this.lblEnviar.Size = new System.Drawing.Size(48, 16);
+            this.lblEnviar.TabIndex = 5;
+            this.lblEnviar.Text = "Enviar:";
             // 
             // button1
             // 
@@ -179,6 +234,7 @@
             this.cboMensajes.Name = "cboMensajes";
             this.cboMensajes.Size = new System.Drawing.Size(680, 24);
             this.cboMensajes.TabIndex = 2;
+            this.cboMensajes.SelectedIndexChanged += new System.EventHandler(this.cboMensajes_SelectedIndexChanged);
             // 
             // lblMostrarDesde
             // 
@@ -193,33 +249,23 @@
             this.lblMostrarDesde.TabIndex = 1;
             this.lblMostrarDesde.Text = "Mostrar mensajes desde:";
             // 
-            // textBox1
+            // textBoxConsola
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.textBoxConsola.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.LightGray;
-            this.textBox1.Location = new System.Drawing.Point(3, 42);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(10);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(906, 125);
-            this.textBox1.TabIndex = 0;
-            // 
-            // ibCamara
-            // 
-            this.ibCamara.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ibCamara.Location = new System.Drawing.Point(0, 12);
-            this.ibCamara.Name = "ibCamara";
-            this.ibCamara.Size = new System.Drawing.Size(911, 461);
-            this.ibCamara.TabIndex = 2;
-            this.ibCamara.TabStop = false;
+            this.textBoxConsola.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxConsola.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxConsola.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxConsola.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxConsola.Location = new System.Drawing.Point(3, 42);
+            this.textBoxConsola.Margin = new System.Windows.Forms.Padding(10);
+            this.textBoxConsola.Multiline = true;
+            this.textBoxConsola.Name = "textBoxConsola";
+            this.textBoxConsola.ReadOnly = true;
+            this.textBoxConsola.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxConsola.Size = new System.Drawing.Size(906, 96);
+            this.textBoxConsola.TabIndex = 0;
             // 
             // frmPanelPrincipal
             // 
@@ -241,7 +287,7 @@
             this.splitDerecho.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitDerecho)).EndInit();
             this.splitDerecho.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ibCamara)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCamara)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,11 +302,14 @@
         private System.Windows.Forms.Button btnRutas;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.SplitContainer splitDerecho;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxConsola;
         private System.Windows.Forms.Label lblMostrarDesde;
         private System.Windows.Forms.ComboBox cboMensajes;
         private System.Windows.Forms.Button btnBorrarTexto;
         private System.Windows.Forms.Button button1;
-        private Emgu.CV.UI.ImageBox ibCamara;
+        private System.Windows.Forms.Label lblEnviar;
+        private System.Windows.Forms.Button btnEnviar;
+        private System.Windows.Forms.TextBox txtEnviar;
+        private System.Windows.Forms.PictureBox pbCamara;
     }
 }

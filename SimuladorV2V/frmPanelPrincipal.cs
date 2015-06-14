@@ -13,13 +13,16 @@ using Emgu.CV;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
 using SimuladorV2V.Utilidades;
+using SimuladorV2V.Interfaces;
+using SimuladorV2V.Clases;
 
 namespace SimuladorV2V
 {
-    public partial class frmPanelPrincipal : Form
+    public partial class frmPanelPrincipal : Form, BluetoothObservador
     {
-        Capture webCam = null;
-        Image<Bgr, Byte> imgOriginal;
+        private Capture webCam = null;
+        private Image<Bgr, Byte> imgOriginal;
+        private String log;
 
         public frmPanelPrincipal()
         {
@@ -30,8 +33,18 @@ namespace SimuladorV2V
         {
             try
             {
-                webCam = new Capture();
+                try
+                {
+                    webCam = new Capture();
+                }  
+                catch (Exception exception)
+                {
+                    MessageBox.Show("No hay ninguna cámara conectada. Revisa las conexiones.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    String error = exception.Message;
+                }    
                 Application.Idle += ProcesarImagen;
+                Bluetooth.Instancia.NuevoObservador(this);
+                ActualizarComboConsola();
             }
             catch (Exception exception)
             {
@@ -61,6 +74,7 @@ namespace SimuladorV2V
                 imgOriginal = webCam.QueryFrame();
                 if (imgOriginal == null)
                 {
+                    pbCamara.Image = SimuladorV2V.Properties.Resources.no_camera;
                     return;
                 }
 
@@ -74,7 +88,7 @@ namespace SimuladorV2V
                     }
                 }
 
-                ibCamara.Image = imgOriginal;
+                pbCamara.Image = imgOriginal.Bitmap;
             }
             catch (Exception exception)
             {
@@ -142,7 +156,90 @@ namespace SimuladorV2V
                 Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
             }
         }
+
+        // PROVISIONAL
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Bluetooth.Instancia.Enviar(txtEnviar.Text.Trim());
+                txtEnviar.Text = String.Empty;
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
+            }
+        }
+        
         #endregion
+
+        #region Eventos
+        private void cboMensajes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ActualizarConsola();
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
+            }
+        }
+
+        #endregion
+
+        #region Actualizar Campos
+        private void ActualizarComboConsola()
+        {
+            try 
+            {
+                cboMensajes.Items.Clear();
+                cboMensajes.Items.Add("Sistema");
+                foreach (Robot robot in Globales.ListadoRobots)
+                {
+                    cboMensajes.Items.Add(robot.Descripcion);
+                }
+                cboMensajes.SelectedIndex = 0;
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
+            }
+        }
+        
+        private void ActualizarConsola()
+        {
+            try
+            {
+                int seleccionado = cboMensajes.SelectedIndex;
+                if (seleccionado == 0)
+                {
+                    textBoxConsola.Text = log;
+                }
+                else
+                {
+                    textBoxConsola.Text = Globales.ListadoRobots[seleccionado - 1].Log;
+                }
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
+            }
+        }
+        #endregion
+
+        public void ObtenerDatos(string datos)
+        {
+            try
+            {
+                log += datos;
+                ActualizarConsola();
+            } 
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
+            }
+        }
 
     }
 }

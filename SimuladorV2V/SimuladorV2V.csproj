@@ -97,8 +97,10 @@
     <Compile Include="frmPanelPrincipal.Designer.cs">
       <DependentUpon>frmPanelPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\BluetoothObservador.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilidades\Bluetooth.cs" />
     <Compile Include="Utilidades\Camara.cs" />
     <Compile Include="Utilidades\Excepciones.cs" />
     <Compile Include="Utilidades\Globales.cs" />
@@ -108,6 +110,7 @@
     <EmbeddedResource Include="frmPanelPrincipal.resx">
       <DependentUpon>frmPanelPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -186,6 +189,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-camera.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

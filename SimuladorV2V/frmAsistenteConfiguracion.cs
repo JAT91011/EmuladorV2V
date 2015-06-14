@@ -274,6 +274,12 @@ namespace SimuladorV2V
                             return;
                         }
 
+                        if( ! Bluetooth.Instancia.Conectar(cboPuertoSerie.SelectedItem.ToString(), Convert.ToInt32(cboVelocidadTransmision.SelectedItem.ToString())))
+                        {
+                            MessageBox.Show("No se ha podido establecer la comunicación con el módulo bluetooth.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+
                         Globales.PuertoSerie = cboPuertoSerie.SelectedItem.ToString();
                         Globales.VelocidadTransmision = Convert.ToInt32(cboVelocidadTransmision.SelectedItem.ToString());
                         intPagina = 4;

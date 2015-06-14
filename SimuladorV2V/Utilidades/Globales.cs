@@ -5,6 +5,7 @@ using System.Text;
 using Emgu.CV;
 using Emgu.CV.Structure;
 using System.Drawing;
+using SimuladorV2V.Clases;
 
 namespace SimuladorV2V.Utilidades
 {
@@ -17,6 +18,12 @@ namespace SimuladorV2V.Utilidades
         // PUNTOS DE REFERENCIA
         public static int Margen = 30;
         public static List<Rectangle> ListadoIntersecciones = new List<Rectangle>();
+
+        // ROBOTS
+        public static List<Robot> ListadoRobots = new List<Robot>();
+
+        // RUTAS
+        public static List<Ruta> ListadoRutas = new List<Ruta>();
 
         // BLUETOOTH
         public static String PuertoSerie = String.Empty;

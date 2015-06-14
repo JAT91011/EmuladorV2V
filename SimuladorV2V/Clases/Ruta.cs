@@ -11,7 +11,7 @@ using SimuladorV2V.Utilidades;
 
 namespace SimuladorV2V.Clases
 {
-    class Ruta
+    public class Ruta
     {
         public static int IZQUIERDA = 0;
         public static int DERECHA = 1;

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace SimuladorV2V.Utilidades
 {
-    class Excepciones
+    public class Excepciones
     {
         public static void EscribirError(String formulario, String procedimiento, Exception excepcion)
         {
