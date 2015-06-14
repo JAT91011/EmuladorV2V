@@ -32,6 +32,9 @@ namespace SimuladorV2V.Utilidades
                 // Se escribe la descripcion de la excepcion
                 file.WriteLine("Excepción:\t\t" + excepcion.Message);
 
+                // Se escribe el contenido de la excepcion
+                file.WriteLine("Detalles:\t\t" + excepcion.StackTrace);
+
                 // Se coloca un salto de linea
                 file.WriteLine(Environment.NewLine);
 
