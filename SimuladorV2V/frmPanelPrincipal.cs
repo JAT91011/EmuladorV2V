@@ -1,11 +1,13 @@
 ﻿using System;
+using System.IO;
+using System.IO.Ports;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Emgu.CV;
 using Emgu.CV.CvEnum;
@@ -33,7 +35,7 @@ namespace SimuladorV2V
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
             }
         }
 
@@ -48,7 +50,7 @@ namespace SimuladorV2V
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
             }
         }
 
@@ -76,7 +78,7 @@ namespace SimuladorV2V
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
             }
         }
 
@@ -89,7 +91,7 @@ namespace SimuladorV2V
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
             }
         }
 
@@ -101,7 +103,7 @@ namespace SimuladorV2V
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
             }
         }
 
@@ -113,7 +115,7 @@ namespace SimuladorV2V
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
             }
         }
 
@@ -125,7 +127,7 @@ namespace SimuladorV2V
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
             }
         }
 
@@ -137,7 +139,7 @@ namespace SimuladorV2V
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
             }
         }
         #endregion

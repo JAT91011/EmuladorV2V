@@ -1,10 +1,17 @@
 ﻿using System;
+using System.IO;
+using System.IO.Ports;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
 using Emgu.CV;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
-using System.Windows.Forms;
+
 
 namespace SimuladorV2V.Utilidades
 {
@@ -27,11 +34,11 @@ namespace SimuladorV2V.Utilidades
                 CircleF[] circulos = imgGris.HoughCircles(
                     new Gray(150),
                     new Gray(75),
-                    1.0,    //Resolution of the accumulator used to detect centers of the circles
-                    10.0,   // Distancia entre circulos 
-                    1,      // Minimo radio
-                    100       // Maximo radio
-                    )[0]; //Get the circles from the first channel
+                    1.0,        // Resolution of the accumulator used to detect centers of the circles
+                    10.0,       // Distancia entre circulos 
+                    1,          // Minimo radio
+                    100         // Maximo radio
+                    )[0];       // Get the circles from the first channel
 
                 // Se obtiene el centro de cada circulo
                 foreach (CircleF circulo in circulos)
@@ -43,7 +50,7 @@ namespace SimuladorV2V.Utilidades
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError("Camara", new StackTrace().GetFrame(0).GetMethod().Name, exception);
                 return null;
             }
         }
@@ -99,7 +106,7 @@ namespace SimuladorV2V.Utilidades
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError("Camara", new StackTrace().GetFrame(0).GetMethod().Name, exception);
                 return null;
             }
         }
@@ -162,7 +169,7 @@ namespace SimuladorV2V.Utilidades
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError("Camara", new StackTrace().GetFrame(0).GetMethod().Name, exception);
                 return null;
             }
         }
@@ -188,7 +195,7 @@ namespace SimuladorV2V.Utilidades
                 return imgOriginal.WarpPerspective(homography, Emgu.CV.CvEnum.INTER.CV_INTER_NN, Emgu.CV.CvEnum.WARP.CV_WARP_FILL_OUTLIERS, new Bgr(0, 0, 0));
 
             } catch (Exception exception) {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError("Camara", new StackTrace().GetFrame(0).GetMethod().Name, exception);
                 return null;
             }
         }
@@ -200,7 +207,7 @@ namespace SimuladorV2V.Utilidades
                 imgOriginal.DrawPolyline(listadoPuntos.ToArray(), true, new Bgr(0, 255, 0), 3);
                 return imgOriginal;
             } catch (Exception exception) {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError("Camara", new StackTrace().GetFrame(0).GetMethod().Name, exception);
                 return null;
             }
         }
@@ -214,7 +221,7 @@ namespace SimuladorV2V.Utilidades
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError("Camara", new StackTrace().GetFrame(0).GetMethod().Name, exception);
                 return null;
             }
         }
@@ -231,7 +238,7 @@ namespace SimuladorV2V.Utilidades
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError("Camara", new StackTrace().GetFrame(0).GetMethod().Name, exception);
                 return null;
             }
         }
@@ -248,7 +255,7 @@ namespace SimuladorV2V.Utilidades
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError("Camara", new StackTrace().GetFrame(0).GetMethod().Name, exception);
                 return null;
             }
         }
@@ -314,7 +321,7 @@ namespace SimuladorV2V.Utilidades
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError("Camara", new StackTrace().GetFrame(0).GetMethod().Name, exception);
                 return null;
             }
         }
