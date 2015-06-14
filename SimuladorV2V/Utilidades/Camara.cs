@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using Emgu.CV;
+using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
 using System.Windows.Forms;
 
@@ -9,6 +10,44 @@ namespace SimuladorV2V.Utilidades
 {
     public static class Camara
     {
+        public static List<Point> BuscarCirculos(Image<Bgr, Byte> imgOriginal)
+        {
+            try
+            {
+                List<Point> listadoCirculos = new List<Point>();
+
+                // Se combierte la imagen a escala de grises
+                Image<Gray, Byte> imgGris = imgOriginal.Convert<Gray, Byte>();
+
+                CvInvoke.cvSmooth(imgGris, imgGris, SMOOTH_TYPE.CV_GAUSSIAN, 3, 3, 0, 0);
+
+                // Se buscan los vertices en la imagen
+
+                // Se buscan los circulos en la imagen
+                CircleF[] circulos = imgGris.HoughCircles(
+                    new Gray(150),
+                    new Gray(75),
+                    1.0,    //Resolution of the accumulator used to detect centers of the circles
+                    10.0,   // Distancia entre circulos 
+                    1,      // Minimo radio
+                    100       // Maximo radio
+                    )[0]; //Get the circles from the first channel
+
+                // Se obtiene el centro de cada circulo
+                foreach (CircleF circulo in circulos)
+                {
+                    listadoCirculos.Add(new Point((int)circulo.Center.X, (int)circulo.Center.Y));
+                }
+
+                return listadoCirculos;
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+                return null;
+            }
+        }
+
         public static List<Point> BuscarRectangulo(Image<Bgr, Byte> imgOriginal)
         {
             try
@@ -165,6 +204,20 @@ namespace SimuladorV2V.Utilidades
                 return null;
             }
         }
+
+        public static Image<Bgr, Byte> DibujarCirculo(Image<Bgr, Byte> imgOriginal, Point centro, int diametro, Bgr color)
+        {
+            try
+            {
+                imgOriginal.Draw(new CircleF(centro, diametro / 2), color, 3);
+                return imgOriginal;
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+                return null;
+            }
+        }
         
         public static Image<Bgr, Byte> DibujarRectangulos(Image<Bgr, Byte> imgOriginal, List<Rectangle> listadoRectangulos)
         {
@@ -175,6 +228,89 @@ namespace SimuladorV2V.Utilidades
                     imgOriginal.Draw(rectangle, new Bgr(255, 0, 0), 2);
                 }
                 return imgOriginal;
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+                return null;
+            }
+        }
+
+        public static Image<Bgr, Byte> DibujarCirculos(Image<Bgr, Byte> imgOriginal, List<Point> listadoCentros, int diametro, Bgr color)
+        {
+            try
+            {
+                foreach (Point puntos in listadoCentros)
+                {
+                    imgOriginal.Draw(new CircleF(puntos, diametro / 2), color, 3);
+                }
+                return imgOriginal;
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+                return null;
+            }
+        }
+
+        public static Bgr[] ObtenerColoresMaximoMinimoMedio(Image<Bgr, Byte> imagen, Point punto, int margen)
+        {
+            try
+            {
+                Bgr[] colores = new Bgr[3];
+                colores[0] = new Bgr(0, 0, 0);
+                colores[1] = new Bgr(255, 255, 255);
+                colores[2] = new Bgr();
+
+                for (int y = punto.Y - margen; y < punto.Y + margen; y++)
+                {
+                    for (int x = punto.X - margen; x < punto.X + margen; x++)
+                    {
+                        // Se comprueba que este dentro de la imagen
+                        if (x >= 0 && y >= 0 && x < 640 && y < 480)
+                        {
+                            // Se obtiene el color del pixel
+                            Bgr color = imagen[y, x];
+
+                            // Se comprueba con el maximo y minimo azul
+                            if (color.Blue > colores[0].Blue)
+                            {
+                                colores[0].Blue = color.Blue;
+                            }
+                            if (color.Blue < colores[1].Blue)
+                            {
+                                colores[1].Blue = color.Blue;
+                            }
+
+                            // Se comprueba con el maximo y minimo verde
+                            if (color.Green > colores[0].Green)
+                            {
+                                colores[0].Green = color.Green;
+                            }
+                            if (color.Green < colores[1].Green)
+                            {
+                                colores[1].Green = color.Green;
+                            }
+
+                            // Se comprueba con el maximo y minimo rojo
+                            if (color.Red > colores[0].Red)
+                            {
+                                colores[0].Red = color.Red;
+                            }
+                            if (color.Red < colores[1].Red)
+                            {
+                                colores[1].Red = color.Red;
+                            }
+                        }
+                    }
+                }
+
+                // Se obtiene el color intermedio
+                colores[2].Blue = (colores[0].Blue + colores[1].Blue) / 2;
+                colores[2].Green = (colores[0].Green + colores[1].Green) / 2;
+                colores[2].Red = (colores[0].Red + colores[1].Red) / 2;
+
+                return colores;
             }
             catch (Exception exception)
             {

@@ -10,11 +10,14 @@ using System.Windows.Forms;
 using Emgu.CV;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
+using SimuladorV2V.Utilidades;
 
 namespace SimuladorV2V
 {
     public partial class frmPanelPrincipal : Form
     {
+        Capture webCam = null;
+        Image<Bgr, Byte> imgOriginal;
 
         public frmPanelPrincipal()
         {
@@ -25,7 +28,8 @@ namespace SimuladorV2V
         {
             try
             {
-
+                webCam = new Capture();
+                Application.Idle += ProcesarImagen;
             }
             catch (Exception exception)
             {
@@ -37,7 +41,38 @@ namespace SimuladorV2V
         {
             try
             {
+                if (webCam != null)
+                {
+                    webCam.Dispose();
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
 
+        private void ProcesarImagen(object sender, EventArgs e)
+        {
+            try
+            {
+                imgOriginal = webCam.QueryFrame();
+                if (imgOriginal == null)
+                {
+                    return;
+                }
+
+                List<Point> centros = Camara.BuscarCirculos(imgOriginal);
+                if (centros != null && centros.Count > 0)
+                {
+                    Bgr[] colores = Camara.ObtenerColoresMaximoMinimoMedio(imgOriginal, centros[0], 10);
+                    if (colores != null)
+                    {
+                        imgOriginal = Camara.DibujarCirculos(imgOriginal, centros, 100, colores[2]);
+                    }
+                }
+
+                ibCamara.Image = imgOriginal;
             }
             catch (Exception exception)
             {
