@@ -79,6 +79,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Robot.cs" />
+    <Compile Include="Clases\Ruta.cs" />
     <Compile Include="Componentes\ColorTable.cs" />
     <Compile Include="Componentes\MyButton.cs">
       <SubType>Component</SubType>
