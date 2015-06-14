@@ -23,10 +23,23 @@ namespace SimuladorV2V.Clases
         private Bgr color;
         private Bgr colorMaximo;
         private Bgr colorMinimo;
+        private int velocidad;
 
         private Rectangle ultimaReferencia;
         private Ruta ruta;
         private String log;
+
+        public Robot()
+        {
+            this.descripcion = "";
+            this.color = new Bgr(0,0,0);
+            this.modo = MODO_LIBRE;
+            this.colorMaximo = new Bgr(0, 0, 0);
+            this.colorMinimo = new Bgr(0, 0, 0);
+            this.ultimaReferencia = new Rectangle();
+            this.ruta = null;
+            this.log = String.Empty;
+        }
 
         public Robot(String descripcion, Bgr color)
         {
@@ -35,6 +48,7 @@ namespace SimuladorV2V.Clases
             this.modo = MODO_LIBRE;
             this.colorMaximo = new Bgr(0, 0, 0);
             this.colorMinimo = new Bgr(0, 0, 0);
+            this.velocidad = 100;
             this.ultimaReferencia = new Rectangle();
             this.ruta = null;
             this.log = String.Empty;
@@ -69,6 +83,12 @@ namespace SimuladorV2V.Clases
         {
             get { return colorMinimo; }
             set { colorMinimo = value; }
+        }
+
+        public int Velocidad
+        {
+            get { return velocidad; }
+            set { velocidad = value; }
         }
 
         public Rectangle UltimaReferencia
