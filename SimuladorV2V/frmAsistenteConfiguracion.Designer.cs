@@ -444,7 +444,7 @@
             // 
             this.btnVolverYCerrar.ColorTable = office2010Yellow1;
             this.btnVolverYCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverYCerrar.Location = new System.Drawing.Point(681, 16);
+            this.btnVolverYCerrar.Location = new System.Drawing.Point(682, 16);
             this.btnVolverYCerrar.Name = "btnVolverYCerrar";
             this.btnVolverYCerrar.Size = new System.Drawing.Size(80, 30);
             this.btnVolverYCerrar.TabIndex = 8;
@@ -468,6 +468,7 @@
             this.Name = "frmAsistenteConfiguracion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asistente de configuración";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAsistenteConfiguracion_FormClosed);
             this.Load += new System.EventHandler(this.FrmAsistenteConfiguracion_Load);
             this.panIzquierdo.ResumeLayout(false);
             this.panIzquierdo.PerformLayout();

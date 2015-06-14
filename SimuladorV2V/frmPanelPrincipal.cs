@@ -15,6 +15,7 @@ using Emgu.CV.Structure;
 using SimuladorV2V.Utilidades;
 using SimuladorV2V.Interfaces;
 using SimuladorV2V.Clases;
+using SimuladorV2V.Formularios;
 
 namespace SimuladorV2V
 {
@@ -23,6 +24,7 @@ namespace SimuladorV2V
         private Capture webCam = null;
         private Image<Bgr, Byte> imgOriginal;
         private String log;
+        private bool enEjecucion;
 
         public frmPanelPrincipal()
         {
@@ -78,6 +80,8 @@ namespace SimuladorV2V
                     return;
                 }
 
+                imgOriginal = Camara.CorregirPerspectiva(imgOriginal, Globales.ListadoVertices);
+
                 List<Point> centros = Camara.BuscarCirculos(imgOriginal);
                 if (centros != null && centros.Count > 0)
                 {
@@ -101,7 +105,32 @@ namespace SimuladorV2V
         {
             try
             {
+                if (enEjecucion)
+                {
+                    DialogResult resultado = MessageBox.Show("Para añadir un nuevo robot el simulador se detendrá por completo." + Environment.NewLine + "¿Deseas continuar?", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (resultado == DialogResult.Yes)
+                    {
+                        // Se manda mensaje a todos los robots conectados para que se detengan
 
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+
+                // Se detiene la camara
+                if (webCam != null)
+                {
+                    webCam.Dispose();
+                }
+
+                // Se abre el nuevo formulario en modo: Nuevo
+                frmRobot formulario = new frmRobot(null);
+                formulario.ShowDialog(this);
+
+                MessageBox.Show("Añadido");
+                webCam = new Capture();
             }
             catch (Exception exception)
             {

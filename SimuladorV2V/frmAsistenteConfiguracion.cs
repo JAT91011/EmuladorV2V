@@ -40,7 +40,7 @@ namespace SimuladorV2V
             }
         }
 
-        private void FrmAsistenteConfiguracion_FormClosing(object sender, EventArgs e)
+        private void FrmAsistenteConfiguracion_FormClosed(object sender, FormClosedEventArgs e)
         {
             try
             {
