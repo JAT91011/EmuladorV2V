@@ -106,6 +106,12 @@
     <Compile Include="Interfaces\BluetoothObservador.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Temporal\frmBluetoothTester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Temporal\frmBluetoothTester.Designer.cs">
+      <DependentUpon>frmBluetoothTester.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades\Bluetooth.cs" />
     <Compile Include="Utilidades\Camara.cs" />
     <Compile Include="Utilidades\Excepciones.cs" />
@@ -129,6 +135,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Temporal\frmBluetoothTester.resx">
+      <DependentUpon>frmBluetoothTester.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Documentos\Manual.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
