@@ -82,11 +82,28 @@ namespace SimuladorV2V.Utilidades
             }
         }
 
+        public bool EstaConectado()
+        {
+            try
+            {
+                return instancia.puertoSerie.IsOpen;
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError("Bluetooth", new StackTrace().GetFrame(0).GetMethod().Name, exception);
+                return false;
+            }
+        }
+
         private void ProcesarDatos(object sender, SerialDataReceivedEventArgs e)
         {
             try
             {
-                byte[] buffer = new byte[puertoSerie.BytesToRead];
+                String datos = puertoSerie.ReadLine();
+                foreach (BluetoothObservador observador in observadores)
+                {
+                    observador.ObtenerDatos(datos);
+                }
             }
             catch (Exception exception)
             {

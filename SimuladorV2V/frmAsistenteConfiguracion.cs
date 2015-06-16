@@ -202,7 +202,7 @@ namespace SimuladorV2V
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
             }
         }
 
