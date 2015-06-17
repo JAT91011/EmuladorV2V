@@ -83,18 +83,27 @@ namespace SimuladorV2V.Temporal
         {
             try
             {
-                if ( ! Bluetooth.Instancia.EstaConectado())
-                {
-                    MessageBox.Show("Antes debes conectarte a un puerto serie.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                //if ( ! Bluetooth.Instancia.EstaConectado())
+                //{
+                //    MessageBox.Show("Antes debes conectarte a un puerto serie.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return;
+                //}
 
                 if (txtSalida.Text.Trim() == String.Empty)
                 {
                     MessageBox.Show("Introduce un mensaje de salida.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                Bluetooth.Instancia.Enviar(txtSalida.Text.Trim());
+
+                if (txtIdRobot.Text.Trim() == String.Empty)
+                {
+                    MessageBox.Show("Introduce una id.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                txtEntrada.Text += Bluetooth.CrearTrama(int.Parse(txtIdRobot.Text.Trim()), txtSalida.Text);
+
+                Bluetooth.Instancia.Enviar(int.Parse(txtIdRobot.Text.Trim()), txtSalida.Text.Trim());
                 txtSalida.Text = String.Empty;
             }
             catch (Exception exception)
@@ -115,5 +124,32 @@ namespace SimuladorV2V.Temporal
                 Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
             }
         }
+
+        private void txtIdRobot_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    if (Char.IsControl(e.KeyChar))
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
+            }
+        }
+
     }
 }

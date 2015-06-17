@@ -39,6 +39,8 @@
             this.cboVelocidad = new System.Windows.Forms.ComboBox();
             this.btnConectar = new ManiXButton.MyButton();
             this.btnEnviar = new ManiXButton.MyButton();
+            this.lblRobot = new System.Windows.Forms.Label();
+            this.txtIdRobot = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblSalida
@@ -57,7 +59,7 @@
             this.txtSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSalida.Location = new System.Drawing.Point(81, 56);
             this.txtSalida.Name = "txtSalida";
-            this.txtSalida.Size = new System.Drawing.Size(472, 26);
+            this.txtSalida.Size = new System.Drawing.Size(231, 26);
             this.txtSalida.TabIndex = 1;
             // 
             // lblEntrada
@@ -82,6 +84,7 @@
             this.txtEntrada.Size = new System.Drawing.Size(568, 201);
             this.txtEntrada.TabIndex = 4;
             this.txtEntrada.WordWrap = false;
+            this.txtEntrada.TextChanged += new System.EventHandler(this.txtEntrada_TextChanged);
             // 
             // lblPuertoSerie
             // 
@@ -180,12 +183,34 @@
             this.btnEnviar.UseVisualStyleBackColor = true;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
+            // lblRobot
+            // 
+            this.lblRobot.AutoSize = true;
+            this.lblRobot.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRobot.ForeColor = System.Drawing.Color.LightGray;
+            this.lblRobot.Location = new System.Drawing.Point(318, 60);
+            this.lblRobot.Name = "lblRobot";
+            this.lblRobot.Size = new System.Drawing.Size(68, 18);
+            this.lblRobot.TabIndex = 10;
+            this.lblRobot.Text = "Id Robot:";
+            // 
+            // txtIdRobot
+            // 
+            this.txtIdRobot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdRobot.Location = new System.Drawing.Point(400, 56);
+            this.txtIdRobot.Name = "txtIdRobot";
+            this.txtIdRobot.Size = new System.Drawing.Size(153, 26);
+            this.txtIdRobot.TabIndex = 11;
+            this.txtIdRobot.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdRobot_KeyPress);
+            // 
             // frmBluetoothTester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(661, 313);
+            this.Controls.Add(this.txtIdRobot);
+            this.Controls.Add(this.lblRobot);
             this.Controls.Add(this.btnConectar);
             this.Controls.Add(this.cboVelocidad);
             this.Controls.Add(this.lblVelocidad);
@@ -220,5 +245,7 @@
         private System.Windows.Forms.Label lblVelocidad;
         private System.Windows.Forms.ComboBox cboVelocidad;
         private ManiXButton.MyButton btnConectar;
+        private System.Windows.Forms.Label lblRobot;
+        private System.Windows.Forms.TextBox txtIdRobot;
     }
 }

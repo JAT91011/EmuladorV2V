@@ -68,11 +68,11 @@ namespace SimuladorV2V.Utilidades
             }
         }
 
-        public bool Enviar(String mensaje)
+        public bool Enviar(int idRobot, String mensaje)
         {
             try
             {
-                instancia.puertoSerie.Write(mensaje);
+                instancia.puertoSerie.Write(CrearTrama(idRobot, mensaje));
                 return true;
             }
             catch (Exception exception)
@@ -108,6 +108,19 @@ namespace SimuladorV2V.Utilidades
             catch (Exception exception)
             {
                 Excepciones.EscribirError("Bluetooth", new StackTrace().GetFrame(0).GetMethod().Name, exception);
+            }
+        }
+
+        public static String CrearTrama(int idRobot, String mensaje)
+        {
+            try
+            {
+                return "#" + idRobot + "%" + mensaje.Length + "$" + mensaje + ";";
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError("Bluetooth", new StackTrace().GetFrame(0).GetMethod().Name, exception);
+                return "";
             }
         }
 

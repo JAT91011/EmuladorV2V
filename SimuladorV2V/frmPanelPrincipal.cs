@@ -191,7 +191,7 @@ namespace SimuladorV2V
         {
             try
             {
-                Bluetooth.Instancia.Enviar(txtEnviar.Text.Trim());
+                //Bluetooth.Instancia.Enviar(txtEnviar.Text.Trim());
                 txtEnviar.Text = String.Empty;
             }
             catch (Exception exception)

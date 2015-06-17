@@ -17,6 +17,7 @@ namespace SimuladorV2V.Clases
         public static int MODE_RUTA = 1;
         public static int MODE_AVERIADO = 2;
 
+        private int id;
         private String descripcion;
         private int modo;
 
@@ -31,6 +32,7 @@ namespace SimuladorV2V.Clases
 
         public Robot()
         {
+            this.id = 0;
             this.descripcion = "";
             this.color = new Bgr(0,0,0);
             this.modo = MODO_LIBRE;
@@ -41,8 +43,9 @@ namespace SimuladorV2V.Clases
             this.log = String.Empty;
         }
 
-        public Robot(String descripcion, Bgr color)
+        public Robot(int id, String descripcion, Bgr color)
         {
+            this.id = id;
             this.descripcion = descripcion;
             this.color = color;
             this.modo = MODO_LIBRE;
@@ -55,6 +58,12 @@ namespace SimuladorV2V.Clases
         }
 
         #region Metodos Get y Set
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
         public string Descripcion
         {
             get { return descripcion; }
