@@ -19,6 +19,6 @@ namespace SimuladorV2V
             Application.Run(new frmBluetoothTester());
             //Application.Run(new frmAsistenteConfiguracion());
             //Application.Run(new frmPanelPrincipal());
-        }
+        } 
     }
 }

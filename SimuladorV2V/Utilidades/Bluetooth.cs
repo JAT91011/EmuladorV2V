@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+
 using SimuladorV2V.Interfaces;
 
 namespace SimuladorV2V.Utilidades
@@ -47,15 +48,16 @@ namespace SimuladorV2V.Utilidades
                 instancia.puertoSerie.DataBits = 8;
 
                 // Se configura el tiempo de espera si una operacion de lectura no finaliza
-                instancia.puertoSerie.ReadTimeout = 2000;
+                instancia.puertoSerie.ReadTimeout = 3000;
 
                 // Se configura el tiempo de espera si una operación de escritura no finaliza
-                instancia.puertoSerie.WriteTimeout = 2000;
+                instancia.puertoSerie.WriteTimeout = 3000;
 
                 // Se abre el puerto serie
                 instancia.puertoSerie.Open();
 
-                // Se establece el método que actuará cuando ser reciban datos 
+                // Se establece el método que actuará cuando ser reciban datos
+                System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = false;
                 instancia.puertoSerie.DataReceived += new SerialDataReceivedEventHandler(ProcesarDatos);
 
                 // Se devuelve si se ha abierto
@@ -99,8 +101,12 @@ namespace SimuladorV2V.Utilidades
         {
             try
             {
-                String datos = puertoSerie.ReadLine();
-                foreach (BluetoothObservador observador in observadores)
+                String datos = "";
+                while (instancia.puertoSerie.BytesToRead > 0)
+                {
+                    datos += Convert.ToChar(instancia.puertoSerie.ReadByte());
+                }
+                foreach (BluetoothObservador observador in instancia.observadores)
                 {
                     observador.ObtenerDatos(datos);
                 }
@@ -115,7 +121,7 @@ namespace SimuladorV2V.Utilidades
         {
             try
             {
-                return "#" + idRobot + "%" + mensaje.Length + "$" + mensaje + ";";
+                return "#" + idRobot + "%" + Utilidades.LlenarString(mensaje.Length.ToString(), '0', 2, "Integer") + "$" + mensaje + ";";
             }
             catch (Exception exception)
             {

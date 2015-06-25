@@ -116,6 +116,7 @@
     <Compile Include="Utilidades\Camara.cs" />
     <Compile Include="Utilidades\Excepciones.cs" />
     <Compile Include="Utilidades\Globales.cs" />
+    <Compile Include="Utilidades\Utilidades.cs" />
     <EmbeddedResource Include="Formularios\frmRobot.resx">
       <DependentUpon>frmRobot.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +213,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

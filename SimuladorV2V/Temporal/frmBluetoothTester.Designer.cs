@@ -84,7 +84,6 @@
             this.txtEntrada.Size = new System.Drawing.Size(568, 201);
             this.txtEntrada.TabIndex = 4;
             this.txtEntrada.WordWrap = false;
-            this.txtEntrada.TextChanged += new System.EventHandler(this.txtEntrada_TextChanged);
             // 
             // lblPuertoSerie
             // 
@@ -227,6 +226,7 @@
             this.Name = "frmBluetoothTester";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bluetooth";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmBluetoothTester_FormClosed);
             this.Load += new System.EventHandler(this.frmBluetoothTester_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

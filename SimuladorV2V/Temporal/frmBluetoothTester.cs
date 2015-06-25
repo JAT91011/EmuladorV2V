@@ -83,11 +83,11 @@ namespace SimuladorV2V.Temporal
         {
             try
             {
-                //if ( ! Bluetooth.Instancia.EstaConectado())
-                //{
-                //    MessageBox.Show("Antes debes conectarte a un puerto serie.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    return;
-                //}
+                if (!Bluetooth.Instancia.EstaConectado())
+                {
+                    MessageBox.Show("Antes debes conectarte a un puerto serie.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 if (txtSalida.Text.Trim() == String.Empty)
                 {
@@ -101,7 +101,7 @@ namespace SimuladorV2V.Temporal
                     return;
                 }
 
-                txtEntrada.Text += Bluetooth.CrearTrama(int.Parse(txtIdRobot.Text.Trim()), txtSalida.Text);
+                txtEntrada.Text += "--> " + Bluetooth.CrearTrama(int.Parse(txtIdRobot.Text.Trim()), txtSalida.Text) + Environment.NewLine;
 
                 Bluetooth.Instancia.Enviar(int.Parse(txtIdRobot.Text.Trim()), txtSalida.Text.Trim());
                 txtSalida.Text = String.Empty;
@@ -117,7 +117,7 @@ namespace SimuladorV2V.Temporal
         {
             try
             {
-                txtEntrada.Text += datos;
+                txtEntrada.Text += "<-- " + datos + Environment.NewLine;
             }
             catch (Exception exception)
             {
@@ -144,6 +144,18 @@ namespace SimuladorV2V.Temporal
                         e.Handled = true;
                     }
                 }
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
+            }
+        }
+
+        private void frmBluetoothTester_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            try
+            {
+                Application.Exit();
             }
             catch (Exception exception)
             {
