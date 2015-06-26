@@ -34,7 +34,7 @@ namespace SimuladorV2V.Temporal
                 {
                     cboPuertoSerie.SelectedIndex = 0;
                 }
-                cboVelocidad.SelectedIndex = 0;
+                cboVelocidad.SelectedIndex = 9;
             }
             catch (Exception exception)
             {
