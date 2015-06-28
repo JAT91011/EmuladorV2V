@@ -84,16 +84,16 @@
     <Compile Include="Componentes\MyButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="frmAsistenteConfiguracion.cs">
+    <Compile Include="Formularios\frmAsistenteConfiguracion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAsistenteConfiguracion.Designer.cs">
+    <Compile Include="Formularios\frmAsistenteConfiguracion.Designer.cs">
       <DependentUpon>frmAsistenteConfiguracion.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPanelPrincipal.cs">
+    <Compile Include="Formularios\frmPanelPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPanelPrincipal.Designer.cs">
+    <Compile Include="Formularios\frmPanelPrincipal.Designer.cs">
       <DependentUpon>frmPanelPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\BluetoothObservador.cs" />
@@ -110,10 +110,10 @@
     <Compile Include="Utilidades\Excepciones.cs" />
     <Compile Include="Utilidades\Globales.cs" />
     <Compile Include="Utilidades\Utilidades.cs" />
-    <EmbeddedResource Include="frmAsistenteConfiguracion.resx">
+    <EmbeddedResource Include="Formularios\frmAsistenteConfiguracion.resx">
       <DependentUpon>frmAsistenteConfiguracion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPanelPrincipal.resx">
+    <EmbeddedResource Include="Formularios\frmPanelPrincipal.resx">
       <DependentUpon>frmPanelPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
