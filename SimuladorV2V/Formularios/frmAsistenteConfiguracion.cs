@@ -48,7 +48,7 @@ namespace SimuladorV2V
                 {
                     webCam.Dispose();
                 }
-                Application.Exit();
+                //Application.Exit();
             }
             catch (Exception exception)
             {
@@ -287,8 +287,8 @@ namespace SimuladorV2V
                         break;
                     case 4:
                         this.Close();
-                        frmPanelPrincipal frmPrincipal = new frmPanelPrincipal();
-                        frmPrincipal.Show();
+                        //frmPanelPrincipal frmPrincipal = new frmPanelPrincipal();
+                        //frmPrincipal.Show();
                         break;
                 }
 

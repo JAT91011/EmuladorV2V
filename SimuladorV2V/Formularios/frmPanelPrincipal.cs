@@ -79,17 +79,26 @@ namespace SimuladorV2V
                     return;
                 }
 
-                imgOriginal = Camara.CorregirPerspectiva(imgOriginal, Globales.ListadoVertices);
+                //imgOriginal = Camara.CorregirPerspectiva(imgOriginal, Globales.ListadoVertices);
 
                 List<Point> centros = Camara.BuscarCirculos(imgOriginal);
-                if (centros != null && centros.Count > 0)
-                {
-                    Bgr[] colores = Camara.ObtenerColoresMaximoMinimoMedio(imgOriginal, centros[0], 10);
+                foreach (Point centro in centros) {
+                    Bgr[] colores = Camara.ObtenerColoresMaximoMinimoMedio(imgOriginal, centro, 10);
                     if (colores != null)
                     {
-                        imgOriginal = Camara.DibujarCirculos(imgOriginal, centros, 100, colores[2]);
+                        List<Point> centrosAux = new List<Point>();
+                        centrosAux.Add(centro);
+                        imgOriginal = Camara.DibujarCirculos(imgOriginal, centrosAux, 100, colores[2]);
                     }
                 }
+                //if (centros != null && centros.Count > 0)
+                //{
+                //    Bgr[] colores = Camara.ObtenerColoresMaximoMinimoMedio(imgOriginal, centros[0], 10);
+                //    if (colores != null)
+                //    {
+                //        imgOriginal = Camara.DibujarCirculos(imgOriginal, centros, 100, colores[2]);
+                //    }
+                //}
 
                 pbCamara.Image = imgOriginal.Bitmap;
             }
