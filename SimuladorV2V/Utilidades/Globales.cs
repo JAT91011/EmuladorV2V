@@ -22,9 +22,6 @@ namespace SimuladorV2V.Utilidades
         // ROBOTS
         public static List<Robot> ListadoRobots = new List<Robot>();
 
-        // RUTAS
-        public static List<Ruta> ListadoRutas = new List<Ruta>();
-
         // BLUETOOTH
         public static String PuertoSerie = String.Empty;
         public static int VelocidadTransmision = 0;

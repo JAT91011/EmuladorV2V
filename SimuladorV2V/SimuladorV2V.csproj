@@ -84,12 +84,6 @@
     <Compile Include="Componentes\MyButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Formularios\frmRobot.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmRobot.Designer.cs">
-      <DependentUpon>frmRobot.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmAsistenteConfiguracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,9 +110,6 @@
     <Compile Include="Utilidades\Excepciones.cs" />
     <Compile Include="Utilidades\Globales.cs" />
     <Compile Include="Utilidades\Utilidades.cs" />
-    <EmbeddedResource Include="Formularios\frmRobot.resx">
-      <DependentUpon>frmRobot.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmAsistenteConfiguracion.resx">
       <DependentUpon>frmAsistenteConfiguracion.cs</DependentUpon>
     </EmbeddedResource>

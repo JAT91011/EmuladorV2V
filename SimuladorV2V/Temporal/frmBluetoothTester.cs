@@ -35,6 +35,7 @@ namespace SimuladorV2V.Temporal
                     cboPuertoSerie.SelectedIndex = 0;
                 }
                 cboVelocidad.SelectedIndex = 9;
+                Bluetooth.Instancia.NuevoObservador(this);
             }
             catch (Exception exception)
             {
@@ -64,8 +65,6 @@ namespace SimuladorV2V.Temporal
                     MessageBox.Show("No se ha podido establecer la comunicación con el módulo bluetooth.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-
-                Bluetooth.Instancia.NuevoObservador(this);
 
                 MessageBox.Show("Conectado correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

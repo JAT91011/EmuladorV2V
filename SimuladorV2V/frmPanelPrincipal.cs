@@ -15,7 +15,6 @@ using Emgu.CV.Structure;
 using SimuladorV2V.Utilidades;
 using SimuladorV2V.Interfaces;
 using SimuladorV2V.Clases;
-using SimuladorV2V.Formularios;
 
 namespace SimuladorV2V
 {
@@ -124,10 +123,6 @@ namespace SimuladorV2V
                 {
                     webCam.Dispose();
                 }
-
-                // Se abre el nuevo formulario en modo: Nuevo
-                frmRobot formulario = new frmRobot(null);
-                formulario.ShowDialog(this);
 
                 MessageBox.Show("Añadido");
                 webCam = new Capture();

@@ -16,8 +16,8 @@ namespace SimuladorV2V
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmBluetoothTester());
-            //Application.Run(new frmAsistenteConfiguracion());
+            //Application.Run(new frmBluetoothTester());
+            Application.Run(new frmAsistenteConfiguracion());
             //Application.Run(new frmPanelPrincipal());
         } 
     }
