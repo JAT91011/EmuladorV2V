@@ -12,11 +12,11 @@ using System.Windows.Forms;
 using Emgu.CV;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
-using SimuladorV2V.Utilidades;
-using SimuladorV2V.Interfaces;
-using SimuladorV2V.Clases;
+using EmuladorV2I.Utilidades;
+using EmuladorV2I.Interfaces;
+using EmuladorV2I.Clases;
 
-namespace SimuladorV2V
+namespace EmuladorV2I
 {
     public partial class frmPanelPrincipal : Form, BluetoothObservador
     {
@@ -75,7 +75,7 @@ namespace SimuladorV2V
                 imgOriginal = webCam.QueryFrame();
                 if (imgOriginal == null)
                 {
-                    pbCamara.Image = SimuladorV2V.Properties.Resources.no_camera;
+                    pbCamara.Image = EmuladorV2I.Properties.Resources.no_camera;
                     return;
                 }
 
@@ -158,7 +158,7 @@ namespace SimuladorV2V
         {
             try
             {
-
+                MessageBox.Show("Esta funcionalidad aun no está disponible.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception exception)
             {

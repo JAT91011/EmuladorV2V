@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EmuladorV2I.Program" Collapsed="true">
+    <Position X="8" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EmuladorV2I.Utilidades.Utilidades">
+    <Position X="11" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utilidades\Utilidades.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EmuladorV2I.frmAsistenteConfiguracion" Collapsed="true">
+    <Position X="10.25" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAQgCRMECGAwAUQAMgDBCiACECADAQcAQYAAAkASiAA=</HashCode>
+      <FileName>Formularios\frmAsistenteConfiguracion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EmuladorV2I.Clases.Robot">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AABCQACAAwIAAAECBAEACAQBAAgAAACAAAAAgAAARgA=</HashCode>
+      <FileName>Clases\Robot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EmuladorV2I.Utilidades.Bluetooth">
+    <Position X="8" Y="4.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAgAgAAAAAAAAAAAAAAARAAAQIEAAAGAgA=</HashCode>
+      <FileName>Utilidades\Bluetooth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EmuladorV2I.Utilidades.Camara">
+    <Position X="11.25" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAQAAAAAAgACAAAAABAAACAEAAA=</HashCode>
+      <FileName>Utilidades\Camara.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EmuladorV2I.Utilidades.Excepciones">
+    <Position X="10" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Utilidades\Excepciones.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EmuladorV2I.Utilidades.Globales">
+    <Position X="7.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ACACAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAAAEQBAAA=</HashCode>
+      <FileName>Utilidades\Globales.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EmuladorV2I.frmPanelPrincipal">
+    <Position X="5.5" Y="3" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ASCBiAYMCCAAAEgAEQCACAACCAAJIEBQAJAAEMggAEA=</HashCode>
+      <FileName>Formularios\frmPanelPrincipal.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="EmuladorV2I.Interfaces.BluetoothObservador">
+    <Position X="4.75" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\BluetoothObservador.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,4 +1,4 @@
-﻿namespace SimuladorV2V.Temporal
+﻿namespace EmuladorV2I.Test
 {
     partial class frmBluetoothTester
     {

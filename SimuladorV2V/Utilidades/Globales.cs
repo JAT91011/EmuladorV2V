@@ -5,19 +5,19 @@ using System.Text;
 using Emgu.CV;
 using Emgu.CV.Structure;
 using System.Drawing;
-using SimuladorV2V.Clases;
+using EmuladorV2I.Clases;
 
-namespace SimuladorV2V.Utilidades
+namespace EmuladorV2I.Utilidades
 {
     public static class Globales
     {
         // CIRCUITO
-        public static Image<Bgr, Byte> imgCircuito = null;
+        public static Image<Bgr, Byte> ImagenCircuito = null;
         public static List<Point> ListadoVertices = null;
 
-        // PUNTOS DE REFERENCIA
-        public static int Margen = 30;
-        public static List<Rectangle> ListadoIntersecciones = new List<Rectangle>();
+        // BIFURCACIONES
+        public static int MargenBifurcaciones = 30;
+        public static List<Rectangle> ListadoBifurcaciones = new List<Rectangle>();
 
         // ROBOTS
         public static List<Robot> ListadoRobots = new List<Robot>();

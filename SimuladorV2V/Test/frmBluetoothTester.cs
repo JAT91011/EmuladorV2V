@@ -9,10 +9,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using SimuladorV2V.Utilidades;
-using SimuladorV2V.Interfaces;
+using EmuladorV2I.Utilidades;
+using EmuladorV2I.Interfaces;
 
-namespace SimuladorV2V.Temporal
+namespace EmuladorV2I.Test
 {
     public partial class frmBluetoothTester : Form, BluetoothObservador
     {

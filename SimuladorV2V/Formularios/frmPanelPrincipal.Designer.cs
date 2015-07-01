@@ -1,4 +1,4 @@
-﻿namespace SimuladorV2V
+﻿namespace EmuladorV2I
 {
     partial class frmPanelPrincipal
     {
@@ -78,7 +78,7 @@
             // 
             // btnIniciarParar
             // 
-            this.btnIniciarParar.Image = global::SimuladorV2V.Properties.Resources.play_icon;
+            this.btnIniciarParar.Image = global::EmuladorV2I.Properties.Resources.play_icon;
             this.btnIniciarParar.Location = new System.Drawing.Point(156, 12);
             this.btnIniciarParar.Name = "btnIniciarParar";
             this.btnIniciarParar.Size = new System.Drawing.Size(42, 42);
@@ -88,7 +88,7 @@
             // 
             // btnRutas
             // 
-            this.btnRutas.Image = global::SimuladorV2V.Properties.Resources.route_icon;
+            this.btnRutas.Image = global::EmuladorV2I.Properties.Resources.route_icon;
             this.btnRutas.Location = new System.Drawing.Point(108, 12);
             this.btnRutas.Name = "btnRutas";
             this.btnRutas.Size = new System.Drawing.Size(42, 42);
@@ -98,7 +98,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Image = global::SimuladorV2V.Properties.Resources.delete_icon;
+            this.btnEliminar.Image = global::EmuladorV2I.Properties.Resources.delete_icon;
             this.btnEliminar.Location = new System.Drawing.Point(60, 12);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(42, 42);
@@ -109,7 +109,7 @@
             // btnNuevo
             // 
             this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
-            this.btnNuevo.BackgroundImage = global::SimuladorV2V.Properties.Resources.add_icon;
+            this.btnNuevo.BackgroundImage = global::EmuladorV2I.Properties.Resources.add_icon;
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnNuevo.Location = new System.Drawing.Point(12, 12);
             this.btnNuevo.Name = "btnNuevo";

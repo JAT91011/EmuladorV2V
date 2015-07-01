@@ -13,7 +13,7 @@ using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
 
 
-namespace SimuladorV2V.Utilidades
+namespace EmuladorV2I.Utilidades
 {
     public static class Camara
     {

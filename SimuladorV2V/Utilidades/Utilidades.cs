@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 
-namespace SimuladorV2V.Utilidades
+namespace EmuladorV2I.Utilidades
 {
     public static class Utilidades
     {

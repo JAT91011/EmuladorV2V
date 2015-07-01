@@ -7,9 +7,9 @@ using System.Drawing;
 using Emgu.CV;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
-using SimuladorV2V.Utilidades;
+using EmuladorV2I.Utilidades;
 
-namespace SimuladorV2V.Clases
+namespace EmuladorV2I.Clases
 {
     public class Robot
     {

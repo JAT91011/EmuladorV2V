@@ -7,8 +7,8 @@
     <ProjectGuid>{23C41549-5F44-4415-82F4-04435FBF35BF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SimuladorV2V</RootNamespace>
-    <AssemblyName>SimuladorV2V</AssemblyName>
+    <RootNamespace>EmuladorV2I</RootNamespace>
+    <AssemblyName>EmuladorV2I</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Robot.cs" />
+    <Compile Include="Clases\Ruta.cs" />
     <Compile Include="Componentes\ColorTable.cs" />
     <Compile Include="Componentes\MyButton.cs">
       <SubType>Component</SubType>
@@ -105,6 +106,12 @@
     <Compile Include="Test\frmBluetoothTester.Designer.cs">
       <DependentUpon>frmBluetoothTester.cs</DependentUpon>
     </Compile>
+    <Compile Include="Test\frmProcesamientoDeImagen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\frmProcesamientoDeImagen.Designer.cs">
+      <DependentUpon>frmProcesamientoDeImagen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades\Bluetooth.cs" />
     <Compile Include="Utilidades\Camara.cs" />
     <Compile Include="Utilidades\Excepciones.cs" />
@@ -129,6 +136,10 @@
     <EmbeddedResource Include="Test\frmBluetoothTester.resx">
       <DependentUpon>frmBluetoothTester.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Test\frmProcesamientoDeImagen.resx">
+      <DependentUpon>frmProcesamientoDeImagen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DiagramaDeClases.cd" />
     <None Include="Documentos\Manual.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

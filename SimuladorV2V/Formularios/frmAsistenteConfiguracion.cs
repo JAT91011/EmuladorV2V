@@ -12,9 +12,9 @@ using System.Windows.Forms;
 using Emgu.CV;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
-using SimuladorV2V.Utilidades;
+using EmuladorV2I.Utilidades;
 
-namespace SimuladorV2V
+namespace EmuladorV2I
 {
     public partial class frmAsistenteConfiguracion : Form
     {
@@ -105,8 +105,8 @@ namespace SimuladorV2V
                         lblReferencias.ForeColor = Color.White;
                         lblComunicacion.ForeColor = Color.LightGray;
                         lblCompletado.ForeColor = Color.LightGray;
-                        Globales.ListadoIntersecciones = new List<Rectangle>();
-                        ibCircuito.Image = Globales.imgCircuito;
+                        Globales.ListadoBifurcaciones = new List<Rectangle>();
+                        ibCircuito.Image = Globales.ImagenCircuito;
                         lblTitulo.Text = "Referencias";
                         panBienvenido.Visible = false;
                         panCircuito.Visible = false;
@@ -174,7 +174,7 @@ namespace SimuladorV2V
                 if (Globales.ListadoVertices != null && Globales.ListadoVertices.Count == 4)
                 {
                     Globales.ListadoVertices = Camara.ReordenarPuntos(Globales.ListadoVertices);
-                    Globales.imgCircuito = Camara.CorregirPerspectiva(imgOriginal, Globales.ListadoVertices);
+                    Globales.ImagenCircuito = Camara.CorregirPerspectiva(imgOriginal, Globales.ListadoVertices);
                     imgOriginal = Camara.DibujarRectangulo(imgOriginal, Globales.ListadoVertices);
                 }
 
@@ -334,34 +334,34 @@ namespace SimuladorV2V
                 MouseEventArgs evento = (MouseEventArgs)e;
                 Point punto = new Point(evento.X, evento.Y);
                 // Se comprueba que no se haya seleccionado ninguna referencia
-                for (int i = 0; i < Globales.ListadoIntersecciones.Count; i++)
+                for (int i = 0; i < Globales.ListadoBifurcaciones.Count; i++)
                 {
-                    if (Globales.ListadoIntersecciones[i].Contains(punto))
+                    if (Globales.ListadoBifurcaciones[i].Contains(punto))
                     {
-                        Globales.ListadoIntersecciones.RemoveAt(i);
-                        ibCircuito.Image = Camara.DibujarRectangulos(Globales.imgCircuito.Clone(), Globales.ListadoIntersecciones);
+                        Globales.ListadoBifurcaciones.RemoveAt(i);
+                        ibCircuito.Image = Camara.DibujarRectangulos(Globales.ImagenCircuito.Clone(), Globales.ListadoBifurcaciones);
                         return;
                     }
                 }
 
                 // Se comprueba que no se salga de la imagen
-                if (punto.X - Globales.Margen / 2 > 0 && punto.X + Globales.Margen / 2 < 640 && punto.Y - Globales.Margen / 2 > 0 && punto.Y - Globales.Margen / 2 < 480)
+                if (punto.X - Globales.MargenBifurcaciones / 2 > 0 && punto.X + Globales.MargenBifurcaciones / 2 < 640 && punto.Y - Globales.MargenBifurcaciones / 2 > 0 && punto.Y - Globales.MargenBifurcaciones / 2 < 480)
                 {
                     // Se crea el rectangulo
-                    Rectangle rectangulo = new Rectangle(new Point(punto.X - Globales.Margen / 2, punto.Y - Globales.Margen / 2), new Size(Globales.Margen, Globales.Margen));
+                    Rectangle rectangulo = new Rectangle(new Point(punto.X - Globales.MargenBifurcaciones / 2, punto.Y - Globales.MargenBifurcaciones / 2), new Size(Globales.MargenBifurcaciones, Globales.MargenBifurcaciones));
 
                     // Se comprueba que no interseccione con los rectangulos existentes
-                    for (int i = 0; i < Globales.ListadoIntersecciones.Count; i++)
+                    for (int i = 0; i < Globales.ListadoBifurcaciones.Count; i++)
                     {
-                        if (rectangulo.IntersectsWith(Globales.ListadoIntersecciones[i]))
+                        if (rectangulo.IntersectsWith(Globales.ListadoBifurcaciones[i]))
                         {
                             return;
                         }
                     }
 
                     // Si no intersecciona con ninguno se añade y se refresca la imagen
-                    Globales.ListadoIntersecciones.Add(rectangulo);
-                    ibCircuito.Image = Camara.DibujarRectangulos(Globales.imgCircuito.Clone(), Globales.ListadoIntersecciones);
+                    Globales.ListadoBifurcaciones.Add(rectangulo);
+                    ibCircuito.Image = Camara.DibujarRectangulos(Globales.ImagenCircuito.Clone(), Globales.ListadoBifurcaciones);
                 }
 
             }

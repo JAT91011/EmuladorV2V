@@ -9,9 +9,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 
-using SimuladorV2V.Interfaces;
+using EmuladorV2I.Interfaces;
 
-namespace SimuladorV2V.Utilidades
+namespace EmuladorV2I.Utilidades
 {
     public class Bluetooth
     {
@@ -135,7 +135,10 @@ namespace SimuladorV2V.Utilidades
         {
             try
             {
-                instancia.observadores.Add(observador);
+                if (!instancia.observadores.Contains(observador))
+                {
+                    instancia.observadores.Add(observador);
+                }
             }
             catch (Exception exception)
             {

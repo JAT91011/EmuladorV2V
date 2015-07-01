@@ -1,4 +1,4 @@
-﻿namespace SimuladorV2V
+﻿namespace EmuladorV2I
 {
     partial class frmAsistenteConfiguracion
     {
@@ -187,7 +187,7 @@
             // 
             // btnRefrescarPuertosSerie
             // 
-            this.btnRefrescarPuertosSerie.Image = global::SimuladorV2V.Properties.Resources.refresh_icon;
+            this.btnRefrescarPuertosSerie.Image = global::EmuladorV2I.Properties.Resources.refresh_icon;
             this.btnRefrescarPuertosSerie.Location = new System.Drawing.Point(792, 31);
             this.btnRefrescarPuertosSerie.Name = "btnRefrescarPuertosSerie";
             this.btnRefrescarPuertosSerie.Size = new System.Drawing.Size(40, 40);
@@ -197,7 +197,7 @@
             // 
             // pbBluetooth
             // 
-            this.pbBluetooth.Image = global::SimuladorV2V.Properties.Resources.bluetooth;
+            this.pbBluetooth.Image = global::EmuladorV2I.Properties.Resources.bluetooth;
             this.pbBluetooth.Location = new System.Drawing.Point(297, 190);
             this.pbBluetooth.Name = "pbBluetooth";
             this.pbBluetooth.Size = new System.Drawing.Size(267, 261);

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimuladorV2V.Interfaces
+namespace EmuladorV2I.Interfaces
 {
     public interface BluetoothObservador
     {

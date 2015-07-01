@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SimuladorV2V.Utilidades
+namespace EmuladorV2I.Utilidades
 {
     public class Excepciones
     {

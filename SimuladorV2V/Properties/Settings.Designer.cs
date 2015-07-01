@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SimuladorV2V.Properties {
+namespace EmuladorV2I.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
