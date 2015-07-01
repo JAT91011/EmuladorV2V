@@ -17,7 +17,6 @@ namespace EmuladorV2I.Clases
         public static int MODE_AVERIADO = 1;
 
         private int id;
-        private String descripcion;
         private int modo;
 
         private Bgr color;
@@ -31,7 +30,6 @@ namespace EmuladorV2I.Clases
         public Robot()
         {
             this.id = 0;
-            this.descripcion = "";
             this.color = new Bgr(0,0,0);
             this.modo = MODO_LIBRE;
             this.colorMaximo = new Bgr(0, 0, 0);
@@ -40,14 +38,13 @@ namespace EmuladorV2I.Clases
             this.log = String.Empty;
         }
 
-        public Robot(int id, String descripcion, Bgr color)
+        public Robot(int id, Bgr colorMaximo, Bgr colorMinimo, Bgr color)
         {
             this.id = id;
-            this.descripcion = descripcion;
             this.color = color;
             this.modo = MODO_LIBRE;
-            this.colorMaximo = new Bgr(0, 0, 0);
-            this.colorMinimo = new Bgr(0, 0, 0);
+            this.colorMaximo = colorMaximo;
+            this.colorMinimo = colorMinimo;
             this.velocidad = 100;
             this.ultimaReferencia = new Rectangle();
             this.log = String.Empty;
@@ -58,12 +55,6 @@ namespace EmuladorV2I.Clases
         {
             get { return id; }
             set { id = value; }
-        }
-
-        public string Descripcion
-        {
-            get { return descripcion; }
-            set { descripcion = value; }
         }
 
         public int Modo

@@ -326,5 +326,17 @@ namespace EmuladorV2I.Utilidades
             }
         }
 
+        public static Boolean ColorEntreColoresMaximoYMinimo(Bgr color, Bgr colorMaximo, Bgr colorMinimo, int margenError)
+        {
+            try
+            {
+                return color.Blue > colorMinimo.Blue - margenError && color.Blue < colorMaximo.Blue + margenError && color.Green > colorMinimo.Green - margenError && color.Green < colorMaximo.Green + margenError && color.Red > colorMinimo.Red - margenError && color.Red < colorMaximo.Red + margenError;
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError("Camara", new StackTrace().GetFrame(0).GetMethod().Name, exception);
+                return false;
+            }
+        }
     }
 }
