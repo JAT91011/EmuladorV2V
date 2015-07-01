@@ -80,7 +80,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Robot.cs" />
-    <Compile Include="Clases\Ruta.cs" />
     <Compile Include="Componentes\ColorTable.cs" />
     <Compile Include="Componentes\MyButton.cs">
       <SubType>Component</SubType>
@@ -114,6 +113,7 @@
     </Compile>
     <Compile Include="Utilidades\Bluetooth.cs" />
     <Compile Include="Utilidades\Camara.cs" />
+    <Compile Include="Utilidades\Comandos.cs" />
     <Compile Include="Utilidades\Excepciones.cs" />
     <Compile Include="Utilidades\Globales.cs" />
     <Compile Include="Utilidades\Utilidades.cs" />

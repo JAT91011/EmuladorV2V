@@ -115,11 +115,39 @@ namespace EmuladorV2I
             {
                 if (enEjecucion)
                 {
-                    DialogResult resultado = MessageBox.Show("Para añadir un nuevo robot el simulador se detendrá por completo." + Environment.NewLine + "¿Deseas continuar?", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult resultado = MessageBox.Show("Para añadir un nuevo robot el emulador se detendrá por completo." + Environment.NewLine + "¿Deseas continuar?", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (resultado == DialogResult.Yes)
                     {
                         // Se manda mensaje a todos los robots conectados para que se detengan
+                        foreach(Robot robot in Globales.ListadoRobots)
+                        {
+                            Bluetooth.Instancia.Enviar(robot.Id, Comandos.STOP);
+                        }
+                        
+                        // Se comprueba si ha recibido alguna petición con un tiempo de espera de 10 segundos
+                        bool recibido = false;
+                        int i = 0;
+                        while(!recibido && i <= 10)
+                        {
+                            String comando = Bluetooth.Instancia.UltimoComando;
+                            if(comando.StartsWith("ON<"))
+                            {
+                                // Se obtiene el id del robot
+                                int id = Convert.ToInt32(comando.Substring(3, 1));
+                                // Se comprueba que no esté ya en el sistema
+                                foreach (Robot robot in Globales.ListadoRobots)
+                                {
+                                    if(robot.Id == id)
+                                    {
+                                        break;
+                                    }
+                                    else
+                                    {
 
+                                    }
+                                }
+                            }
+                        }
                     }
                     else
                     {
@@ -158,7 +186,7 @@ namespace EmuladorV2I
         {
             try
             {
-                MessageBox.Show("Esta funcionalidad aun no está disponible.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Esta funcionalidad aun no está disponible.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception exception)
             {

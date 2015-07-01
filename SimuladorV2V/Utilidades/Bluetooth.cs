@@ -18,11 +18,13 @@ namespace EmuladorV2I.Utilidades
         private static Bluetooth instancia;
         private SerialPort puertoSerie;
         private List<BluetoothObservador> observadores;
+        private String ultimoComando;
 
         private Bluetooth()
         {
             puertoSerie = new SerialPort();
             observadores = new List<BluetoothObservador>();
+            ultimoComando = String.Empty;
         }
 
         public bool Conectar(String puerto, int velocidad)
@@ -106,6 +108,7 @@ namespace EmuladorV2I.Utilidades
                 {
                     datos += Convert.ToChar(instancia.puertoSerie.ReadByte());
                 }
+                ultimoComando = datos;
                 foreach (BluetoothObservador observador in instancia.observadores)
                 {
                     observador.ObtenerDatos(datos);
@@ -170,6 +173,11 @@ namespace EmuladorV2I.Utilidades
             }
         }
         #endregion
+
+        public String UltimoComando
+        {
+            get { return ultimoComando; }
+        }
 
         public static Bluetooth Instancia
         {
