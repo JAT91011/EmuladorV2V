@@ -23,7 +23,6 @@ namespace EmuladorV2I
     {
         private Capture webCam = null;
         private Image<Bgr, Byte> imgOriginal;
-        private String log;
         private bool enEjecucion;
 
         public frmPanelPrincipal()
@@ -79,7 +78,7 @@ namespace EmuladorV2I
                     return;
                 }
 
-                Image <Bgr, Byte> imageCorregida = Camara.CorregirPerspectiva(imgOriginal, Globales.ListadoVertices);
+                //Image <Bgr, Byte> imageCorregida = Camara.CorregirPerspectiva(imgOriginal, Globales.ListadoVertices);
 
                 List<Point> centros = Camara.BuscarCirculos(imgOriginal);
                 foreach (Point centro in centros) {
@@ -88,7 +87,7 @@ namespace EmuladorV2I
                     {
                         List<Point> centrosAux = new List<Point>();
                         centrosAux.Add(centro);
-                        imgOriginal = Camara.DibujarCirculos(imageCorregida, centrosAux, 100, colores[2]);
+                        imgOriginal = Camara.DibujarCirculos(imgOriginal, centrosAux, 100, colores[2]);
                     }
                 }
                 //if (centros != null && centros.Count > 0)
@@ -100,7 +99,7 @@ namespace EmuladorV2I
                 //    }
                 //}
 
-                pbCamara.Image = imageCorregida.Bitmap;
+                pbCamara.Image = imgOriginal.Bitmap;
             }
             catch (Exception exception)
             {
@@ -263,18 +262,6 @@ namespace EmuladorV2I
             }
         }
 
-        private void btnRutas_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                MessageBox.Show("Esta funcionalidad aun no está disponible.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception exception)
-            {
-                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
-            }
-        }
-
         private void btnIniciarParar_Click(object sender, EventArgs e)
         {
             try
@@ -302,41 +289,14 @@ namespace EmuladorV2I
         #endregion
 
         #region Eventos
-        private void cboMensajes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                ActualizarConsola();
-            }
-            catch (Exception exception)
-            {
-                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
-            }
-        }
-
-        #endregion
-
-        #region Actualizar Campos
-        
-        private void ActualizarConsola()
-        {
-            try
-            {
-                textBoxConsola.Text = log;   
-            }
-            catch (Exception exception)
-            {
-                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
-            }
-        }
+ 
         #endregion
 
         public void ObtenerDatos(string datos)
         {
             try
             {
-                log += datos;
-                ActualizarConsola();
+                
             } 
             catch (Exception exception)
             {
@@ -370,7 +330,6 @@ namespace EmuladorV2I
                 if(comando != String.Empty)
                 {
                     Bluetooth.Instancia.Enviar(id, Comandos.STOP);
-                    log += DateTime.Now + "Enviado: " + Bluetooth.CrearTrama(id, Comandos.STOP) + Environment.NewLine;
                 }
                 String respuestaObtenida = String.Empty;
                 if(respuestaEsperada != String.Empty)
@@ -382,7 +341,6 @@ namespace EmuladorV2I
                         if (respuestaEsperada == ultimoComando || ultimoComando.StartsWith(respuestaEsperada))
                         {
                             respuestaObtenida = ultimoComando;
-                            log += DateTime.Now + "Recibido: " + ultimoComando + Environment.NewLine;
                         } else {
                             i++;
                             Thread.Sleep(1000);
@@ -395,6 +353,61 @@ namespace EmuladorV2I
             {
                 Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
                 return String.Empty;
+            }
+        }
+
+
+        #region Menu
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Se para el hilo de GET de los robots
+                panRobots.Visible = false;
+                panCamara.Visible = true;
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
+            }
+        }
+        #endregion
+
+        private void btnRobots_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Se inicia el hilo de GET de los robots
+                panCamara.Visible = false;
+                panRobots.Visible = true;
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
+            }
+        }
+
+        private void btnRutas_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show("Esta funcionalidad aun no está disponible.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
+            }
+        }
+
+        private void btnAjustes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Se para el hilo de GET de los robots
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
             }
         }
     }

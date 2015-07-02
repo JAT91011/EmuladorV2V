@@ -12,5 +12,9 @@ namespace EmuladorV2I.Utilidades
     public static class Comandos
     {
         public static String STOP = "STOP";
+        public static String OK = "OK";
+        public static String MODE_FREE = "MODE_FREE";
+        public static String MODE_BROKEN = "MODE_BROKEN";
+        public static String OFF = "OFF";
     }
 }
