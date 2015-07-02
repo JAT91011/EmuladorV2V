@@ -18,7 +18,7 @@ namespace EmuladorV2I
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmBluetoothTester());
             //Application.Run(new frmProcesamientoDeImagen());
-            //Application.Run(new frmAsistenteConfiguracion());
+            Application.Run(new frmAsistenteConfiguracion());
             Application.Run(new frmPanelPrincipal());
         } 
     }

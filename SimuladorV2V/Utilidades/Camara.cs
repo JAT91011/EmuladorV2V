@@ -260,6 +260,23 @@ namespace EmuladorV2I.Utilidades
             }
         }
 
+        public static Image<Bgr, Byte> DibujarCirculos(Image<Bgr, Byte> imgOriginal, List<CircleF> listadoCirculos)
+        {
+            try
+            {
+                foreach (CircleF circulo in listadoCirculos)
+                {
+                    imgOriginal.Draw(circulo, new Bgr(255, 0, 0), 3);
+                }
+                return imgOriginal;
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError("Camara", new StackTrace().GetFrame(0).GetMethod().Name, exception);
+                return null;
+            }
+        }
+
         public static Bgr[] ObtenerColoresMaximoMinimoMedio(Image<Bgr, Byte> imagen, Point punto, int margen)
         {
             try

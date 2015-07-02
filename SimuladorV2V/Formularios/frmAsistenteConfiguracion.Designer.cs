@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsistenteConfiguracion));
-            ManiXButton.Office2010Yellow office2010Yellow1 = new ManiXButton.Office2010Yellow();
+            ManiXButton.Office2010Yellow office2010Yellow2 = new ManiXButton.Office2010Yellow();
             this.panIzquierdo = new System.Windows.Forms.Panel();
             this.pbIcono = new System.Windows.Forms.PictureBox();
             this.lblCompletado = new System.Windows.Forms.Label();
             this.lblComunicacion = new System.Windows.Forms.Label();
-            this.lblReferencias = new System.Windows.Forms.Label();
+            this.lblIntersecciones = new System.Windows.Forms.Label();
             this.lblCircuito = new System.Windows.Forms.Label();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.panDerecho = new System.Windows.Forms.Panel();
@@ -82,7 +82,7 @@
             this.panIzquierdo.Controls.Add(this.pbIcono);
             this.panIzquierdo.Controls.Add(this.lblCompletado);
             this.panIzquierdo.Controls.Add(this.lblComunicacion);
-            this.panIzquierdo.Controls.Add(this.lblReferencias);
+            this.panIzquierdo.Controls.Add(this.lblIntersecciones);
             this.panIzquierdo.Controls.Add(this.lblCircuito);
             this.panIzquierdo.Controls.Add(this.lblBienvenido);
             this.panIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
@@ -122,16 +122,16 @@
             this.lblComunicacion.TabIndex = 3;
             this.lblComunicacion.Text = "Comunicación";
             // 
-            // lblReferencias
+            // lblIntersecciones
             // 
-            this.lblReferencias.AutoSize = true;
-            this.lblReferencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReferencias.ForeColor = System.Drawing.Color.LightGray;
-            this.lblReferencias.Location = new System.Drawing.Point(25, 270);
-            this.lblReferencias.Name = "lblReferencias";
-            this.lblReferencias.Size = new System.Drawing.Size(106, 20);
-            this.lblReferencias.TabIndex = 2;
-            this.lblReferencias.Text = "Referencias";
+            this.lblIntersecciones.AutoSize = true;
+            this.lblIntersecciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIntersecciones.ForeColor = System.Drawing.Color.LightGray;
+            this.lblIntersecciones.Location = new System.Drawing.Point(25, 270);
+            this.lblIntersecciones.Name = "lblIntersecciones";
+            this.lblIntersecciones.Size = new System.Drawing.Size(127, 20);
+            this.lblIntersecciones.TabIndex = 2;
+            this.lblIntersecciones.Text = "Intersecciones";
             // 
             // lblCircuito
             // 
@@ -412,24 +412,24 @@
             // 
             // btnSiguienteYTerminar
             // 
-            office2010Yellow1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Yellow1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Yellow1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Yellow1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Yellow1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Yellow1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Yellow1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
-            office2010Yellow1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
-            office2010Yellow1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
-            office2010Yellow1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
-            office2010Yellow1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Yellow1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Yellow1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Yellow1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Yellow1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Yellow1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Yellow1.TextColor = System.Drawing.Color.Black;
-            this.btnSiguienteYTerminar.ColorTable = office2010Yellow1;
+            office2010Yellow2.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Yellow2.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Yellow2.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Yellow2.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Yellow2.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Yellow2.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Yellow2.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
+            office2010Yellow2.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
+            office2010Yellow2.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
+            office2010Yellow2.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
+            office2010Yellow2.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Yellow2.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Yellow2.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Yellow2.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Yellow2.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Yellow2.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Yellow2.TextColor = System.Drawing.Color.Black;
+            this.btnSiguienteYTerminar.ColorTable = office2010Yellow2;
             this.btnSiguienteYTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguienteYTerminar.Location = new System.Drawing.Point(771, 16);
             this.btnSiguienteYTerminar.Name = "btnSiguienteYTerminar";
@@ -442,7 +442,7 @@
             // 
             // btnVolverYCerrar
             // 
-            this.btnVolverYCerrar.ColorTable = office2010Yellow1;
+            this.btnVolverYCerrar.ColorTable = office2010Yellow2;
             this.btnVolverYCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolverYCerrar.Location = new System.Drawing.Point(682, 16);
             this.btnVolverYCerrar.Name = "btnVolverYCerrar";
@@ -496,7 +496,7 @@
         private System.Windows.Forms.Panel panDerecho;
         private System.Windows.Forms.Label lblCompletado;
         private System.Windows.Forms.Label lblComunicacion;
-        private System.Windows.Forms.Label lblReferencias;
+        private System.Windows.Forms.Label lblIntersecciones;
         private System.Windows.Forms.Label lblCircuito;
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.Panel panBotonera;

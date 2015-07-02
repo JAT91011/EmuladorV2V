@@ -16,8 +16,8 @@ namespace EmuladorV2I.Utilidades
         public static List<Point> ListadoVertices = null;
 
         // BIFURCACIONES
-        public static int MargenBifurcaciones = 30;
-        public static List<Rectangle> ListadoBifurcaciones = new List<Rectangle>();
+        public static int RadioIntersecciones = 30;
+        public static List<CircleF> ListadoIntersecciones = new List<CircleF>();
 
         // ROBOTS
         public static List<Robot> ListadoRobots = new List<Robot>();

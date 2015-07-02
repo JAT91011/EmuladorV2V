@@ -250,17 +250,7 @@ namespace EmuladorV2I
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-            }
-            catch (Exception exception)
-            {
-                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
-            }
-        }
+       
 
         private void btnIniciarParar_Click(object sender, EventArgs e)
         {
@@ -371,8 +361,7 @@ namespace EmuladorV2I
                 Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
             }
         }
-        #endregion
-
+        
         private void btnRobots_Click(object sender, EventArgs e)
         {
             try
@@ -410,5 +399,8 @@ namespace EmuladorV2I
                 Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
             }
         }
+        #endregion
+
+        
     }
 }

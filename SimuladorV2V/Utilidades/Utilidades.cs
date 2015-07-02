@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using Emgu.CV.Structure;
 
 namespace EmuladorV2I.Utilidades
 {
@@ -52,6 +53,20 @@ namespace EmuladorV2I.Utilidades
             {
                 Excepciones.EscribirError("Utilidades", new StackTrace().GetFrame(0).GetMethod().Name, exception);
                 return null;
+            }
+        }
+    
+        public static Boolean CirculoContienePunto(CircleF circulo, Point punto)
+        {
+            try
+            {
+                //(x - center_x)^2 + (y - center_y)^2 < radius^2
+                return  Math.Pow(punto.X - circulo.Center.X, 2) +  Math.Pow(punto.Y - circulo.Center.Y, 2) <  Math.Pow(circulo.Radius, 2);
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError("Utilidades", new StackTrace().GetFrame(0).GetMethod().Name, exception);
+                return true;
             }
         }
     }
