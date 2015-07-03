@@ -22,10 +22,8 @@ namespace EmuladorV2I.Clases
         private Bgr color;
         private Bgr colorMaximo;
         private Bgr colorMinimo;
-        private int velocidad;
 
         private Rectangle ultimaReferencia;
-        private String log;
 
         public Robot()
         {
@@ -35,7 +33,6 @@ namespace EmuladorV2I.Clases
             this.colorMaximo = new Bgr(0, 0, 0);
             this.colorMinimo = new Bgr(0, 0, 0);
             this.ultimaReferencia = new Rectangle();
-            this.log = String.Empty;
         }
 
         public Robot(int id, Bgr colorMaximo, Bgr colorMinimo, Bgr color)
@@ -45,9 +42,7 @@ namespace EmuladorV2I.Clases
             this.modo = MODO_LIBRE;
             this.colorMaximo = colorMaximo;
             this.colorMinimo = colorMinimo;
-            this.velocidad = 100;
             this.ultimaReferencia = new Rectangle();
-            this.log = String.Empty;
         }
 
         #region Metodos Get y Set
@@ -81,22 +76,10 @@ namespace EmuladorV2I.Clases
             set { colorMinimo = value; }
         }
 
-        public int Velocidad
-        {
-            get { return velocidad; }
-            set { velocidad = value; }
-        }
-
         public Rectangle UltimaReferencia
         {
             get { return ultimaReferencia; }
             set { ultimaReferencia = value; }
-        }
-
-        public String Log
-        {
-            get { return log; }
-            set { log = value; }
         }
         #endregion
     }

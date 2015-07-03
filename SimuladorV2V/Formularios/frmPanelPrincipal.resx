@@ -117,19 +117,415 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="IdRobot.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pbCamara.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="pbCamara.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pbCamara.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 58</value>
+  </data>
+  <data name="pbCamara.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="pbCamara.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>2000, 2000</value>
+  </data>
+  <data name="pbCamara.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>640, 480</value>
+  </data>
+  <data name="pbCamara.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="pbCamara.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1125, 480</value>
+  </data>
+  <data name="pbCamara.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pbCamara.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pbCamara.Name" xml:space="preserve">
+    <value>pbCamara</value>
+  </data>
+  <data name="&gt;&gt;pbCamara.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbCamara.Parent" xml:space="preserve">
+    <value>panCamara</value>
+  </data>
+  <data name="&gt;&gt;pbCamara.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chkIntersecciones.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="chkIntersecciones.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkIntersecciones.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="chkIntersecciones.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkIntersecciones.Location" type="System.Drawing.Point, System.Drawing">
+    <value>973, 18</value>
+  </data>
+  <data name="chkIntersecciones.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 22</value>
+  </data>
+  <data name="chkIntersecciones.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="chkIntersecciones.Text" xml:space="preserve">
+    <value>Mostrar intersecciones</value>
+  </data>
+  <data name="&gt;&gt;chkIntersecciones.Name" xml:space="preserve">
+    <value>chkIntersecciones</value>
+  </data>
+  <data name="&gt;&gt;chkIntersecciones.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkIntersecciones.Parent" xml:space="preserve">
+    <value>panBotoneraCamara</value>
+  </data>
+  <data name="&gt;&gt;chkIntersecciones.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chkCorregirPerspectiva.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="chkCorregirPerspectiva.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkCorregirPerspectiva.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="chkCorregirPerspectiva.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkCorregirPerspectiva.Location" type="System.Drawing.Point, System.Drawing">
+    <value>807, 18</value>
+  </data>
+  <data name="chkCorregirPerspectiva.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 22</value>
+  </data>
+  <data name="chkCorregirPerspectiva.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="chkCorregirPerspectiva.Text" xml:space="preserve">
+    <value>Corregir perspectiva</value>
+  </data>
+  <data name="&gt;&gt;chkCorregirPerspectiva.Name" xml:space="preserve">
+    <value>chkCorregirPerspectiva</value>
+  </data>
+  <data name="&gt;&gt;chkCorregirPerspectiva.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkCorregirPerspectiva.Parent" xml:space="preserve">
+    <value>panBotoneraCamara</value>
+  </data>
+  <data name="&gt;&gt;chkCorregirPerspectiva.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnEliminar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="btnEliminar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnEliminar.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnEliminar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnEliminar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 3</value>
+  </data>
+  <data name="btnEliminar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 42</value>
+  </data>
+  <data name="btnEliminar.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnEliminar.Text" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="btnEliminar.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnEliminar.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnEliminar.Name" xml:space="preserve">
+    <value>btnEliminar</value>
+  </data>
+  <data name="&gt;&gt;btnEliminar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnEliminar.Parent" xml:space="preserve">
+    <value>panBotoneraCamara</value>
+  </data>
+  <data name="&gt;&gt;btnEliminar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnIniciarParar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnIniciarParar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 3</value>
+  </data>
+  <data name="btnIniciarParar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 42</value>
+  </data>
+  <data name="btnIniciarParar.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnIniciarParar.Name" xml:space="preserve">
+    <value>btnIniciarParar</value>
+  </data>
+  <data name="&gt;&gt;btnIniciarParar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnIniciarParar.Parent" xml:space="preserve">
+    <value>panBotoneraCamara</value>
+  </data>
+  <data name="&gt;&gt;btnIniciarParar.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnNuevo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="btnNuevo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnNuevo.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnNuevo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnNuevo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 3</value>
+  </data>
+  <data name="btnNuevo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 42</value>
+  </data>
+  <data name="btnNuevo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnNuevo.Text" xml:space="preserve">
+    <value>Nuevo</value>
+  </data>
+  <data name="btnNuevo.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnNuevo.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnNuevo.Name" xml:space="preserve">
+    <value>btnNuevo</value>
+  </data>
+  <data name="&gt;&gt;btnNuevo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNuevo.Parent" xml:space="preserve">
+    <value>panBotoneraCamara</value>
+  </data>
+  <data name="&gt;&gt;btnNuevo.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panBotoneraCamara.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panBotoneraCamara.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panBotoneraCamara.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1163, 50</value>
+  </data>
+  <data name="panBotoneraCamara.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panBotoneraCamara.Name" xml:space="preserve">
+    <value>panBotoneraCamara</value>
+  </data>
+  <data name="&gt;&gt;panBotoneraCamara.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panBotoneraCamara.Parent" xml:space="preserve">
+    <value>panCamara</value>
+  </data>
+  <data name="&gt;&gt;panBotoneraCamara.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panCamara.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panCamara.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panCamara.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1163, 493</value>
+  </data>
+  <data name="panCamara.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panCamara.Name" xml:space="preserve">
+    <value>panCamara</value>
+  </data>
+  <data name="&gt;&gt;panCamara.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panCamara.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panCamara.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="colId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Descripcion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="colId.HeaderText" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <metadata name="colDescripcion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Modo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="colDescripcion.HeaderText" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <metadata name="colModo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Bateria.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="colModo.HeaderText" xml:space="preserve">
+    <value>Modo</value>
+  </data>
+  <metadata name="colTemperatura.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Temperatura.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="colTemperatura.HeaderText" xml:space="preserve">
+    <value>Temperatura</value>
+  </data>
+  <metadata name="colBateria.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="colBateria.HeaderText" xml:space="preserve">
+    <value>Batería</value>
+  </data>
+  <metadata name="colQuitar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colQuitar.HeaderText" xml:space="preserve">
+    <value>Quitar</value>
+  </data>
+  <data name="gvRobots.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 3</value>
+  </data>
+  <data name="gvRobots.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1125, 140</value>
+  </data>
+  <data name="gvRobots.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gvRobots.Name" xml:space="preserve">
+    <value>gvRobots</value>
+  </data>
+  <data name="&gt;&gt;gvRobots.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gvRobots.Parent" xml:space="preserve">
+    <value>panRobots</value>
+  </data>
+  <data name="&gt;&gt;gvRobots.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panRobots.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="panRobots.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 493</value>
+  </data>
+  <data name="panRobots.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1163, 150</value>
+  </data>
+  <data name="panRobots.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panRobots.Name" xml:space="preserve">
+    <value>panRobots</value>
+  </data>
+  <data name="&gt;&gt;panRobots.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panRobots.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panRobots.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1163, 643</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Emulador V2I</value>
+  </data>
+  <data name="&gt;&gt;colId.Name" xml:space="preserve">
+    <value>colId</value>
+  </data>
+  <data name="&gt;&gt;colId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colDescripcion.Name" xml:space="preserve">
+    <value>colDescripcion</value>
+  </data>
+  <data name="&gt;&gt;colDescripcion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colModo.Name" xml:space="preserve">
+    <value>colModo</value>
+  </data>
+  <data name="&gt;&gt;colModo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewComboBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colTemperatura.Name" xml:space="preserve">
+    <value>colTemperatura</value>
+  </data>
+  <data name="&gt;&gt;colTemperatura.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colBateria.Name" xml:space="preserve">
+    <value>colBateria</value>
+  </data>
+  <data name="&gt;&gt;colBateria.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colQuitar.Name" xml:space="preserve">
+    <value>colQuitar</value>
+  </data>
+  <data name="&gt;&gt;colQuitar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmPanelPrincipal</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

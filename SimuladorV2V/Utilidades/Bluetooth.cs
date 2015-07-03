@@ -108,10 +108,10 @@ namespace EmuladorV2I.Utilidades
                 {
                     datos += Convert.ToChar(instancia.puertoSerie.ReadByte());
                 }
-                ultimoComando = datos;
+                ultimoComando = datos.Substring(3, datos.Length - 3);
                 foreach (BluetoothObservador observador in instancia.observadores)
                 {
-                    observador.ObtenerDatos(datos);
+                    observador.ObtenerDatos(ultimoComando);
                 }
             }
             catch (Exception exception)

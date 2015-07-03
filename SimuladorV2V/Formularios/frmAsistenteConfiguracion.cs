@@ -123,7 +123,7 @@ namespace EmuladorV2I
                         Globales.PuertoSerie = String.Empty;
                         Globales.VelocidadTransmision = 0;
                         CargarPuertosSerie();
-                        cboVelocidadTransmision.SelectedIndex = 0;
+                        cboVelocidadTransmision.SelectedIndex = 9;
                         lblBienvenido.ForeColor = Color.LightGray;
                         lblCircuito.ForeColor = Color.LightGray;
                         lblIntersecciones.ForeColor = Color.LightGray;

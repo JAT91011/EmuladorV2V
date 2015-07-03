@@ -28,215 +28,108 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPanelPrincipal));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panIzquierdo = new System.Windows.Forms.Panel();
-            this.btnAjustes = new System.Windows.Forms.Button();
-            this.btnInicio = new System.Windows.Forms.Button();
-            this.btnRutas = new System.Windows.Forms.Button();
-            this.btnRobots = new System.Windows.Forms.Button();
-            this.btnIniciarParar = new System.Windows.Forms.Button();
             this.panCamara = new System.Windows.Forms.Panel();
             this.panBotoneraCamara = new System.Windows.Forms.Panel();
-            this.pbCamara = new System.Windows.Forms.PictureBox();
+            this.chkIntersecciones = new System.Windows.Forms.CheckBox();
+            this.chkCorregirPerspectiva = new System.Windows.Forms.CheckBox();
             this.panRobots = new System.Windows.Forms.Panel();
-            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.pbCamara = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnIniciarParar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.gvRobots = new System.Windows.Forms.DataGridView();
-            this.IdRobot = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Modo = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Bateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Temperatura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panIzquierdo.SuspendLayout();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colModo = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colTemperatura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colQuitar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panCamara.SuspendLayout();
             this.panBotoneraCamara.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCamara)).BeginInit();
             this.panRobots.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCamara)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvRobots)).BeginInit();
             this.SuspendLayout();
             // 
-            // panIzquierdo
-            // 
-            this.panIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.panIzquierdo.Controls.Add(this.btnAjustes);
-            this.panIzquierdo.Controls.Add(this.btnInicio);
-            this.panIzquierdo.Controls.Add(this.btnRutas);
-            this.panIzquierdo.Controls.Add(this.btnRobots);
-            this.panIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panIzquierdo.Location = new System.Drawing.Point(0, 0);
-            this.panIzquierdo.Name = "panIzquierdo";
-            this.panIzquierdo.Size = new System.Drawing.Size(210, 661);
-            this.panIzquierdo.TabIndex = 0;
-            // 
-            // btnAjustes
-            // 
-            this.btnAjustes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAjustes.Image = global::EmuladorV2I.Properties.Resources.settings_icon;
-            this.btnAjustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAjustes.Location = new System.Drawing.Point(15, 225);
-            this.btnAjustes.Name = "btnAjustes";
-            this.btnAjustes.Size = new System.Drawing.Size(180, 42);
-            this.btnAjustes.TabIndex = 4;
-            this.btnAjustes.Text = "Configuración";
-            this.btnAjustes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAjustes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAjustes.UseCompatibleTextRendering = true;
-            this.btnAjustes.UseVisualStyleBackColor = true;
-            this.btnAjustes.Click += new System.EventHandler(this.btnAjustes_Click);
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.Image = global::EmuladorV2I.Properties.Resources.webcam_icon;
-            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.Location = new System.Drawing.Point(15, 60);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(180, 42);
-            this.btnInicio.TabIndex = 2;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInicio.UseCompatibleTextRendering = true;
-            this.btnInicio.UseVisualStyleBackColor = true;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-            // 
-            // btnRutas
-            // 
-            this.btnRutas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRutas.Image = global::EmuladorV2I.Properties.Resources.route_icon;
-            this.btnRutas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRutas.Location = new System.Drawing.Point(15, 170);
-            this.btnRutas.Name = "btnRutas";
-            this.btnRutas.Size = new System.Drawing.Size(180, 42);
-            this.btnRutas.TabIndex = 2;
-            this.btnRutas.Text = "Rutas";
-            this.btnRutas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRutas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRutas.UseCompatibleTextRendering = true;
-            this.btnRutas.UseVisualStyleBackColor = true;
-            this.btnRutas.Click += new System.EventHandler(this.btnRutas_Click);
-            // 
-            // btnRobots
-            // 
-            this.btnRobots.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRobots.Image = global::EmuladorV2I.Properties.Resources.car_icon;
-            this.btnRobots.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRobots.Location = new System.Drawing.Point(15, 115);
-            this.btnRobots.Name = "btnRobots";
-            this.btnRobots.Size = new System.Drawing.Size(180, 42);
-            this.btnRobots.TabIndex = 1;
-            this.btnRobots.Text = "Robots";
-            this.btnRobots.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRobots.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRobots.UseCompatibleTextRendering = true;
-            this.btnRobots.UseVisualStyleBackColor = true;
-            this.btnRobots.Click += new System.EventHandler(this.btnRobots_Click);
-            // 
-            // btnIniciarParar
-            // 
-            this.btnIniciarParar.Image = global::EmuladorV2I.Properties.Resources.play_icon;
-            this.btnIniciarParar.Location = new System.Drawing.Point(16, 3);
-            this.btnIniciarParar.Name = "btnIniciarParar";
-            this.btnIniciarParar.Size = new System.Drawing.Size(42, 42);
-            this.btnIniciarParar.TabIndex = 3;
-            this.btnIniciarParar.UseVisualStyleBackColor = true;
-            this.btnIniciarParar.Click += new System.EventHandler(this.btnIniciarParar_Click);
-            // 
             // panCamara
             // 
-            this.panCamara.Controls.Add(this.panBotoneraCamara);
             this.panCamara.Controls.Add(this.pbCamara);
-            this.panCamara.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panCamara.Location = new System.Drawing.Point(210, 0);
+            this.panCamara.Controls.Add(this.panBotoneraCamara);
+            resources.ApplyResources(this.panCamara, "panCamara");
             this.panCamara.Name = "panCamara";
-            this.panCamara.Size = new System.Drawing.Size(919, 661);
-            this.panCamara.TabIndex = 1;
             // 
             // panBotoneraCamara
             // 
+            this.panBotoneraCamara.Controls.Add(this.chkIntersecciones);
+            this.panBotoneraCamara.Controls.Add(this.chkCorregirPerspectiva);
+            this.panBotoneraCamara.Controls.Add(this.btnEliminar);
             this.panBotoneraCamara.Controls.Add(this.btnIniciarParar);
-            this.panBotoneraCamara.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panBotoneraCamara.Location = new System.Drawing.Point(0, 611);
+            this.panBotoneraCamara.Controls.Add(this.btnNuevo);
+            resources.ApplyResources(this.panBotoneraCamara, "panBotoneraCamara");
             this.panBotoneraCamara.Name = "panBotoneraCamara";
-            this.panBotoneraCamara.Size = new System.Drawing.Size(919, 50);
-            this.panBotoneraCamara.TabIndex = 1;
             // 
-            // pbCamara
+            // chkIntersecciones
             // 
-            this.pbCamara.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbCamara.Location = new System.Drawing.Point(0, 0);
-            this.pbCamara.Name = "pbCamara";
-            this.pbCamara.Size = new System.Drawing.Size(919, 661);
-            this.pbCamara.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCamara.TabIndex = 0;
-            this.pbCamara.TabStop = false;
+            resources.ApplyResources(this.chkIntersecciones, "chkIntersecciones");
+            this.chkIntersecciones.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.chkIntersecciones.Name = "chkIntersecciones";
+            this.chkIntersecciones.UseVisualStyleBackColor = true;
+            // 
+            // chkCorregirPerspectiva
+            // 
+            resources.ApplyResources(this.chkCorregirPerspectiva, "chkCorregirPerspectiva");
+            this.chkCorregirPerspectiva.Checked = true;
+            this.chkCorregirPerspectiva.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkCorregirPerspectiva.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.chkCorregirPerspectiva.Name = "chkCorregirPerspectiva";
+            this.chkCorregirPerspectiva.UseVisualStyleBackColor = true;
             // 
             // panRobots
             // 
-            this.panRobots.Controls.Add(this.progressBar);
-            this.panRobots.Controls.Add(this.btnEliminar);
-            this.panRobots.Controls.Add(this.btnNuevo);
+            this.panRobots.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.panRobots.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panRobots.Controls.Add(this.gvRobots);
-            this.panRobots.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panRobots.Location = new System.Drawing.Point(210, 0);
+            resources.ApplyResources(this.panRobots, "panRobots");
             this.panRobots.Name = "panRobots";
-            this.panRobots.Size = new System.Drawing.Size(919, 661);
-            this.panRobots.TabIndex = 1;
             // 
-            // progressBar
+            // pbCamara
             // 
-            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar.Location = new System.Drawing.Point(6, 627);
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(906, 31);
-            this.progressBar.TabIndex = 3;
+            resources.ApplyResources(this.pbCamara, "pbCamara");
+            this.pbCamara.Name = "pbCamara";
+            this.pbCamara.TabStop = false;
             // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.btnEliminar, "btnEliminar");
             this.btnEliminar.Image = global::EmuladorV2I.Properties.Resources.delete_icon;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(112, 12);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(100, 32);
-            this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // btnIniciarParar
+            // 
+            this.btnIniciarParar.Image = global::EmuladorV2I.Properties.Resources.play_icon;
+            resources.ApplyResources(this.btnIniciarParar, "btnIniciarParar");
+            this.btnIniciarParar.Name = "btnIniciarParar";
+            this.btnIniciarParar.UseVisualStyleBackColor = true;
+            this.btnIniciarParar.Click += new System.EventHandler(this.btnIniciarParar_Click);
             // 
             // btnNuevo
             // 
             this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
-            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.btnNuevo, "btnNuevo");
             this.btnNuevo.Image = global::EmuladorV2I.Properties.Resources.add_icon;
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(6, 12);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(100, 32);
-            this.btnNuevo.TabIndex = 0;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // gvRobots
             // 
             this.gvRobots.AllowUserToAddRows = false;
-            this.gvRobots.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gvRobots.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -247,80 +140,72 @@
             this.gvRobots.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gvRobots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvRobots.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdRobot,
-            this.Descripcion,
-            this.Modo,
-            this.Bateria,
-            this.Temperatura});
-            this.gvRobots.Location = new System.Drawing.Point(6, 60);
+            this.colId,
+            this.colDescripcion,
+            this.colModo,
+            this.colTemperatura,
+            this.colBateria,
+            this.colQuitar});
+            resources.ApplyResources(this.gvRobots, "gvRobots");
             this.gvRobots.Name = "gvRobots";
-            this.gvRobots.Size = new System.Drawing.Size(906, 561);
-            this.gvRobots.TabIndex = 1;
-            // 
-            // IdRobot
-            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdRobot.DefaultCellStyle = dataGridViewCellStyle2;
-            this.IdRobot.HeaderText = "ID";
-            this.IdRobot.MaxInputLength = 3;
-            this.IdRobot.Name = "IdRobot";
-            this.IdRobot.ReadOnly = true;
-            this.IdRobot.Width = 60;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvRobots.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             // 
-            // Descripcion
+            // colId
             // 
-            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Descripcion.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Descripcion.FillWeight = 200F;
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
+            resources.ApplyResources(this.colId, "colId");
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
             // 
-            // Modo
+            // colDescripcion
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Modo.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Modo.HeaderText = "Modo";
-            this.Modo.Items.AddRange(new object[] {
+            resources.ApplyResources(this.colDescripcion, "colDescripcion");
+            this.colDescripcion.Name = "colDescripcion";
+            // 
+            // colModo
+            // 
+            resources.ApplyResources(this.colModo, "colModo");
+            this.colModo.Items.AddRange(new object[] {
             "Libre",
             "Averiado"});
-            this.Modo.Name = "Modo";
+            this.colModo.Name = "colModo";
             // 
-            // Bateria
+            // colTemperatura
             // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bateria.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Bateria.HeaderText = "Batería";
-            this.Bateria.Name = "Bateria";
-            this.Bateria.ReadOnly = true;
+            resources.ApplyResources(this.colTemperatura, "colTemperatura");
+            this.colTemperatura.Name = "colTemperatura";
             // 
-            // Temperatura
+            // colBateria
             // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Temperatura.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Temperatura.HeaderText = "Temperatura";
-            this.Temperatura.Name = "Temperatura";
-            this.Temperatura.ReadOnly = true;
+            resources.ApplyResources(this.colBateria, "colBateria");
+            this.colBateria.Name = "colBateria";
+            // 
+            // colQuitar
+            // 
+            resources.ApplyResources(this.colQuitar, "colQuitar");
+            this.colQuitar.Name = "colQuitar";
             // 
             // frmPanelPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1129, 661);
-            this.Controls.Add(this.panRobots);
             this.Controls.Add(this.panCamara);
-            this.Controls.Add(this.panIzquierdo);
+            this.Controls.Add(this.panRobots);
             this.Name = "frmPanelPrincipal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Emulador V2I";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPanelPrincipal_Load);
-            this.panIzquierdo.ResumeLayout(false);
             this.panCamara.ResumeLayout(false);
             this.panBotoneraCamara.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbCamara)).EndInit();
+            this.panBotoneraCamara.PerformLayout();
             this.panRobots.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbCamara)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvRobots)).EndInit();
             this.ResumeLayout(false);
 
@@ -328,24 +213,21 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panIzquierdo;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnIniciarParar;
-        private System.Windows.Forms.Button btnRutas;
         private System.Windows.Forms.PictureBox pbCamara;
-        private System.Windows.Forms.Button btnInicio;
-        private System.Windows.Forms.Button btnRobots;
-        private System.Windows.Forms.Button btnAjustes;
         private System.Windows.Forms.Panel panCamara;
         private System.Windows.Forms.Panel panRobots;
-        private System.Windows.Forms.DataGridView gvRobots;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Panel panBotoneraCamara;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdRobot;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Modo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bateria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Temperatura;
-        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.CheckBox chkCorregirPerspectiva;
+        private System.Windows.Forms.CheckBox chkIntersecciones;
+        private System.Windows.Forms.DataGridView gvRobots;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescripcion;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colModo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTemperatura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBateria;
+        private System.Windows.Forms.DataGridViewButtonColumn colQuitar;
     }
 }

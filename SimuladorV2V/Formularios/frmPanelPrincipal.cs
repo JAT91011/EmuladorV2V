@@ -23,6 +23,7 @@ namespace EmuladorV2I
     {
         private Capture webCam = null;
         private Image<Bgr, Byte> imgOriginal;
+        private DataTable dtRobots;
         private bool enEjecucion;
 
         public frmPanelPrincipal()
@@ -37,14 +38,18 @@ namespace EmuladorV2I
                 try
                 {
                     webCam = new Capture();
+                    webCam.SetCaptureProperty(CAP_PROP.CV_CAP_PROP_FRAME_WIDTH, 640);
+                    webCam.SetCaptureProperty(CAP_PROP.CV_CAP_PROP_FRAME_HEIGHT, 480);
                 }  
                 catch (Exception exception)
                 {
                     MessageBox.Show("No hay ninguna cámara conectada. Revisa las conexiones.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     String error = exception.Message;
-                }    
+                }
+                dtRobots = new DataTable();
                 Application.Idle += ProcesarImagen;
                 Bluetooth.Instancia.NuevoObservador(this);
+                enEjecucion = false;
             }
             catch (Exception exception)
             {
@@ -77,29 +82,36 @@ namespace EmuladorV2I
                     pbCamara.Image = EmuladorV2I.Properties.Resources.no_camera;
                     return;
                 }
-
-                //Image <Bgr, Byte> imageCorregida = Camara.CorregirPerspectiva(imgOriginal, Globales.ListadoVertices);
-
-                List<Point> centros = Camara.BuscarCirculos(imgOriginal);
-                foreach (Point centro in centros) {
-                    Bgr[] colores = Camara.ObtenerColoresMaximoMinimoMedio(imgOriginal, centro, 10);
+                
+                List<CircleF> circulos = Camara.BuscarCirculos(imgOriginal);
+                foreach (CircleF circulo in circulos)
+                {
+                    Bgr[] colores = Camara.ObtenerColoresMaximoMinimoMedio(imgOriginal, new Point((int)circulo.Center.X, (int)circulo.Center.Y), 10);
                     if (colores != null)
                     {
-                        List<Point> centrosAux = new List<Point>();
-                        centrosAux.Add(centro);
-                        imgOriginal = Camara.DibujarCirculos(imgOriginal, centrosAux, 100, colores[2]);
+                        imgOriginal = Camara.DibujarCirculo(imgOriginal, new CircleF(new PointF(circulo.Center.X, circulo.Center.Y), circulo.Radius + 5), colores[2]);
                     }
                 }
-                //if (centros != null && centros.Count > 0)
-                //{
-                //    Bgr[] colores = Camara.ObtenerColoresMaximoMinimoMedio(imgOriginal, centros[0], 10);
-                //    if (colores != null)
-                //    {
-                //        imgOriginal = Camara.DibujarCirculos(imgOriginal, centros, 100, colores[2]);
-                //    }
-                //}
 
-                pbCamara.Image = imgOriginal.Bitmap;
+                // Se visualizan las intersecciones
+                if (chkIntersecciones.Checked)
+                {
+                    foreach (CircleF interseccion in Globales.ListadoIntersecciones)
+                    {
+                        imgOriginal = Camara.DibujarCirculos(imgOriginal, Globales.ListadoIntersecciones);
+                    }
+                }
+
+                // Se corrige la perspectiva
+                if (chkCorregirPerspectiva.Checked)
+                {
+                    Image<Bgr, Byte> imagenCorregida = Camara.CorregirPerspectiva(imgOriginal, Globales.ListadoVertices);
+                    pbCamara.Image = imagenCorregida.Bitmap;
+                }
+                else
+                {
+                    pbCamara.Image = imgOriginal.Bitmap;
+                }
             }
             catch (Exception exception)
             {
@@ -108,6 +120,42 @@ namespace EmuladorV2I
         }
 
         #region Botones
+
+        private void btnIniciarParar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(enEjecucion)
+                {
+                    if(DetenerRobots())
+                    {
+                        enEjecucion = false;
+                        btnIniciarParar.Image = Properties.Resources.pause_icon;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un error al detener la plataforma.");
+                    }
+                }
+                else
+                {
+                    if (ArrancarRobots())
+                    {
+                        enEjecucion = true;
+                        btnIniciarParar.Image = Properties.Resources.play_icon;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un error al arrancar la plataforma.");
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
+            }
+        }
+
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             try
@@ -123,7 +171,6 @@ namespace EmuladorV2I
                     }
 
                     // Se comprueba que estén todos detenidos
-                    
                     if (!DetenerRobots())
                     {
                         MessageBox.Show("Ha ocurrido un error al detener los robots.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -194,12 +241,12 @@ namespace EmuladorV2I
                     reintentar = true;
                     while (reintentar)
                     {
-                        List<Point> centrosCirculos = Camara.BuscarCirculos(imgOriginal);
+                        List<CircleF> circulos = Camara.BuscarCirculos(imgOriginal);
                         Boolean encontrado = false;
-                        foreach (Point centro in centrosCirculos)
+                        foreach (CircleF circulo in circulos)
                         {
                             // Se obtiene el color medio de cada circulo
-                            colorMaximoMinimoMedio = Camara.ObtenerColoresMaximoMinimoMedio(imgOriginal, centro, 10);
+                            colorMaximoMinimoMedio = Camara.ObtenerColoresMaximoMinimoMedio(imgOriginal, new Point((int)circulo.Center.X, (int)circulo.Center.Y), 10);
                             Boolean robotExistente = false;
                             foreach (Robot robot in Globales.ListadoRobots)
                             {
@@ -250,20 +297,6 @@ namespace EmuladorV2I
             }
         }
 
-       
-
-        private void btnIniciarParar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-            }
-            catch (Exception exception)
-            {
-                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
-            }
-        }
-
         private void btnBorrarTexto_Click(object sender, EventArgs e)
         {
             try
@@ -286,7 +319,93 @@ namespace EmuladorV2I
         {
             try
             {
-                
+                if(datos.StartsWith("ON<"))
+                {
+                    // Hay algún robot intentando conectarse
+
+                    // Se obtiene el id del robot
+                    int id = Convert.ToInt32(datos.Substring(3, 1));
+
+                    DialogResult resultado = MessageBox.Show("Hay un robot intentando conectarse al sistema." + Environment.NewLine + "¿Deseas incorporarlo?", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (resultado != DialogResult.Yes)
+                    {
+                        // Si no, se le avisa para que pare
+                        Bluetooth.Instancia.Enviar(id, "ERR");
+                        return;
+                    }
+
+
+                    // Se avisa para colocarlo en el emulador
+                    DialogResult resultado2 = MessageBox.Show("Coloca el nuevo robot en el emulador y pulsa Ok.", "Información", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (resultado2 == DialogResult.Cancel)
+                    {
+                        // Si no, se le avisa para que desconecte
+                        Bluetooth.Instancia.Enviar(id, "ERR");
+                        return;
+                    }
+
+                    // Se busca en el emulador
+                    Bgr[] colorMaximoMinimoMedio = null;
+                    Boolean reintentar = true;
+                    while (reintentar)
+                    {
+                        List<CircleF> circulos = Camara.BuscarCirculos(imgOriginal);
+                        Boolean encontrado = false;
+                        foreach (CircleF circulo in circulos)
+                        {
+                            // Se obtiene el color medio de cada circulo
+                            colorMaximoMinimoMedio = Camara.ObtenerColoresMaximoMinimoMedio(imgOriginal, new Point((int)circulo.Center.X, (int)circulo.Center.Y), 10);
+                            Boolean robotExistente = false;
+                            foreach (Robot robot in Globales.ListadoRobots)
+                            {
+                                // Se comprueba que no exista ningun robot con ese color
+                                if (Camara.ColorEntreColoresMaximoYMinimo(colorMaximoMinimoMedio[2], robot.ColorMaximo, robot.ColorMinimo, 50))
+                                {
+                                    robotExistente = true;
+                                    break;
+                                }
+                            }
+                            if (!robotExistente)
+                            {
+                                encontrado = true;
+                                break;
+                            }
+                        }
+
+                        if (!encontrado)
+                        {
+                            // No se ha encontrado ninguno nuevo
+                            if (MessageBox.Show("No se ha encontrado ningun color nuevo. ¿Volver a intentar?", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                reintentar = true;
+                            }
+                            else
+                            {
+                                Bluetooth.Instancia.Enviar(id, "ERR");
+                                MessageBox.Show("No se ha añadido ningun robot.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            // Si se ha encontrado se añade y se inicializan todos
+                            DataRow dr = new DataRow();
+                            dr["colId"] = id;
+                            dr["colDescripcion"] = "";
+                            dr["colModo"] = 0;
+                            dr["colTemperatura"] = 0;
+                            dr["colBateria"] = 0;
+                            string[] row1 = new string[]{"Meatloaf", "Main Dish", boringMeatloaf, boringMeatloafRanking};
+                            gvRobots.Rows.Add(id, ) 
+                            Robot robot = new Robot(id, colorMaximoMinimoMedio[0], colorMaximoMinimoMedio[1], colorMaximoMinimoMedio[2]);
+                            reintentar = false;
+                            Globales.ListadoRobots.Add(robot);
+                            Bluetooth.Instancia.Enviar(id, "OK");
+                           // Bluetooth.Instancia.Enviar(id, Comandos.MODE_FREE);
+                            MessageBox.Show("El nuevo robot se ha añadido correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
             } 
             catch (Exception exception)
             {
@@ -303,6 +422,33 @@ namespace EmuladorV2I
                 foreach (Robot robot in Globales.ListadoRobots)
                 {
                     detenidos = EnviarRecibirDatos(robot.Id, Comandos.STOP, "OK", 5) != String.Empty;
+                }
+                return detenidos;
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
+                return false;
+            }
+        }
+
+        private Boolean ArrancarRobots()
+        {
+            try
+            {
+                // Se arrancan todos los robots del emulador
+                Boolean detenidos = true;
+                foreach (Robot robot in Globales.ListadoRobots)
+                {
+                    if(robot.Modo == Robot.MODO_LIBRE)
+                    {
+                        detenidos = EnviarRecibirDatos(robot.Id, Comandos.MODE_FREE, "OK", 5) != String.Empty;
+                    }
+                    else if (robot.Modo == Robot.MODE_AVERIADO)
+                    {
+                        detenidos = EnviarRecibirDatos(robot.Id, Comandos.MODE_BROKEN, "OK", 5) != String.Empty;
+                    }
+        
                 }
                 return detenidos;
             }

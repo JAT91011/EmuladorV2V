@@ -17,11 +17,11 @@ namespace EmuladorV2I.Utilidades
 {
     public static class Camara
     {
-        public static List<Point> BuscarCirculos(Image<Bgr, Byte> imgOriginal)
+        public static List<CircleF> BuscarCirculos(Image<Bgr, Byte> imgOriginal)
         {
             try
             {
-                List<Point> listadoCirculos = new List<Point>();
+                List<CircleF> listadoCirculos = new List<CircleF>();
 
                 // Se combierte la imagen a escala de grises
                 Image<Gray, Byte> imgGris = imgOriginal.Convert<Gray, Byte>();
@@ -43,7 +43,7 @@ namespace EmuladorV2I.Utilidades
                 // Se obtiene el centro de cada circulo
                 foreach (CircleF circulo in circulos)
                 {
-                    listadoCirculos.Add(new Point((int)circulo.Center.X, (int)circulo.Center.Y));
+                    listadoCirculos.Add(circulo);
                 }
 
                 return listadoCirculos;
@@ -69,6 +69,7 @@ namespace EmuladorV2I.Utilidades
                 imgGris = imgGris.Canny(new Gray(180), new Gray(120));
 
                 // Se buscan los contornos
+                double maxArea = 0;
                 using (MemStorage storage = new MemStorage())
                 {
                     for(Contour<Point> contours = imgGris.FindContours(Emgu.CV.CvEnum.CHAIN_APPROX_METHOD.CV_CHAIN_APPROX_SIMPLE, Emgu.CV.CvEnum.RETR_TYPE.CV_RETR_LIST, storage); contours != null; contours = contours.HNext)
@@ -93,16 +94,20 @@ namespace EmuladorV2I.Utilidades
                             }
                             if (esRectangulo)
                             {
-                                for (int i = 0; i < puntos.Length; i++)
+                                if(maxArea < currentContour.Area)
                                 {
-                                    listadoVertices.Add(puntos[i]);
+                                    maxArea = currentContour.Area;
+                                    listadoVertices.Clear();
+                                    for (int i = 0; i < puntos.Length; i++)
+                                    {
+                                        listadoVertices.Add(puntos[i]);
+                                    }
                                 }
-                                return listadoVertices;
                             }
                         }
                     }          
                 }
-                return null;
+                return listadoVertices;
             }
             catch (Exception exception)
             {
@@ -225,7 +230,21 @@ namespace EmuladorV2I.Utilidades
                 return null;
             }
         }
-        
+
+        public static Image<Bgr, Byte> DibujarCirculo(Image<Bgr, Byte> imgOriginal, CircleF circulo, Bgr color)
+        {
+            try
+            {
+                imgOriginal.Draw(circulo, color, 3);
+                return imgOriginal;
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError("Camara", new StackTrace().GetFrame(0).GetMethod().Name, exception);
+                return null;
+            }
+        }
+
         public static Image<Bgr, Byte> DibujarRectangulos(Image<Bgr, Byte> imgOriginal, List<Rectangle> listadoRectangulos)
         {
             try
@@ -266,7 +285,7 @@ namespace EmuladorV2I.Utilidades
             {
                 foreach (CircleF circulo in listadoCirculos)
                 {
-                    imgOriginal.Draw(circulo, new Bgr(255, 0, 0), 3);
+                    imgOriginal.Draw(circulo, new Bgr(255, 255, 0), 3);
                 }
                 return imgOriginal;
             }
