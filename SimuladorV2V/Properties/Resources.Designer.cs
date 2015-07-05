@@ -113,6 +113,16 @@ namespace EmuladorV2I.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap left_icon {
+            get {
+                object obj = ResourceManager.GetObject("left_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap no_camera {
             get {
                 object obj = ResourceManager.GetObject("no_camera", resourceCulture);
@@ -146,6 +156,16 @@ namespace EmuladorV2I.Properties {
         internal static System.Drawing.Bitmap refresh_icon {
             get {
                 object obj = ResourceManager.GetObject("refresh_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap right_icon {
+            get {
+                object obj = ResourceManager.GetObject("right_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

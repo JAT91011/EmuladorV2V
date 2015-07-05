@@ -97,15 +97,56 @@ namespace EmuladorV2I
                     return;
                 }
                 
-                List<CircleF> circulos = Camara.BuscarCirculos(imgOriginal);
-                foreach (CircleF circulo in circulos)
+                if(robots.Count > 0)
                 {
-                    Bgr[] colores = Camara.ObtenerColoresMaximoMinimoMedio(imgOriginal, new Point((int)circulo.Center.X, (int)circulo.Center.Y), 10);
-                    if (colores != null)
+                    List<CircleF> circulos = Camara.BuscarCirculos(imgOriginal);
+                    foreach (CircleF circulo in circulos)
                     {
-                        imgOriginal = Camara.DibujarCirculo(imgOriginal, new CircleF(new PointF(circulo.Center.X, circulo.Center.Y), circulo.Radius + 5), colores[2]);
+                        Bgr[] colores = Camara.ObtenerColoresMaximoMinimoMedio(imgOriginal, new Point((int)circulo.Center.X, (int)circulo.Center.Y), 20);
+                        if (colores != null)
+                        {
+                            // Se comprueba si es el robot actual para pintarlo
+                            if (Camara.ColorEntreColoresMaximoYMinimo(colores[2], robots[robotSeleccionado].ColorMaximo, robots[robotSeleccionado].ColorMinimo, 20))
+                            {
+                                imgOriginal = Camara.DibujarCirculo(imgOriginal, new CircleF(new PointF(circulo.Center.X, circulo.Center.Y), circulo.Radius + 5), colores[2]);
+                            }
+                            // Se comprueba si hay algún robot dentro de una intersección
+                            foreach (Robot robot in robots)
+                            {
+                                // Se comprueba a que robot pertenece el círculo
+                                if (Camara.ColorEntreColoresMaximoYMinimo(colores[2], robot.ColorMaximo, robot.ColorMinimo, 20))
+                                {
+                                    foreach (CircleF interseccion in Globales.ListadoIntersecciones)
+                                    {
+                                        // Se comprueba si el robot esta dentro de una intersección
+                                        if (Utilidades.Utilidades.CirculoContienePunto(interseccion, new Point((int)circulo.Center.X, (int)circulo.Center.Y)))
+                                        {
+                                            Random random = new Random();
+                                            int direccion = random.Next(2);
+                                            if (direccion == 0)  // Izquierda
+                                            {
+                                                timer.Stop();
+                                                Thread.Sleep(1200);
+                                                Bluetooth.Instancia.Enviar(robot.Id, "LEFT");
+                                                timer.Start();
+                                            }
+                                            else // Derecha
+                                            {
+                                                timer.Stop();
+                                                Thread.Sleep(1200);
+                                                Bluetooth.Instancia.Enviar(robot.Id, "RIGHT");
+                                                timer.Start();
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    break;
+                                }
+                            }
+                        }
                     }
                 }
+                
 
                 // Se visualizan las intersecciones
                 if (chkIntersecciones.Checked)
@@ -119,13 +160,10 @@ namespace EmuladorV2I
                 // Se corrige la perspectiva
                 if (chkCorregirPerspectiva.Checked)
                 {
-                    Image<Bgr, Byte> imagenCorregida = Camara.CorregirPerspectiva(imgOriginal, Globales.ListadoVertices);
-                    pbCamara.Image = imagenCorregida.Bitmap;
+                    imgOriginal = Camara.CorregirPerspectiva(imgOriginal, Globales.ListadoVertices);
                 }
-                else
-                {
-                    pbCamara.Image = imgOriginal.Bitmap;
-                }
+
+                pbCamara.Image = imgOriginal.Bitmap;
             }
             catch (Exception exception)
             {
@@ -333,6 +371,7 @@ namespace EmuladorV2I
             {
                 if (robotSeleccionado > -1)
                 {
+                    lblNavegador.Text = (robotSeleccionado + 1) + " / " + robots.Count;
                     panRobots.Visible = true;
                     lblIdValor.Text = robots[robotSeleccionado].Id.ToString();
                     cboModo.SelectedIndex = robots[robotSeleccionado].Modo;
@@ -408,5 +447,47 @@ namespace EmuladorV2I
             }
         }
         #endregion  
+
+        #region Navegador
+        private void btnLeft_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(robotSeleccionado == 0)
+                {
+                    robotSeleccionado = robots.Count - 1;
+                }
+                else
+                {
+                    robotSeleccionado--;
+                }
+                CargarInformacion();
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
+            }
+        }
+
+        private void btnRight_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (robotSeleccionado == robots.Count - 1)
+                {
+                    robotSeleccionado = 0;
+                }
+                else
+                {
+                    robotSeleccionado++;
+                }
+                CargarInformacion();
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
+            }
+        }
+        #endregion
     }
 }

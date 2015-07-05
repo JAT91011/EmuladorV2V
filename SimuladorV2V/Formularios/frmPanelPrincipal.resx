@@ -117,15 +117,87 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;lblMensaje.Name" xml:space="preserve">
+    <value>lblMensaje</value>
+  </data>
+  <data name="&gt;&gt;lblMensaje.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMensaje.Parent" xml:space="preserve">
+    <value>panCamara</value>
+  </data>
+  <data name="&gt;&gt;lblMensaje.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;chkIntersecciones.Name" xml:space="preserve">
+    <value>chkIntersecciones</value>
+  </data>
+  <data name="&gt;&gt;chkIntersecciones.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkIntersecciones.Parent" xml:space="preserve">
+    <value>panCamara</value>
+  </data>
+  <data name="&gt;&gt;chkIntersecciones.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pbCamara.Name" xml:space="preserve">
+    <value>pbCamara</value>
+  </data>
+  <data name="&gt;&gt;pbCamara.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbCamara.Parent" xml:space="preserve">
+    <value>panCamara</value>
+  </data>
+  <data name="&gt;&gt;pbCamara.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;chkCorregirPerspectiva.Name" xml:space="preserve">
+    <value>chkCorregirPerspectiva</value>
+  </data>
+  <data name="&gt;&gt;chkCorregirPerspectiva.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkCorregirPerspectiva.Parent" xml:space="preserve">
+    <value>panCamara</value>
+  </data>
+  <data name="&gt;&gt;chkCorregirPerspectiva.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panCamara.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panCamara.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 0</value>
+  </data>
+  <data name="panCamara.Size" type="System.Drawing.Size, System.Drawing">
+    <value>814, 662</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panCamara.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panCamara.Name" xml:space="preserve">
+    <value>panCamara</value>
+  </data>
+  <data name="&gt;&gt;panCamara.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panCamara.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panCamara.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="lblMensaje.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblMensaje.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblMensaje.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 15.75pt</value>
   </data>
@@ -192,48 +264,6 @@
   <data name="&gt;&gt;chkIntersecciones.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="pbCamara.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="pbCamara.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pbCamara.Location" type="System.Drawing.Point, System.Drawing">
-    <value>52, 60</value>
-  </data>
-  <data name="pbCamara.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 10, 10, 10</value>
-  </data>
-  <data name="pbCamara.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>2000, 2000</value>
-  </data>
-  <data name="pbCamara.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>640, 480</value>
-  </data>
-  <data name="pbCamara.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 10, 10, 10</value>
-  </data>
-  <data name="pbCamara.Size" type="System.Drawing.Size, System.Drawing">
-    <value>716, 546</value>
-  </data>
-  <data name="pbCamara.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="pbCamara.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pbCamara.Name" xml:space="preserve">
-    <value>pbCamara</value>
-  </data>
-  <data name="&gt;&gt;pbCamara.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbCamara.Parent" xml:space="preserve">
-    <value>panCamara</value>
-  </data>
-  <data name="&gt;&gt;pbCamara.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="chkCorregirPerspectiva.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -270,32 +300,86 @@
   <data name="&gt;&gt;chkCorregirPerspectiva.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="panCamara.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panCamara.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 0</value>
-  </data>
-  <data name="panCamara.Size" type="System.Drawing.Size, System.Drawing">
-    <value>814, 662</value>
-  </data>
-  <data name="panCamara.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;panCamara.Name" xml:space="preserve">
-    <value>panCamara</value>
-  </data>
-  <data name="&gt;&gt;panCamara.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panCamara.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panCamara.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="panRobots.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="lblNavegador.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNavegador.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="lblNavegador.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 15</value>
+  </data>
+  <data name="lblNavegador.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 24</value>
+  </data>
+  <data name="lblNavegador.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblNavegador.Text" xml:space="preserve">
+    <value>1 / 1</value>
+  </data>
+  <data name="&gt;&gt;lblNavegador.Name" xml:space="preserve">
+    <value>lblNavegador</value>
+  </data>
+  <data name="&gt;&gt;lblNavegador.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNavegador.Parent" xml:space="preserve">
+    <value>panRobots</value>
+  </data>
+  <data name="&gt;&gt;lblNavegador.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnRight.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnRight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 7</value>
+  </data>
+  <data name="btnRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="btnRight.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;btnRight.Name" xml:space="preserve">
+    <value>btnRight</value>
+  </data>
+  <data name="&gt;&gt;btnRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRight.Parent" xml:space="preserve">
+    <value>panRobots</value>
+  </data>
+  <data name="&gt;&gt;btnRight.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnLeft.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnLeft.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 7</value>
+  </data>
+  <data name="btnLeft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="btnLeft.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;btnLeft.Name" xml:space="preserve">
+    <value>btnLeft</value>
+  </data>
+  <data name="&gt;&gt;btnLeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLeft.Parent" xml:space="preserve">
+    <value>panRobots</value>
+  </data>
+  <data name="&gt;&gt;btnLeft.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="btnDesconectar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -307,7 +391,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnDesconectar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 355</value>
+    <value>128, 387</value>
   </data>
   <data name="btnDesconectar.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 35</value>
@@ -328,7 +412,307 @@
     <value>panRobots</value>
   </data>
   <data name="&gt;&gt;btnDesconectar.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cboSeguridadApagado.Name" xml:space="preserve">
+    <value>cboSeguridadApagado</value>
+  </data>
+  <data name="&gt;&gt;cboSeguridadApagado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cboSeguridadApagado.Parent" xml:space="preserve">
+    <value>gbParametros</value>
+  </data>
+  <data name="&gt;&gt;cboSeguridadApagado.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;spinVelocidad.Name" xml:space="preserve">
+    <value>spinVelocidad</value>
+  </data>
+  <data name="&gt;&gt;spinVelocidad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;spinVelocidad.Parent" xml:space="preserve">
+    <value>gbParametros</value>
+  </data>
+  <data name="&gt;&gt;spinVelocidad.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblVelocidad.Name" xml:space="preserve">
+    <value>lblVelocidad</value>
+  </data>
+  <data name="&gt;&gt;lblVelocidad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblVelocidad.Parent" xml:space="preserve">
+    <value>gbParametros</value>
+  </data>
+  <data name="&gt;&gt;lblVelocidad.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>gbParametros</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gbParametros.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="gbParametros.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 257</value>
+  </data>
+  <data name="gbParametros.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 116</value>
+  </data>
+  <data name="gbParametros.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="gbParametros.Text" xml:space="preserve">
+    <value>Parámetros</value>
+  </data>
+  <data name="&gt;&gt;gbParametros.Name" xml:space="preserve">
+    <value>gbParametros</value>
+  </data>
+  <data name="&gt;&gt;gbParametros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbParametros.Parent" xml:space="preserve">
+    <value>panRobots</value>
+  </data>
+  <data name="&gt;&gt;gbParametros.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblId.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblId.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="lblId.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 62</value>
+  </data>
+  <data name="lblId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 18</value>
+  </data>
+  <data name="lblId.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblId.Text" xml:space="preserve">
+    <value>ID:</value>
+  </data>
+  <data name="&gt;&gt;lblId.Name" xml:space="preserve">
+    <value>lblId</value>
+  </data>
+  <data name="&gt;&gt;lblId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblId.Parent" xml:space="preserve">
+    <value>panRobots</value>
+  </data>
+  <data name="&gt;&gt;lblId.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblIdValor.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblIdValor.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  </data>
+  <data name="lblIdValor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblIdValor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 62</value>
+  </data>
+  <data name="lblIdValor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 18</value>
+  </data>
+  <data name="lblIdValor.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblIdValor.Name" xml:space="preserve">
+    <value>lblIdValor</value>
+  </data>
+  <data name="&gt;&gt;lblIdValor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblIdValor.Parent" xml:space="preserve">
+    <value>panRobots</value>
+  </data>
+  <data name="&gt;&gt;lblIdValor.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lblBateriaValor.Name" xml:space="preserve">
+    <value>lblBateriaValor</value>
+  </data>
+  <data name="&gt;&gt;lblBateriaValor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblBateriaValor.Parent" xml:space="preserve">
+    <value>gbSensores</value>
+  </data>
+  <data name="&gt;&gt;lblBateriaValor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblTemperaturaValor.Name" xml:space="preserve">
+    <value>lblTemperaturaValor</value>
+  </data>
+  <data name="&gt;&gt;lblTemperaturaValor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTemperaturaValor.Parent" xml:space="preserve">
+    <value>gbSensores</value>
+  </data>
+  <data name="&gt;&gt;lblTemperaturaValor.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblBateria.Name" xml:space="preserve">
+    <value>lblBateria</value>
+  </data>
+  <data name="&gt;&gt;lblBateria.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblBateria.Parent" xml:space="preserve">
+    <value>gbSensores</value>
+  </data>
+  <data name="&gt;&gt;lblBateria.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblTemperatura.Name" xml:space="preserve">
+    <value>lblTemperatura</value>
+  </data>
+  <data name="&gt;&gt;lblTemperatura.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTemperatura.Parent" xml:space="preserve">
+    <value>gbSensores</value>
+  </data>
+  <data name="&gt;&gt;lblTemperatura.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gbSensores.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="gbSensores.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 149</value>
+  </data>
+  <data name="gbSensores.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 89</value>
+  </data>
+  <data name="gbSensores.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="gbSensores.Text" xml:space="preserve">
+    <value>Sensores</value>
+  </data>
+  <data name="&gt;&gt;gbSensores.Name" xml:space="preserve">
+    <value>gbSensores</value>
+  </data>
+  <data name="&gt;&gt;gbSensores.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbSensores.Parent" xml:space="preserve">
+    <value>panRobots</value>
+  </data>
+  <data name="&gt;&gt;gbSensores.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cboModo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="cboModo.Items" xml:space="preserve">
+    <value>Libre</value>
+  </data>
+  <data name="cboModo.Items1" xml:space="preserve">
+    <value>Averiado</value>
+  </data>
+  <data name="cboModo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>67, 95</value>
+  </data>
+  <data name="cboModo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 26</value>
+  </data>
+  <data name="cboModo.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cboModo.Name" xml:space="preserve">
+    <value>cboModo</value>
+  </data>
+  <data name="&gt;&gt;cboModo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cboModo.Parent" xml:space="preserve">
+    <value>panRobots</value>
+  </data>
+  <data name="&gt;&gt;cboModo.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblModo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblModo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="lblModo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblModo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 98</value>
+  </data>
+  <data name="lblModo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 18</value>
+  </data>
+  <data name="lblModo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblModo.Text" xml:space="preserve">
+    <value>Modo:</value>
+  </data>
+  <data name="&gt;&gt;lblModo.Name" xml:space="preserve">
+    <value>lblModo</value>
+  </data>
+  <data name="&gt;&gt;lblModo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblModo.Parent" xml:space="preserve">
+    <value>panRobots</value>
+  </data>
+  <data name="&gt;&gt;lblModo.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="panRobots.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="panRobots.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panRobots.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 662</value>
+  </data>
+  <data name="panRobots.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panRobots.Name" xml:space="preserve">
+    <value>panRobots</value>
+  </data>
+  <data name="&gt;&gt;panRobots.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panRobots.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panRobots.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="cboSeguridadApagado.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11.25pt</value>
@@ -457,96 +841,6 @@
     <value>gbParametros</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="gbParametros.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="gbParametros.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 223</value>
-  </data>
-  <data name="gbParametros.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 116</value>
-  </data>
-  <data name="gbParametros.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="gbParametros.Text" xml:space="preserve">
-    <value>Parámetros</value>
-  </data>
-  <data name="&gt;&gt;gbParametros.Name" xml:space="preserve">
-    <value>gbParametros</value>
-  </data>
-  <data name="&gt;&gt;gbParametros.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbParametros.Parent" xml:space="preserve">
-    <value>panRobots</value>
-  </data>
-  <data name="&gt;&gt;gbParametros.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblId.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblId.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
-  </data>
-  <data name="lblId.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 28</value>
-  </data>
-  <data name="lblId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 18</value>
-  </data>
-  <data name="lblId.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblId.Text" xml:space="preserve">
-    <value>ID:</value>
-  </data>
-  <data name="&gt;&gt;lblId.Name" xml:space="preserve">
-    <value>lblId</value>
-  </data>
-  <data name="&gt;&gt;lblId.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblId.Parent" xml:space="preserve">
-    <value>panRobots</value>
-  </data>
-  <data name="&gt;&gt;lblId.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblIdValor.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblIdValor.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
-  </data>
-  <data name="lblIdValor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblIdValor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 28</value>
-  </data>
-  <data name="lblIdValor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 18</value>
-  </data>
-  <data name="lblIdValor.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lblIdValor.Name" xml:space="preserve">
-    <value>lblIdValor</value>
-  </data>
-  <data name="&gt;&gt;lblIdValor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblIdValor.Parent" xml:space="preserve">
-    <value>panRobots</value>
-  </data>
-  <data name="&gt;&gt;lblIdValor.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="lblBateriaValor.AutoSize" type="System.Boolean, mscorlib">
@@ -681,119 +975,47 @@
   <data name="&gt;&gt;lblTemperatura.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="gbSensores.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+  <data name="pbCamara.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="gbSensores.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 115</value>
-  </data>
-  <data name="gbSensores.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 89</value>
-  </data>
-  <data name="gbSensores.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="gbSensores.Text" xml:space="preserve">
-    <value>Sensores</value>
-  </data>
-  <data name="&gt;&gt;gbSensores.Name" xml:space="preserve">
-    <value>gbSensores</value>
-  </data>
-  <data name="&gt;&gt;gbSensores.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbSensores.Parent" xml:space="preserve">
-    <value>panRobots</value>
-  </data>
-  <data name="&gt;&gt;gbSensores.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="cboModo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
-  </data>
-  <data name="cboModo.Items" xml:space="preserve">
-    <value>Libre</value>
-  </data>
-  <data name="cboModo.Items1" xml:space="preserve">
-    <value>Averiado</value>
-  </data>
-  <data name="cboModo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 61</value>
-  </data>
-  <data name="cboModo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 26</value>
-  </data>
-  <data name="cboModo.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;cboModo.Name" xml:space="preserve">
-    <value>cboModo</value>
-  </data>
-  <data name="&gt;&gt;cboModo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cboModo.Parent" xml:space="preserve">
-    <value>panRobots</value>
-  </data>
-  <data name="&gt;&gt;cboModo.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lblModo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblModo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
-  </data>
-  <data name="lblModo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="pbCamara.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="lblModo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 64</value>
+  <data name="pbCamara.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 60</value>
   </data>
-  <data name="lblModo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 18</value>
+  <data name="pbCamara.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
   </data>
-  <data name="lblModo.TabIndex" type="System.Int32, mscorlib">
+  <data name="pbCamara.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>2000, 2000</value>
+  </data>
+  <data name="pbCamara.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>640, 480</value>
+  </data>
+  <data name="pbCamara.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="pbCamara.Size" type="System.Drawing.Size, System.Drawing">
+    <value>716, 546</value>
+  </data>
+  <data name="pbCamara.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pbCamara.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pbCamara.Name" xml:space="preserve">
+    <value>pbCamara</value>
+  </data>
+  <data name="&gt;&gt;pbCamara.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbCamara.Parent" xml:space="preserve">
+    <value>panCamara</value>
+  </data>
+  <data name="&gt;&gt;pbCamara.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="lblModo.Text" xml:space="preserve">
-    <value>Modo:</value>
-  </data>
-  <data name="&gt;&gt;lblModo.Name" xml:space="preserve">
-    <value>lblModo</value>
-  </data>
-  <data name="&gt;&gt;lblModo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblModo.Parent" xml:space="preserve">
-    <value>panRobots</value>
-  </data>
-  <data name="&gt;&gt;lblModo.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="panRobots.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="panRobots.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panRobots.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 662</value>
-  </data>
-  <data name="panRobots.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;panRobots.Name" xml:space="preserve">
-    <value>panRobots</value>
-  </data>
-  <data name="&gt;&gt;panRobots.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panRobots.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panRobots.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
