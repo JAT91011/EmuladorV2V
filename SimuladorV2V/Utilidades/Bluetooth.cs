@@ -18,13 +18,13 @@ namespace EmuladorV2I.Utilidades
         private static Bluetooth instancia;
         private SerialPort puertoSerie;
         private List<BluetoothObservador> observadores;
-        private String ultimoComando;
+        private String[] ultimoComando;
 
         private Bluetooth()
         {
             puertoSerie = new SerialPort();
             observadores = new List<BluetoothObservador>();
-            ultimoComando = String.Empty;
+            ultimoComando = new String[2];
         }
 
         public bool Conectar(String puerto, int velocidad)
@@ -103,15 +103,23 @@ namespace EmuladorV2I.Utilidades
         {
             try
             {
-                String datos = "";
-                while (instancia.puertoSerie.BytesToRead > 0)
+                if (instancia.puertoSerie.BytesToRead == 19)
                 {
-                    datos += Convert.ToChar(instancia.puertoSerie.ReadByte());
-                }
-                ultimoComando = datos.Substring(3, datos.Length - 3);
-                foreach (BluetoothObservador observador in instancia.observadores)
-                {
-                    observador.ObtenerDatos(ultimoComando);
+                    string comandoRecibido = String.Empty;
+                    while (instancia.puertoSerie.BytesToRead > 0)
+                    {
+                        comandoRecibido += Convert.ToChar(instancia.puertoSerie.ReadByte());
+                    }
+                    comandoRecibido = comandoRecibido.Trim();
+                    if (comandoRecibido != String.Empty && comandoRecibido.Length > 3)
+                    {
+                        ultimoComando[0] = comandoRecibido.Substring(0, 1);
+                        ultimoComando[1] = comandoRecibido.Substring(3, comandoRecibido.Length - 3);
+                        foreach (BluetoothObservador observador in instancia.observadores)
+                        {
+                            observador.ObtenerDatos(ultimoComando);
+                        }
+                    }
                 }
             }
             catch (Exception exception)
@@ -174,7 +182,7 @@ namespace EmuladorV2I.Utilidades
         }
         #endregion
 
-        public String UltimoComando
+        public String[] UltimoComando
         {
             get { return ultimoComando; }
         }

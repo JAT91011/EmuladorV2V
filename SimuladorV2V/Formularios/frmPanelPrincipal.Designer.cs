@@ -29,47 +29,44 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPanelPrincipal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            ManiXButton.Office2010Red office2010Red1 = new ManiXButton.Office2010Red();
             this.panCamara = new System.Windows.Forms.Panel();
-            this.panBotoneraCamara = new System.Windows.Forms.Panel();
             this.chkIntersecciones = new System.Windows.Forms.CheckBox();
+            this.pbCamara = new System.Windows.Forms.PictureBox();
             this.chkCorregirPerspectiva = new System.Windows.Forms.CheckBox();
             this.panRobots = new System.Windows.Forms.Panel();
-            this.pbCamara = new System.Windows.Forms.PictureBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnIniciarParar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.gvRobots = new System.Windows.Forms.DataGridView();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colModo = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colTemperatura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colQuitar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.gbParametros = new System.Windows.Forms.GroupBox();
+            this.cboSeguridadApagado = new System.Windows.Forms.ComboBox();
+            this.spinVelocidad = new System.Windows.Forms.NumericUpDown();
+            this.lblVelocidad = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
+            this.lblIdValor = new System.Windows.Forms.Label();
+            this.gbSensores = new System.Windows.Forms.GroupBox();
+            this.lblBateriaValor = new System.Windows.Forms.Label();
+            this.lblTemperaturaValor = new System.Windows.Forms.Label();
+            this.lblBateria = new System.Windows.Forms.Label();
+            this.lblTemperatura = new System.Windows.Forms.Label();
+            this.cboModo = new System.Windows.Forms.ComboBox();
+            this.lblModo = new System.Windows.Forms.Label();
+            this.lblMensaje = new System.Windows.Forms.Label();
+            this.btnDesconectar = new ManiXButton.MyButton();
             this.panCamara.SuspendLayout();
-            this.panBotoneraCamara.SuspendLayout();
-            this.panRobots.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCamara)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvRobots)).BeginInit();
+            this.panRobots.SuspendLayout();
+            this.gbParametros.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spinVelocidad)).BeginInit();
+            this.gbSensores.SuspendLayout();
             this.SuspendLayout();
             // 
             // panCamara
             // 
+            this.panCamara.Controls.Add(this.lblMensaje);
+            this.panCamara.Controls.Add(this.chkIntersecciones);
             this.panCamara.Controls.Add(this.pbCamara);
-            this.panCamara.Controls.Add(this.panBotoneraCamara);
+            this.panCamara.Controls.Add(this.chkCorregirPerspectiva);
             resources.ApplyResources(this.panCamara, "panCamara");
             this.panCamara.Name = "panCamara";
-            // 
-            // panBotoneraCamara
-            // 
-            this.panBotoneraCamara.Controls.Add(this.chkIntersecciones);
-            this.panBotoneraCamara.Controls.Add(this.chkCorregirPerspectiva);
-            this.panBotoneraCamara.Controls.Add(this.btnEliminar);
-            this.panBotoneraCamara.Controls.Add(this.btnIniciarParar);
-            this.panBotoneraCamara.Controls.Add(this.btnNuevo);
-            resources.ApplyResources(this.panBotoneraCamara, "panBotoneraCamara");
-            this.panBotoneraCamara.Name = "panBotoneraCamara";
             // 
             // chkIntersecciones
             // 
@@ -77,6 +74,12 @@
             this.chkIntersecciones.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.chkIntersecciones.Name = "chkIntersecciones";
             this.chkIntersecciones.UseVisualStyleBackColor = true;
+            // 
+            // pbCamara
+            // 
+            resources.ApplyResources(this.pbCamara, "pbCamara");
+            this.pbCamara.Name = "pbCamara";
+            this.pbCamara.TabStop = false;
             // 
             // chkCorregirPerspectiva
             // 
@@ -89,107 +92,155 @@
             // 
             // panRobots
             // 
-            this.panRobots.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.panRobots.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panRobots.Controls.Add(this.gvRobots);
             resources.ApplyResources(this.panRobots, "panRobots");
+            this.panRobots.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.panRobots.Controls.Add(this.btnDesconectar);
+            this.panRobots.Controls.Add(this.gbParametros);
+            this.panRobots.Controls.Add(this.lblId);
+            this.panRobots.Controls.Add(this.lblIdValor);
+            this.panRobots.Controls.Add(this.gbSensores);
+            this.panRobots.Controls.Add(this.cboModo);
+            this.panRobots.Controls.Add(this.lblModo);
             this.panRobots.Name = "panRobots";
             // 
-            // pbCamara
+            // gbParametros
             // 
-            resources.ApplyResources(this.pbCamara, "pbCamara");
-            this.pbCamara.Name = "pbCamara";
-            this.pbCamara.TabStop = false;
+            this.gbParametros.Controls.Add(this.cboSeguridadApagado);
+            this.gbParametros.Controls.Add(this.spinVelocidad);
+            this.gbParametros.Controls.Add(this.lblVelocidad);
+            this.gbParametros.Controls.Add(this.label4);
+            resources.ApplyResources(this.gbParametros, "gbParametros");
+            this.gbParametros.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.gbParametros.Name = "gbParametros";
+            this.gbParametros.TabStop = false;
             // 
-            // btnEliminar
+            // cboSeguridadApagado
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.btnEliminar, "btnEliminar");
-            this.btnEliminar.Image = global::EmuladorV2I.Properties.Resources.delete_icon;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.cboSeguridadApagado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cboSeguridadApagado, "cboSeguridadApagado");
+            this.cboSeguridadApagado.FormattingEnabled = true;
+            this.cboSeguridadApagado.Items.AddRange(new object[] {
+            resources.GetString("cboSeguridadApagado.Items"),
+            resources.GetString("cboSeguridadApagado.Items1"),
+            resources.GetString("cboSeguridadApagado.Items2"),
+            resources.GetString("cboSeguridadApagado.Items3"),
+            resources.GetString("cboSeguridadApagado.Items4"),
+            resources.GetString("cboSeguridadApagado.Items5")});
+            this.cboSeguridadApagado.Name = "cboSeguridadApagado";
+            this.cboSeguridadApagado.SelectedIndexChanged += new System.EventHandler(this.cboSeguridadApagado_SelectedIndexChanged);
             // 
-            // btnIniciarParar
+            // spinVelocidad
             // 
-            this.btnIniciarParar.Image = global::EmuladorV2I.Properties.Resources.play_icon;
-            resources.ApplyResources(this.btnIniciarParar, "btnIniciarParar");
-            this.btnIniciarParar.Name = "btnIniciarParar";
-            this.btnIniciarParar.UseVisualStyleBackColor = true;
-            this.btnIniciarParar.Click += new System.EventHandler(this.btnIniciarParar_Click);
+            resources.ApplyResources(this.spinVelocidad, "spinVelocidad");
+            this.spinVelocidad.Name = "spinVelocidad";
             // 
-            // btnNuevo
+            // lblVelocidad
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.btnNuevo, "btnNuevo");
-            this.btnNuevo.Image = global::EmuladorV2I.Properties.Resources.add_icon;
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            resources.ApplyResources(this.lblVelocidad, "lblVelocidad");
+            this.lblVelocidad.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.lblVelocidad.Name = "lblVelocidad";
             // 
-            // gvRobots
+            // label4
             // 
-            this.gvRobots.AllowUserToAddRows = false;
-            this.gvRobots.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvRobots.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.gvRobots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvRobots.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colId,
-            this.colDescripcion,
-            this.colModo,
-            this.colTemperatura,
-            this.colBateria,
-            this.colQuitar});
-            resources.ApplyResources(this.gvRobots, "gvRobots");
-            this.gvRobots.Name = "gvRobots";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvRobots.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label4.Name = "label4";
             // 
-            // colId
+            // lblId
             // 
-            resources.ApplyResources(this.colId, "colId");
-            this.colId.Name = "colId";
-            this.colId.ReadOnly = true;
+            resources.ApplyResources(this.lblId, "lblId");
+            this.lblId.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.lblId.Name = "lblId";
             // 
-            // colDescripcion
+            // lblIdValor
             // 
-            resources.ApplyResources(this.colDescripcion, "colDescripcion");
-            this.colDescripcion.Name = "colDescripcion";
+            resources.ApplyResources(this.lblIdValor, "lblIdValor");
+            this.lblIdValor.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.lblIdValor.Name = "lblIdValor";
             // 
-            // colModo
+            // gbSensores
             // 
-            resources.ApplyResources(this.colModo, "colModo");
-            this.colModo.Items.AddRange(new object[] {
-            "Libre",
-            "Averiado"});
-            this.colModo.Name = "colModo";
+            this.gbSensores.Controls.Add(this.lblBateriaValor);
+            this.gbSensores.Controls.Add(this.lblTemperaturaValor);
+            this.gbSensores.Controls.Add(this.lblBateria);
+            this.gbSensores.Controls.Add(this.lblTemperatura);
+            resources.ApplyResources(this.gbSensores, "gbSensores");
+            this.gbSensores.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.gbSensores.Name = "gbSensores";
+            this.gbSensores.TabStop = false;
             // 
-            // colTemperatura
+            // lblBateriaValor
             // 
-            resources.ApplyResources(this.colTemperatura, "colTemperatura");
-            this.colTemperatura.Name = "colTemperatura";
+            resources.ApplyResources(this.lblBateriaValor, "lblBateriaValor");
+            this.lblBateriaValor.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.lblBateriaValor.Name = "lblBateriaValor";
             // 
-            // colBateria
+            // lblTemperaturaValor
             // 
-            resources.ApplyResources(this.colBateria, "colBateria");
-            this.colBateria.Name = "colBateria";
+            resources.ApplyResources(this.lblTemperaturaValor, "lblTemperaturaValor");
+            this.lblTemperaturaValor.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.lblTemperaturaValor.Name = "lblTemperaturaValor";
             // 
-            // colQuitar
+            // lblBateria
             // 
-            resources.ApplyResources(this.colQuitar, "colQuitar");
-            this.colQuitar.Name = "colQuitar";
+            resources.ApplyResources(this.lblBateria, "lblBateria");
+            this.lblBateria.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.lblBateria.Name = "lblBateria";
+            // 
+            // lblTemperatura
+            // 
+            resources.ApplyResources(this.lblTemperatura, "lblTemperatura");
+            this.lblTemperatura.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.lblTemperatura.Name = "lblTemperatura";
+            // 
+            // cboModo
+            // 
+            this.cboModo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cboModo, "cboModo");
+            this.cboModo.FormattingEnabled = true;
+            this.cboModo.Items.AddRange(new object[] {
+            resources.GetString("cboModo.Items"),
+            resources.GetString("cboModo.Items1")});
+            this.cboModo.Name = "cboModo";
+            this.cboModo.SelectedIndexChanged += new System.EventHandler(this.cboModo_SelectedIndexChanged);
+            // 
+            // lblModo
+            // 
+            resources.ApplyResources(this.lblModo, "lblModo");
+            this.lblModo.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.lblModo.Name = "lblModo";
+            // 
+            // lblMensaje
+            // 
+            resources.ApplyResources(this.lblMensaje, "lblMensaje");
+            this.lblMensaje.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.lblMensaje.Name = "lblMensaje";
+            // 
+            // btnDesconectar
+            // 
+            resources.ApplyResources(this.btnDesconectar, "btnDesconectar");
+            office2010Red1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Red1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Red1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Red1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Red1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Red1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Red1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
+            office2010Red1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
+            office2010Red1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
+            office2010Red1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
+            office2010Red1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Red1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Red1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Red1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Red1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Red1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Red1.TextColor = System.Drawing.Color.White;
+            this.btnDesconectar.ColorTable = office2010Red1;
+            this.btnDesconectar.Name = "btnDesconectar";
+            this.btnDesconectar.Theme = ManiXButton.Theme.MSOffice2010_RED;
+            this.btnDesconectar.UseVisualStyleBackColor = true;
+            this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
             // 
             // frmPanelPrincipal
             // 
@@ -199,35 +250,43 @@
             this.Controls.Add(this.panCamara);
             this.Controls.Add(this.panRobots);
             this.Name = "frmPanelPrincipal";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPanelPrincipal_Load);
             this.panCamara.ResumeLayout(false);
-            this.panBotoneraCamara.ResumeLayout(false);
-            this.panBotoneraCamara.PerformLayout();
-            this.panRobots.ResumeLayout(false);
+            this.panCamara.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCamara)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvRobots)).EndInit();
+            this.panRobots.ResumeLayout(false);
+            this.panRobots.PerformLayout();
+            this.gbParametros.ResumeLayout(false);
+            this.gbParametros.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spinVelocidad)).EndInit();
+            this.gbSensores.ResumeLayout(false);
+            this.gbSensores.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnIniciarParar;
         private System.Windows.Forms.PictureBox pbCamara;
         private System.Windows.Forms.Panel panCamara;
-        private System.Windows.Forms.Panel panRobots;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Panel panBotoneraCamara;
         private System.Windows.Forms.CheckBox chkCorregirPerspectiva;
         private System.Windows.Forms.CheckBox chkIntersecciones;
-        private System.Windows.Forms.DataGridView gvRobots;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDescripcion;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colModo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTemperatura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colBateria;
-        private System.Windows.Forms.DataGridViewButtonColumn colQuitar;
+        private System.Windows.Forms.Panel panRobots;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.ComboBox cboModo;
+        private System.Windows.Forms.Label lblModo;
+        private System.Windows.Forms.GroupBox gbSensores;
+        private System.Windows.Forms.Label lblBateria;
+        private System.Windows.Forms.Label lblTemperatura;
+        private System.Windows.Forms.Label lblIdValor;
+        private System.Windows.Forms.Label lblTemperaturaValor;
+        private System.Windows.Forms.Label lblBateriaValor;
+        private System.Windows.Forms.GroupBox gbParametros;
+        private System.Windows.Forms.ComboBox cboSeguridadApagado;
+        private System.Windows.Forms.NumericUpDown spinVelocidad;
+        private System.Windows.Forms.Label lblVelocidad;
+        private System.Windows.Forms.Label label4;
+        private ManiXButton.MyButton btnDesconectar;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }

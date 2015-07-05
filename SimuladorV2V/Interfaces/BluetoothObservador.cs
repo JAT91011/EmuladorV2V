@@ -8,6 +8,6 @@ namespace EmuladorV2I.Interfaces
 {
     public interface BluetoothObservador
     {
-        void ObtenerDatos(String datos);
+        void ObtenerDatos(String [] datos);
     }
 }

@@ -112,11 +112,11 @@ namespace EmuladorV2I.Test
         }
         #endregion
 
-        public void ObtenerDatos(string datos)
+        public void ObtenerDatos(string [] datos)
         {
             try
             {
-                txtEntrada.Text += "<-- " + datos + Environment.NewLine;
+                txtEntrada.Text += "<-- " + datos[1] + Environment.NewLine;
             }
             catch (Exception exception)
             {
