@@ -117,7 +117,105 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;pbIcono.Name" xml:space="preserve">
+    <value>pbIcono</value>
+  </data>
+  <data name="&gt;&gt;pbIcono.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbIcono.Parent" xml:space="preserve">
+    <value>panIzquierdo</value>
+  </data>
+  <data name="&gt;&gt;pbIcono.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblCompletado.Name" xml:space="preserve">
+    <value>lblCompletado</value>
+  </data>
+  <data name="&gt;&gt;lblCompletado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCompletado.Parent" xml:space="preserve">
+    <value>panIzquierdo</value>
+  </data>
+  <data name="&gt;&gt;lblCompletado.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblComunicacion.Name" xml:space="preserve">
+    <value>lblComunicacion</value>
+  </data>
+  <data name="&gt;&gt;lblComunicacion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblComunicacion.Parent" xml:space="preserve">
+    <value>panIzquierdo</value>
+  </data>
+  <data name="&gt;&gt;lblComunicacion.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblIntersecciones.Name" xml:space="preserve">
+    <value>lblIntersecciones</value>
+  </data>
+  <data name="&gt;&gt;lblIntersecciones.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblIntersecciones.Parent" xml:space="preserve">
+    <value>panIzquierdo</value>
+  </data>
+  <data name="&gt;&gt;lblIntersecciones.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblCircuito.Name" xml:space="preserve">
+    <value>lblCircuito</value>
+  </data>
+  <data name="&gt;&gt;lblCircuito.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCircuito.Parent" xml:space="preserve">
+    <value>panIzquierdo</value>
+  </data>
+  <data name="&gt;&gt;lblCircuito.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblBienvenido.Name" xml:space="preserve">
+    <value>lblBienvenido</value>
+  </data>
+  <data name="&gt;&gt;lblBienvenido.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblBienvenido.Parent" xml:space="preserve">
+    <value>panIzquierdo</value>
+  </data>
+  <data name="&gt;&gt;lblBienvenido.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panIzquierdo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panIzquierdo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panIzquierdo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 662</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panIzquierdo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panIzquierdo.Name" xml:space="preserve">
+    <value>panIzquierdo</value>
+  </data>
+  <data name="&gt;&gt;panIzquierdo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panIzquierdo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panIzquierdo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="pbIcono.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAKAAAACpCAYAAACswDblAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAACH
@@ -244,7 +342,6 @@
   <data name="pbIcono.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 144</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pbIcono.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
@@ -410,30 +507,626 @@
   <data name="&gt;&gt;lblBienvenido.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panIzquierdo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
+  <data name="lblConfiguracionCompletada.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="panIzquierdo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="lblConfiguracionCompletada.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="panIzquierdo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 662</value>
+  <data name="lblConfiguracionCompletada.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="panIzquierdo.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblConfiguracionCompletada.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="lblConfiguracionCompletada.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 20</value>
+  </data>
+  <data name="lblConfiguracionCompletada.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblConfiguracionCompletada.Text" xml:space="preserve">
+    <value>Se ha completado la configuración del emulador.</value>
+  </data>
+  <data name="&gt;&gt;lblConfiguracionCompletada.Name" xml:space="preserve">
+    <value>lblConfiguracionCompletada</value>
+  </data>
+  <data name="&gt;&gt;lblConfiguracionCompletada.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblConfiguracionCompletada.Parent" xml:space="preserve">
+    <value>panCompletado</value>
+  </data>
+  <data name="&gt;&gt;lblConfiguracionCompletada.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;panIzquierdo.Name" xml:space="preserve">
-    <value>panIzquierdo</value>
+  <data name="lblPulsaFinalizar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;panIzquierdo.Type" xml:space="preserve">
+  <data name="lblPulsaFinalizar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lblPulsaFinalizar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPulsaFinalizar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 75</value>
+  </data>
+  <data name="lblPulsaFinalizar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 20</value>
+  </data>
+  <data name="lblPulsaFinalizar.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lblPulsaFinalizar.Text" xml:space="preserve">
+    <value>Pulsa finalizar para empezar a utilizarlo.</value>
+  </data>
+  <data name="&gt;&gt;lblPulsaFinalizar.Name" xml:space="preserve">
+    <value>lblPulsaFinalizar</value>
+  </data>
+  <data name="&gt;&gt;lblPulsaFinalizar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPulsaFinalizar.Parent" xml:space="preserve">
+    <value>panCompletado</value>
+  </data>
+  <data name="&gt;&gt;lblPulsaFinalizar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pbOkIcono.Location" type="System.Drawing.Point, System.Drawing">
+    <value>297, 190</value>
+  </data>
+  <data name="pbOkIcono.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 257</value>
+  </data>
+  <data name="pbOkIcono.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;pbOkIcono.Name" xml:space="preserve">
+    <value>pbOkIcono</value>
+  </data>
+  <data name="&gt;&gt;pbOkIcono.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbOkIcono.Parent" xml:space="preserve">
+    <value>panCompletado</value>
+  </data>
+  <data name="&gt;&gt;pbOkIcono.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panCompletado.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panCompletado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 80</value>
+  </data>
+  <data name="panCompletado.Size" type="System.Drawing.Size, System.Drawing">
+    <value>864, 523</value>
+  </data>
+  <data name="panCompletado.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panCompletado.Name" xml:space="preserve">
+    <value>panCompletado</value>
+  </data>
+  <data name="&gt;&gt;panCompletado.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panIzquierdo.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panCompletado.Parent" xml:space="preserve">
+    <value>panDerecho</value>
+  </data>
+  <data name="&gt;&gt;panCompletado.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblParaObtener.Name" xml:space="preserve">
+    <value>lblParaObtener</value>
+  </data>
+  <data name="&gt;&gt;lblParaObtener.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblParaObtener.Parent" xml:space="preserve">
+    <value>panBienvenido</value>
+  </data>
+  <data name="&gt;&gt;lblParaObtener.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;linkManual.Name" xml:space="preserve">
+    <value>linkManual</value>
+  </data>
+  <data name="&gt;&gt;linkManual.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;linkManual.Parent" xml:space="preserve">
+    <value>panBienvenido</value>
+  </data>
+  <data name="&gt;&gt;linkManual.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblConsulte.Name" xml:space="preserve">
+    <value>lblConsulte</value>
+  </data>
+  <data name="&gt;&gt;lblConsulte.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblConsulte.Parent" xml:space="preserve">
+    <value>panBienvenido</value>
+  </data>
+  <data name="&gt;&gt;lblConsulte.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblEsteAsistente.Name" xml:space="preserve">
+    <value>lblEsteAsistente</value>
+  </data>
+  <data name="&gt;&gt;lblEsteAsistente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblEsteAsistente.Parent" xml:space="preserve">
+    <value>panBienvenido</value>
+  </data>
+  <data name="&gt;&gt;lblEsteAsistente.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblBienvenidoAlAsistente.Name" xml:space="preserve">
+    <value>lblBienvenidoAlAsistente</value>
+  </data>
+  <data name="&gt;&gt;lblBienvenidoAlAsistente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblBienvenidoAlAsistente.Parent" xml:space="preserve">
+    <value>panBienvenido</value>
+  </data>
+  <data name="&gt;&gt;lblBienvenidoAlAsistente.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panBienvenido.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panBienvenido.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 80</value>
+  </data>
+  <data name="panBienvenido.Size" type="System.Drawing.Size, System.Drawing">
+    <value>864, 523</value>
+  </data>
+  <data name="panBienvenido.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;panBienvenido.Name" xml:space="preserve">
+    <value>panBienvenido</value>
+  </data>
+  <data name="&gt;&gt;panBienvenido.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panBienvenido.Parent" xml:space="preserve">
+    <value>panDerecho</value>
+  </data>
+  <data name="&gt;&gt;panBienvenido.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnRefrescarPuertosSerie.Name" xml:space="preserve">
+    <value>btnRefrescarPuertosSerie</value>
+  </data>
+  <data name="&gt;&gt;btnRefrescarPuertosSerie.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRefrescarPuertosSerie.Parent" xml:space="preserve">
+    <value>panComunicacion</value>
+  </data>
+  <data name="&gt;&gt;btnRefrescarPuertosSerie.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pbBluetooth.Name" xml:space="preserve">
+    <value>pbBluetooth</value>
+  </data>
+  <data name="&gt;&gt;pbBluetooth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbBluetooth.Parent" xml:space="preserve">
+    <value>panComunicacion</value>
+  </data>
+  <data name="&gt;&gt;pbBluetooth.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cboVelocidadTransmision.Name" xml:space="preserve">
+    <value>cboVelocidadTransmision</value>
+  </data>
+  <data name="&gt;&gt;cboVelocidadTransmision.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cboVelocidadTransmision.Parent" xml:space="preserve">
+    <value>panComunicacion</value>
+  </data>
+  <data name="&gt;&gt;cboVelocidadTransmision.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cboPuertoSerie.Name" xml:space="preserve">
+    <value>cboPuertoSerie</value>
+  </data>
+  <data name="&gt;&gt;cboPuertoSerie.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cboPuertoSerie.Parent" xml:space="preserve">
+    <value>panComunicacion</value>
+  </data>
+  <data name="&gt;&gt;cboPuertoSerie.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblVelocidadTransmision.Name" xml:space="preserve">
+    <value>lblVelocidadTransmision</value>
+  </data>
+  <data name="&gt;&gt;lblVelocidadTransmision.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblVelocidadTransmision.Parent" xml:space="preserve">
+    <value>panComunicacion</value>
+  </data>
+  <data name="&gt;&gt;lblVelocidadTransmision.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblPuertoSerie.Name" xml:space="preserve">
+    <value>lblPuertoSerie</value>
+  </data>
+  <data name="&gt;&gt;lblPuertoSerie.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPuertoSerie.Parent" xml:space="preserve">
+    <value>panComunicacion</value>
+  </data>
+  <data name="&gt;&gt;lblPuertoSerie.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="panComunicacion.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panComunicacion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 80</value>
+  </data>
+  <data name="panComunicacion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>864, 523</value>
+  </data>
+  <data name="panComunicacion.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panComunicacion.Name" xml:space="preserve">
+    <value>panComunicacion</value>
+  </data>
+  <data name="&gt;&gt;panComunicacion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panComunicacion.Parent" xml:space="preserve">
+    <value>panDerecho</value>
+  </data>
+  <data name="&gt;&gt;panComunicacion.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ibCircuito.Name" xml:space="preserve">
+    <value>ibCircuito</value>
+  </data>
+  <data name="&gt;&gt;ibCircuito.Type" xml:space="preserve">
+    <value>Emgu.CV.UI.ImageBox, Emgu.CV.UI, Version=2.2.1.1150, Culture=neutral, PublicKeyToken=7281126722ab4438</value>
+  </data>
+  <data name="&gt;&gt;ibCircuito.Parent" xml:space="preserve">
+    <value>panReferencias</value>
+  </data>
+  <data name="&gt;&gt;ibCircuito.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panReferencias.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panReferencias.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 80</value>
+  </data>
+  <data name="panReferencias.Size" type="System.Drawing.Size, System.Drawing">
+    <value>864, 523</value>
+  </data>
+  <data name="panReferencias.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;panReferencias.Name" xml:space="preserve">
+    <value>panReferencias</value>
+  </data>
+  <data name="&gt;&gt;panReferencias.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panReferencias.Parent" xml:space="preserve">
+    <value>panDerecho</value>
+  </data>
+  <data name="&gt;&gt;panReferencias.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ibCamara.Name" xml:space="preserve">
+    <value>ibCamara</value>
+  </data>
+  <data name="&gt;&gt;ibCamara.Type" xml:space="preserve">
+    <value>Emgu.CV.UI.ImageBox, Emgu.CV.UI, Version=2.2.1.1150, Culture=neutral, PublicKeyToken=7281126722ab4438</value>
+  </data>
+  <data name="&gt;&gt;ibCamara.Parent" xml:space="preserve">
+    <value>panCircuito</value>
+  </data>
+  <data name="&gt;&gt;ibCamara.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panCircuito.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panCircuito.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 80</value>
+  </data>
+  <data name="panCircuito.Size" type="System.Drawing.Size, System.Drawing">
+    <value>864, 523</value>
+  </data>
+  <data name="panCircuito.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;panCircuito.Name" xml:space="preserve">
+    <value>panCircuito</value>
+  </data>
+  <data name="&gt;&gt;panCircuito.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panCircuito.Parent" xml:space="preserve">
+    <value>panDerecho</value>
+  </data>
+  <data name="&gt;&gt;panCircuito.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblTitulo.Name" xml:space="preserve">
+    <value>lblTitulo</value>
+  </data>
+  <data name="&gt;&gt;lblTitulo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTitulo.Parent" xml:space="preserve">
+    <value>panCabecera</value>
+  </data>
+  <data name="&gt;&gt;lblTitulo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panCabecera.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panCabecera.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panCabecera.Size" type="System.Drawing.Size, System.Drawing">
+    <value>864, 80</value>
+  </data>
+  <data name="panCabecera.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;panCabecera.Name" xml:space="preserve">
+    <value>panCabecera</value>
+  </data>
+  <data name="&gt;&gt;panCabecera.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panCabecera.Parent" xml:space="preserve">
+    <value>panDerecho</value>
+  </data>
+  <data name="&gt;&gt;panCabecera.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btnSiguienteYTerminar.Name" xml:space="preserve">
+    <value>btnSiguienteYTerminar</value>
+  </data>
+  <data name="&gt;&gt;btnSiguienteYTerminar.Type" xml:space="preserve">
+    <value>ManiXButton.MyButton, EmuladorV2I, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnSiguienteYTerminar.Parent" xml:space="preserve">
+    <value>panBotonera</value>
+  </data>
+  <data name="&gt;&gt;btnSiguienteYTerminar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnVolverYCerrar.Name" xml:space="preserve">
+    <value>btnVolverYCerrar</value>
+  </data>
+  <data name="&gt;&gt;btnVolverYCerrar.Type" xml:space="preserve">
+    <value>ManiXButton.MyButton, EmuladorV2I, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnVolverYCerrar.Parent" xml:space="preserve">
+    <value>panBotonera</value>
+  </data>
+  <data name="&gt;&gt;btnVolverYCerrar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panBotonera.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="panBotonera.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 603</value>
+  </data>
+  <data name="panBotonera.Size" type="System.Drawing.Size, System.Drawing">
+    <value>864, 59</value>
+  </data>
+  <data name="panBotonera.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;panBotonera.Name" xml:space="preserve">
+    <value>panBotonera</value>
+  </data>
+  <data name="&gt;&gt;panBotonera.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panBotonera.Parent" xml:space="preserve">
+    <value>panDerecho</value>
+  </data>
+  <data name="&gt;&gt;panBotonera.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="panDerecho.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panDerecho.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 0</value>
+  </data>
+  <data name="panDerecho.Size" type="System.Drawing.Size, System.Drawing">
+    <value>864, 662</value>
+  </data>
+  <data name="panDerecho.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panDerecho.Name" xml:space="preserve">
+    <value>panDerecho</value>
+  </data>
+  <data name="&gt;&gt;panDerecho.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panDerecho.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panIzquierdo.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panDerecho.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblParaObtener.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblParaObtener.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lblParaObtener.Location" type="System.Drawing.Point, System.Drawing">
+    <value>247, 110</value>
+  </data>
+  <data name="lblParaObtener.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 20</value>
+  </data>
+  <data name="lblParaObtener.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblParaObtener.Text" xml:space="preserve">
+    <value>para obtener más información.</value>
+  </data>
+  <data name="&gt;&gt;lblParaObtener.Name" xml:space="preserve">
+    <value>lblParaObtener</value>
+  </data>
+  <data name="&gt;&gt;lblParaObtener.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblParaObtener.Parent" xml:space="preserve">
+    <value>panBienvenido</value>
+  </data>
+  <data name="&gt;&gt;lblParaObtener.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="linkManual.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="linkManual.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="linkManual.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 110</value>
+  </data>
+  <data name="linkManual.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="linkManual.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="linkManual.Text" xml:space="preserve">
+    <value>Manual de usuario</value>
+  </data>
+  <data name="&gt;&gt;linkManual.Name" xml:space="preserve">
+    <value>linkManual</value>
+  </data>
+  <data name="&gt;&gt;linkManual.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;linkManual.Parent" xml:space="preserve">
+    <value>panBienvenido</value>
+  </data>
+  <data name="&gt;&gt;linkManual.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="lblConsulte.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblConsulte.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lblConsulte.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 110</value>
+  </data>
+  <data name="lblConsulte.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 20</value>
+  </data>
+  <data name="lblConsulte.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblConsulte.Text" xml:space="preserve">
+    <value>Consulte</value>
+  </data>
+  <data name="&gt;&gt;lblConsulte.Name" xml:space="preserve">
+    <value>lblConsulte</value>
+  </data>
+  <data name="&gt;&gt;lblConsulte.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblConsulte.Parent" xml:space="preserve">
+    <value>panBienvenido</value>
+  </data>
+  <data name="&gt;&gt;lblConsulte.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblEsteAsistente.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblEsteAsistente.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lblEsteAsistente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 75</value>
+  </data>
+  <data name="lblEsteAsistente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>457, 20</value>
+  </data>
+  <data name="lblEsteAsistente.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblEsteAsistente.Text" xml:space="preserve">
+    <value>Este asistente le guiará por los pasos de configuración iniciales.</value>
+  </data>
+  <data name="&gt;&gt;lblEsteAsistente.Name" xml:space="preserve">
+    <value>lblEsteAsistente</value>
+  </data>
+  <data name="&gt;&gt;lblEsteAsistente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblEsteAsistente.Parent" xml:space="preserve">
+    <value>panBienvenido</value>
+  </data>
+  <data name="&gt;&gt;lblEsteAsistente.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblBienvenidoAlAsistente.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblBienvenidoAlAsistente.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lblBienvenidoAlAsistente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="lblBienvenidoAlAsistente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>383, 20</value>
+  </data>
+  <data name="lblBienvenidoAlAsistente.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblBienvenidoAlAsistente.Text" xml:space="preserve">
+    <value>Bienvenido al Asistente de configuración del sistema.</value>
+  </data>
+  <data name="&gt;&gt;lblBienvenidoAlAsistente.Name" xml:space="preserve">
+    <value>lblBienvenidoAlAsistente</value>
+  </data>
+  <data name="&gt;&gt;lblBienvenidoAlAsistente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblBienvenidoAlAsistente.Parent" xml:space="preserve">
+    <value>panBienvenido</value>
+  </data>
+  <data name="&gt;&gt;lblBienvenidoAlAsistente.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="btnRefrescarPuertosSerie.Location" type="System.Drawing.Point, System.Drawing">
     <value>792, 31</value>
@@ -618,204 +1311,6 @@
   <data name="&gt;&gt;lblPuertoSerie.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="panComunicacion.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panComunicacion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 80</value>
-  </data>
-  <data name="panComunicacion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>864, 523</value>
-  </data>
-  <data name="panComunicacion.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panComunicacion.Name" xml:space="preserve">
-    <value>panComunicacion</value>
-  </data>
-  <data name="&gt;&gt;panComunicacion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panComunicacion.Parent" xml:space="preserve">
-    <value>panDerecho</value>
-  </data>
-  <data name="&gt;&gt;panComunicacion.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblParaObtener.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblParaObtener.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lblParaObtener.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 110</value>
-  </data>
-  <data name="lblParaObtener.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 20</value>
-  </data>
-  <data name="lblParaObtener.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="lblParaObtener.Text" xml:space="preserve">
-    <value>para obtener más información.</value>
-  </data>
-  <data name="&gt;&gt;lblParaObtener.Name" xml:space="preserve">
-    <value>lblParaObtener</value>
-  </data>
-  <data name="&gt;&gt;lblParaObtener.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblParaObtener.Parent" xml:space="preserve">
-    <value>panBienvenido</value>
-  </data>
-  <data name="&gt;&gt;lblParaObtener.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="linkManual.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="linkManual.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="linkManual.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 110</value>
-  </data>
-  <data name="linkManual.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 20</value>
-  </data>
-  <data name="linkManual.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="linkManual.Text" xml:space="preserve">
-    <value>Manual de usuario</value>
-  </data>
-  <data name="&gt;&gt;linkManual.Name" xml:space="preserve">
-    <value>linkManual</value>
-  </data>
-  <data name="&gt;&gt;linkManual.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;linkManual.Parent" xml:space="preserve">
-    <value>panBienvenido</value>
-  </data>
-  <data name="&gt;&gt;linkManual.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblConsulte.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblConsulte.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lblConsulte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 110</value>
-  </data>
-  <data name="lblConsulte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 20</value>
-  </data>
-  <data name="lblConsulte.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblConsulte.Text" xml:space="preserve">
-    <value>Consulte</value>
-  </data>
-  <data name="&gt;&gt;lblConsulte.Name" xml:space="preserve">
-    <value>lblConsulte</value>
-  </data>
-  <data name="&gt;&gt;lblConsulte.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblConsulte.Parent" xml:space="preserve">
-    <value>panBienvenido</value>
-  </data>
-  <data name="&gt;&gt;lblConsulte.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblEsteAsistente.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblEsteAsistente.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lblEsteAsistente.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 75</value>
-  </data>
-  <data name="lblEsteAsistente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>457, 20</value>
-  </data>
-  <data name="lblEsteAsistente.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblEsteAsistente.Text" xml:space="preserve">
-    <value>Este asistente le guiará por los pasos de configuración iniciales.</value>
-  </data>
-  <data name="&gt;&gt;lblEsteAsistente.Name" xml:space="preserve">
-    <value>lblEsteAsistente</value>
-  </data>
-  <data name="&gt;&gt;lblEsteAsistente.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblEsteAsistente.Parent" xml:space="preserve">
-    <value>panBienvenido</value>
-  </data>
-  <data name="&gt;&gt;lblEsteAsistente.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lblBienvenidoAlAsistente.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblBienvenidoAlAsistente.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lblBienvenidoAlAsistente.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <data name="lblBienvenidoAlAsistente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 20</value>
-  </data>
-  <data name="lblBienvenidoAlAsistente.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblBienvenidoAlAsistente.Text" xml:space="preserve">
-    <value>Bienvenido al Asistente de configuración del sistema.</value>
-  </data>
-  <data name="&gt;&gt;lblBienvenidoAlAsistente.Name" xml:space="preserve">
-    <value>lblBienvenidoAlAsistente</value>
-  </data>
-  <data name="&gt;&gt;lblBienvenidoAlAsistente.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblBienvenidoAlAsistente.Parent" xml:space="preserve">
-    <value>panBienvenido</value>
-  </data>
-  <data name="&gt;&gt;lblBienvenidoAlAsistente.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="panBienvenido.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panBienvenido.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 80</value>
-  </data>
-  <data name="panBienvenido.Size" type="System.Drawing.Size, System.Drawing">
-    <value>864, 523</value>
-  </data>
-  <data name="panBienvenido.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;panBienvenido.Name" xml:space="preserve">
-    <value>panBienvenido</value>
-  </data>
-  <data name="&gt;&gt;panBienvenido.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panBienvenido.Parent" xml:space="preserve">
-    <value>panDerecho</value>
-  </data>
-  <data name="&gt;&gt;panBienvenido.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="ibCircuito.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 30</value>
   </data>
@@ -843,30 +1338,6 @@
   <data name="&gt;&gt;ibCircuito.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="panReferencias.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panReferencias.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 80</value>
-  </data>
-  <data name="panReferencias.Size" type="System.Drawing.Size, System.Drawing">
-    <value>864, 523</value>
-  </data>
-  <data name="panReferencias.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;panReferencias.Name" xml:space="preserve">
-    <value>panReferencias</value>
-  </data>
-  <data name="&gt;&gt;panReferencias.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panReferencias.Parent" xml:space="preserve">
-    <value>panDerecho</value>
-  </data>
-  <data name="&gt;&gt;panReferencias.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="ibCamara.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 30</value>
   </data>
@@ -893,54 +1364,6 @@
   </data>
   <data name="&gt;&gt;ibCamara.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="panCircuito.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panCircuito.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 80</value>
-  </data>
-  <data name="panCircuito.Size" type="System.Drawing.Size, System.Drawing">
-    <value>864, 523</value>
-  </data>
-  <data name="panCircuito.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;panCircuito.Name" xml:space="preserve">
-    <value>panCircuito</value>
-  </data>
-  <data name="&gt;&gt;panCircuito.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panCircuito.Parent" xml:space="preserve">
-    <value>panDerecho</value>
-  </data>
-  <data name="&gt;&gt;panCircuito.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="panCompletado.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panCompletado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 80</value>
-  </data>
-  <data name="panCompletado.Size" type="System.Drawing.Size, System.Drawing">
-    <value>864, 523</value>
-  </data>
-  <data name="panCompletado.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panCompletado.Name" xml:space="preserve">
-    <value>panCompletado</value>
-  </data>
-  <data name="&gt;&gt;panCompletado.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panCompletado.Parent" xml:space="preserve">
-    <value>panDerecho</value>
-  </data>
-  <data name="&gt;&gt;panCompletado.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="lblTitulo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -971,30 +1394,6 @@
   </data>
   <data name="&gt;&gt;lblTitulo.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="panCabecera.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="panCabecera.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panCabecera.Size" type="System.Drawing.Size, System.Drawing">
-    <value>864, 80</value>
-  </data>
-  <data name="panCabecera.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;panCabecera.Name" xml:space="preserve">
-    <value>panCabecera</value>
-  </data>
-  <data name="&gt;&gt;panCabecera.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panCabecera.Parent" xml:space="preserve">
-    <value>panDerecho</value>
-  </data>
-  <data name="&gt;&gt;panCabecera.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="btnSiguienteYTerminar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -1050,59 +1449,8 @@
   <data name="&gt;&gt;btnVolverYCerrar.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panBotonera.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="panBotonera.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 603</value>
-  </data>
-  <data name="panBotonera.Size" type="System.Drawing.Size, System.Drawing">
-    <value>864, 59</value>
-  </data>
-  <data name="panBotonera.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;panBotonera.Name" xml:space="preserve">
-    <value>panBotonera</value>
-  </data>
-  <data name="&gt;&gt;panBotonera.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panBotonera.Parent" xml:space="preserve">
-    <value>panDerecho</value>
-  </data>
-  <data name="&gt;&gt;panBotonera.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="panDerecho.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panDerecho.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 0</value>
-  </data>
-  <data name="panDerecho.Size" type="System.Drawing.Size, System.Drawing">
-    <value>864, 662</value>
-  </data>
-  <data name="panDerecho.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;panDerecho.Name" xml:space="preserve">
-    <value>panDerecho</value>
-  </data>
-  <data name="&gt;&gt;panDerecho.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panDerecho.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panDerecho.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>es-ES</value>
   </metadata>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

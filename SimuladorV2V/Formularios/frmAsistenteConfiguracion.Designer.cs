@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsistenteConfiguracion));
-            ManiXButton.Office2010Yellow office2010Yellow1 = new ManiXButton.Office2010Yellow();
+            ManiXButton.Office2010Yellow office2010Yellow2 = new ManiXButton.Office2010Yellow();
             this.panIzquierdo = new System.Windows.Forms.Panel();
             this.pbIcono = new System.Windows.Forms.PictureBox();
             this.lblCompletado = new System.Windows.Forms.Label();
@@ -39,6 +39,14 @@
             this.lblCircuito = new System.Windows.Forms.Label();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.panDerecho = new System.Windows.Forms.Panel();
+            this.panCompletado = new System.Windows.Forms.Panel();
+            this.pbOkIcono = new System.Windows.Forms.PictureBox();
+            this.panBienvenido = new System.Windows.Forms.Panel();
+            this.lblParaObtener = new System.Windows.Forms.Label();
+            this.linkManual = new System.Windows.Forms.LinkLabel();
+            this.lblConsulte = new System.Windows.Forms.Label();
+            this.lblEsteAsistente = new System.Windows.Forms.Label();
+            this.lblBienvenidoAlAsistente = new System.Windows.Forms.Label();
             this.panComunicacion = new System.Windows.Forms.Panel();
             this.btnRefrescarPuertosSerie = new System.Windows.Forms.Button();
             this.pbBluetooth = new System.Windows.Forms.PictureBox();
@@ -46,28 +54,25 @@
             this.cboPuertoSerie = new System.Windows.Forms.ComboBox();
             this.lblVelocidadTransmision = new System.Windows.Forms.Label();
             this.lblPuertoSerie = new System.Windows.Forms.Label();
-            this.panBienvenido = new System.Windows.Forms.Panel();
-            this.lblParaObtener = new System.Windows.Forms.Label();
-            this.linkManual = new System.Windows.Forms.LinkLabel();
-            this.lblConsulte = new System.Windows.Forms.Label();
-            this.lblEsteAsistente = new System.Windows.Forms.Label();
-            this.lblBienvenidoAlAsistente = new System.Windows.Forms.Label();
             this.panReferencias = new System.Windows.Forms.Panel();
             this.ibCircuito = new Emgu.CV.UI.ImageBox();
             this.panCircuito = new System.Windows.Forms.Panel();
             this.ibCamara = new Emgu.CV.UI.ImageBox();
-            this.panCompletado = new System.Windows.Forms.Panel();
             this.panCabecera = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panBotonera = new System.Windows.Forms.Panel();
             this.btnSiguienteYTerminar = new ManiXButton.MyButton();
             this.btnVolverYCerrar = new ManiXButton.MyButton();
+            this.lblPulsaFinalizar = new System.Windows.Forms.Label();
+            this.lblConfiguracionCompletada = new System.Windows.Forms.Label();
             this.panIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbIcono)).BeginInit();
             this.panDerecho.SuspendLayout();
+            this.panCompletado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOkIcono)).BeginInit();
+            this.panBienvenido.SuspendLayout();
             this.panComunicacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBluetooth)).BeginInit();
-            this.panBienvenido.SuspendLayout();
             this.panReferencias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibCircuito)).BeginInit();
             this.panCircuito.SuspendLayout();
@@ -127,15 +132,72 @@
             // panDerecho
             // 
             this.panDerecho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panDerecho.Controls.Add(this.panComunicacion);
+            this.panDerecho.Controls.Add(this.panCompletado);
             this.panDerecho.Controls.Add(this.panBienvenido);
+            this.panDerecho.Controls.Add(this.panComunicacion);
             this.panDerecho.Controls.Add(this.panReferencias);
             this.panDerecho.Controls.Add(this.panCircuito);
-            this.panDerecho.Controls.Add(this.panCompletado);
             this.panDerecho.Controls.Add(this.panCabecera);
             this.panDerecho.Controls.Add(this.panBotonera);
             resources.ApplyResources(this.panDerecho, "panDerecho");
             this.panDerecho.Name = "panDerecho";
+            // 
+            // panCompletado
+            // 
+            this.panCompletado.Controls.Add(this.lblConfiguracionCompletada);
+            this.panCompletado.Controls.Add(this.lblPulsaFinalizar);
+            this.panCompletado.Controls.Add(this.pbOkIcono);
+            resources.ApplyResources(this.panCompletado, "panCompletado");
+            this.panCompletado.Name = "panCompletado";
+            // 
+            // pbOkIcono
+            // 
+            this.pbOkIcono.Image = global::EmuladorV2I.Properties.Resources.ok_icon;
+            resources.ApplyResources(this.pbOkIcono, "pbOkIcono");
+            this.pbOkIcono.Name = "pbOkIcono";
+            this.pbOkIcono.TabStop = false;
+            // 
+            // panBienvenido
+            // 
+            this.panBienvenido.Controls.Add(this.lblParaObtener);
+            this.panBienvenido.Controls.Add(this.linkManual);
+            this.panBienvenido.Controls.Add(this.lblConsulte);
+            this.panBienvenido.Controls.Add(this.lblEsteAsistente);
+            this.panBienvenido.Controls.Add(this.lblBienvenidoAlAsistente);
+            resources.ApplyResources(this.panBienvenido, "panBienvenido");
+            this.panBienvenido.Name = "panBienvenido";
+            // 
+            // lblParaObtener
+            // 
+            resources.ApplyResources(this.lblParaObtener, "lblParaObtener");
+            this.lblParaObtener.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblParaObtener.Name = "lblParaObtener";
+            // 
+            // linkManual
+            // 
+            resources.ApplyResources(this.linkManual, "linkManual");
+            this.linkManual.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
+            this.linkManual.Name = "linkManual";
+            this.linkManual.TabStop = true;
+            this.linkManual.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkManual_LinkClicked);
+            // 
+            // lblConsulte
+            // 
+            resources.ApplyResources(this.lblConsulte, "lblConsulte");
+            this.lblConsulte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblConsulte.Name = "lblConsulte";
+            // 
+            // lblEsteAsistente
+            // 
+            resources.ApplyResources(this.lblEsteAsistente, "lblEsteAsistente");
+            this.lblEsteAsistente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblEsteAsistente.Name = "lblEsteAsistente";
+            // 
+            // lblBienvenidoAlAsistente
+            // 
+            resources.ApplyResources(this.lblBienvenidoAlAsistente, "lblBienvenidoAlAsistente");
+            this.lblBienvenidoAlAsistente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblBienvenidoAlAsistente.Name = "lblBienvenidoAlAsistente";
             // 
             // panComunicacion
             // 
@@ -201,48 +263,6 @@
             this.lblPuertoSerie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblPuertoSerie.Name = "lblPuertoSerie";
             // 
-            // panBienvenido
-            // 
-            this.panBienvenido.Controls.Add(this.lblParaObtener);
-            this.panBienvenido.Controls.Add(this.linkManual);
-            this.panBienvenido.Controls.Add(this.lblConsulte);
-            this.panBienvenido.Controls.Add(this.lblEsteAsistente);
-            this.panBienvenido.Controls.Add(this.lblBienvenidoAlAsistente);
-            resources.ApplyResources(this.panBienvenido, "panBienvenido");
-            this.panBienvenido.Name = "panBienvenido";
-            // 
-            // lblParaObtener
-            // 
-            resources.ApplyResources(this.lblParaObtener, "lblParaObtener");
-            this.lblParaObtener.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblParaObtener.Name = "lblParaObtener";
-            // 
-            // linkManual
-            // 
-            resources.ApplyResources(this.linkManual, "linkManual");
-            this.linkManual.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
-            this.linkManual.Name = "linkManual";
-            this.linkManual.TabStop = true;
-            this.linkManual.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkManual_LinkClicked);
-            // 
-            // lblConsulte
-            // 
-            resources.ApplyResources(this.lblConsulte, "lblConsulte");
-            this.lblConsulte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblConsulte.Name = "lblConsulte";
-            // 
-            // lblEsteAsistente
-            // 
-            resources.ApplyResources(this.lblEsteAsistente, "lblEsteAsistente");
-            this.lblEsteAsistente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblEsteAsistente.Name = "lblEsteAsistente";
-            // 
-            // lblBienvenidoAlAsistente
-            // 
-            resources.ApplyResources(this.lblBienvenidoAlAsistente, "lblBienvenidoAlAsistente");
-            this.lblBienvenidoAlAsistente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblBienvenidoAlAsistente.Name = "lblBienvenidoAlAsistente";
-            // 
             // panReferencias
             // 
             this.panReferencias.Controls.Add(this.ibCircuito);
@@ -271,11 +291,6 @@
             this.ibCamara.Name = "ibCamara";
             this.ibCamara.TabStop = false;
             // 
-            // panCompletado
-            // 
-            resources.ApplyResources(this.panCompletado, "panCompletado");
-            this.panCompletado.Name = "panCompletado";
-            // 
             // panCabecera
             // 
             this.panCabecera.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -299,24 +314,24 @@
             // 
             // btnSiguienteYTerminar
             // 
-            office2010Yellow1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Yellow1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Yellow1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Yellow1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Yellow1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Yellow1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Yellow1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
-            office2010Yellow1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
-            office2010Yellow1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
-            office2010Yellow1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
-            office2010Yellow1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Yellow1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Yellow1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Yellow1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Yellow1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Yellow1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Yellow1.TextColor = System.Drawing.Color.Black;
-            this.btnSiguienteYTerminar.ColorTable = office2010Yellow1;
+            office2010Yellow2.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Yellow2.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Yellow2.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Yellow2.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Yellow2.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Yellow2.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Yellow2.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
+            office2010Yellow2.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
+            office2010Yellow2.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
+            office2010Yellow2.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
+            office2010Yellow2.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Yellow2.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Yellow2.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Yellow2.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Yellow2.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Yellow2.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Yellow2.TextColor = System.Drawing.Color.Black;
+            this.btnSiguienteYTerminar.ColorTable = office2010Yellow2;
             resources.ApplyResources(this.btnSiguienteYTerminar, "btnSiguienteYTerminar");
             this.btnSiguienteYTerminar.Name = "btnSiguienteYTerminar";
             this.btnSiguienteYTerminar.Theme = ManiXButton.Theme.MSOffice2010_Yellow;
@@ -325,12 +340,24 @@
             // 
             // btnVolverYCerrar
             // 
-            this.btnVolverYCerrar.ColorTable = office2010Yellow1;
+            this.btnVolverYCerrar.ColorTable = office2010Yellow2;
             resources.ApplyResources(this.btnVolverYCerrar, "btnVolverYCerrar");
             this.btnVolverYCerrar.Name = "btnVolverYCerrar";
             this.btnVolverYCerrar.Theme = ManiXButton.Theme.MSOffice2010_Yellow;
             this.btnVolverYCerrar.UseVisualStyleBackColor = true;
             this.btnVolverYCerrar.Click += new System.EventHandler(this.btnVolverYCerrar_Click);
+            // 
+            // lblPulsaFinalizar
+            // 
+            resources.ApplyResources(this.lblPulsaFinalizar, "lblPulsaFinalizar");
+            this.lblPulsaFinalizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblPulsaFinalizar.Name = "lblPulsaFinalizar";
+            // 
+            // lblConfiguracionCompletada
+            // 
+            resources.ApplyResources(this.lblConfiguracionCompletada, "lblConfiguracionCompletada");
+            this.lblConfiguracionCompletada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblConfiguracionCompletada.Name = "lblConfiguracionCompletada";
             // 
             // frmAsistenteConfiguracion
             // 
@@ -348,11 +375,14 @@
             this.panIzquierdo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbIcono)).EndInit();
             this.panDerecho.ResumeLayout(false);
+            this.panCompletado.ResumeLayout(false);
+            this.panCompletado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOkIcono)).EndInit();
+            this.panBienvenido.ResumeLayout(false);
+            this.panBienvenido.PerformLayout();
             this.panComunicacion.ResumeLayout(false);
             this.panComunicacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBluetooth)).EndInit();
-            this.panBienvenido.ResumeLayout(false);
-            this.panBienvenido.PerformLayout();
             this.panReferencias.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ibCircuito)).EndInit();
             this.panCircuito.ResumeLayout(false);
@@ -397,6 +427,9 @@
         private System.Windows.Forms.PictureBox pbBluetooth;
         private System.Windows.Forms.Button btnRefrescarPuertosSerie;
         private System.Windows.Forms.PictureBox pbIcono;
+        private System.Windows.Forms.PictureBox pbOkIcono;
+        private System.Windows.Forms.Label lblConfiguracionCompletada;
+        private System.Windows.Forms.Label lblPulsaFinalizar;
 
     }
 }

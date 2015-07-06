@@ -29,12 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPanelPrincipal));
-            ManiXButton.Office2010Red office2010Red2 = new ManiXButton.Office2010Red();
+            ManiXButton.Office2010Red office2010Red1 = new ManiXButton.Office2010Red();
             this.panCamara = new System.Windows.Forms.Panel();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.chkIntersecciones = new System.Windows.Forms.CheckBox();
+            this.pbCamara = new System.Windows.Forms.PictureBox();
             this.chkCorregirPerspectiva = new System.Windows.Forms.CheckBox();
             this.panRobots = new System.Windows.Forms.Panel();
+            this.lblNavegador = new System.Windows.Forms.Label();
+            this.btnRight = new System.Windows.Forms.Button();
+            this.btnLeft = new System.Windows.Forms.Button();
             this.gbParametros = new System.Windows.Forms.GroupBox();
             this.cboSeguridadApagado = new System.Windows.Forms.ComboBox();
             this.spinVelocidad = new System.Windows.Forms.NumericUpDown();
@@ -50,16 +54,12 @@
             this.cboModo = new System.Windows.Forms.ComboBox();
             this.lblModo = new System.Windows.Forms.Label();
             this.btnDesconectar = new ManiXButton.MyButton();
-            this.btnLeft = new System.Windows.Forms.Button();
-            this.pbCamara = new System.Windows.Forms.PictureBox();
-            this.btnRight = new System.Windows.Forms.Button();
-            this.lblNavegador = new System.Windows.Forms.Label();
             this.panCamara.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCamara)).BeginInit();
             this.panRobots.SuspendLayout();
             this.gbParametros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spinVelocidad)).BeginInit();
             this.gbSensores.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCamara)).BeginInit();
             this.SuspendLayout();
             // 
             // panCamara
@@ -84,6 +84,13 @@
             this.chkIntersecciones.Name = "chkIntersecciones";
             this.chkIntersecciones.UseVisualStyleBackColor = true;
             // 
+            // pbCamara
+            // 
+            resources.ApplyResources(this.pbCamara, "pbCamara");
+            this.pbCamara.Name = "pbCamara";
+            this.pbCamara.TabStop = false;
+            this.pbCamara.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbCamara_MouseClick);
+            // 
             // chkCorregirPerspectiva
             // 
             resources.ApplyResources(this.chkCorregirPerspectiva, "chkCorregirPerspectiva");
@@ -106,6 +113,28 @@
             this.panRobots.Controls.Add(this.cboModo);
             this.panRobots.Controls.Add(this.lblModo);
             this.panRobots.Name = "panRobots";
+            // 
+            // lblNavegador
+            // 
+            resources.ApplyResources(this.lblNavegador, "lblNavegador");
+            this.lblNavegador.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.lblNavegador.Name = "lblNavegador";
+            // 
+            // btnRight
+            // 
+            this.btnRight.Image = global::EmuladorV2I.Properties.Resources.right_icon;
+            resources.ApplyResources(this.btnRight, "btnRight");
+            this.btnRight.Name = "btnRight";
+            this.btnRight.UseVisualStyleBackColor = true;
+            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
+            // 
+            // btnLeft
+            // 
+            this.btnLeft.Image = global::EmuladorV2I.Properties.Resources.left_icon;
+            resources.ApplyResources(this.btnLeft, "btnLeft");
+            this.btnLeft.Name = "btnLeft";
+            this.btnLeft.UseVisualStyleBackColor = true;
+            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
             // gbParametros
             // 
@@ -217,56 +246,28 @@
             // btnDesconectar
             // 
             resources.ApplyResources(this.btnDesconectar, "btnDesconectar");
-            office2010Red2.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Red2.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Red2.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Red2.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Red2.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Red2.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Red2.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
-            office2010Red2.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
-            office2010Red2.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
-            office2010Red2.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
-            office2010Red2.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Red2.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Red2.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Red2.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Red2.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Red2.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Red2.TextColor = System.Drawing.Color.White;
-            this.btnDesconectar.ColorTable = office2010Red2;
+            office2010Red1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Red1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Red1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Red1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Red1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Red1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Red1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
+            office2010Red1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
+            office2010Red1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
+            office2010Red1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
+            office2010Red1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Red1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Red1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Red1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Red1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Red1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Red1.TextColor = System.Drawing.Color.White;
+            this.btnDesconectar.ColorTable = office2010Red1;
             this.btnDesconectar.Name = "btnDesconectar";
             this.btnDesconectar.Theme = ManiXButton.Theme.MSOffice2010_RED;
             this.btnDesconectar.UseVisualStyleBackColor = true;
             this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
-            // 
-            // btnLeft
-            // 
-            this.btnLeft.Image = global::EmuladorV2I.Properties.Resources.left_icon;
-            resources.ApplyResources(this.btnLeft, "btnLeft");
-            this.btnLeft.Name = "btnLeft";
-            this.btnLeft.UseVisualStyleBackColor = true;
-            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
-            // 
-            // pbCamara
-            // 
-            resources.ApplyResources(this.pbCamara, "pbCamara");
-            this.pbCamara.Name = "pbCamara";
-            this.pbCamara.TabStop = false;
-            // 
-            // btnRight
-            // 
-            this.btnRight.Image = global::EmuladorV2I.Properties.Resources.right_icon;
-            resources.ApplyResources(this.btnRight, "btnRight");
-            this.btnRight.Name = "btnRight";
-            this.btnRight.UseVisualStyleBackColor = true;
-            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
-            // 
-            // lblNavegador
-            // 
-            resources.ApplyResources(this.lblNavegador, "lblNavegador");
-            this.lblNavegador.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.lblNavegador.Name = "lblNavegador";
             // 
             // frmPanelPrincipal
             // 
@@ -279,6 +280,7 @@
             this.Load += new System.EventHandler(this.frmPanelPrincipal_Load);
             this.panCamara.ResumeLayout(false);
             this.panCamara.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCamara)).EndInit();
             this.panRobots.ResumeLayout(false);
             this.panRobots.PerformLayout();
             this.gbParametros.ResumeLayout(false);
@@ -286,7 +288,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.spinVelocidad)).EndInit();
             this.gbSensores.ResumeLayout(false);
             this.gbSensores.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCamara)).EndInit();
             this.ResumeLayout(false);
 
         }

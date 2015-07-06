@@ -117,6 +117,9 @@
     <Compile Include="Utilidades\Excepciones.cs" />
     <Compile Include="Utilidades\Globales.cs" />
     <Compile Include="Utilidades\Utilidades.cs" />
+    <EmbeddedResource Include="Formularios\frmAsistenteConfiguracion.es-ES.resx">
+      <DependentUpon>frmAsistenteConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAsistenteConfiguracion.resx">
       <DependentUpon>frmAsistenteConfiguracion.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +247,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\right-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

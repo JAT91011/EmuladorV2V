@@ -117,87 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;lblMensaje.Name" xml:space="preserve">
-    <value>lblMensaje</value>
-  </data>
-  <data name="&gt;&gt;lblMensaje.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMensaje.Parent" xml:space="preserve">
-    <value>panCamara</value>
-  </data>
-  <data name="&gt;&gt;lblMensaje.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;chkIntersecciones.Name" xml:space="preserve">
-    <value>chkIntersecciones</value>
-  </data>
-  <data name="&gt;&gt;chkIntersecciones.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chkIntersecciones.Parent" xml:space="preserve">
-    <value>panCamara</value>
-  </data>
-  <data name="&gt;&gt;chkIntersecciones.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pbCamara.Name" xml:space="preserve">
-    <value>pbCamara</value>
-  </data>
-  <data name="&gt;&gt;pbCamara.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbCamara.Parent" xml:space="preserve">
-    <value>panCamara</value>
-  </data>
-  <data name="&gt;&gt;pbCamara.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;chkCorregirPerspectiva.Name" xml:space="preserve">
-    <value>chkCorregirPerspectiva</value>
-  </data>
-  <data name="&gt;&gt;chkCorregirPerspectiva.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chkCorregirPerspectiva.Parent" xml:space="preserve">
-    <value>panCamara</value>
-  </data>
-  <data name="&gt;&gt;chkCorregirPerspectiva.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panCamara.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="panCamara.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 0</value>
-  </data>
-  <data name="panCamara.Size" type="System.Drawing.Size, System.Drawing">
-    <value>814, 662</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panCamara.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;panCamara.Name" xml:space="preserve">
-    <value>panCamara</value>
-  </data>
-  <data name="&gt;&gt;panCamara.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panCamara.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panCamara.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="lblMensaje.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblMensaje.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblMensaje.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 15.75pt</value>
   </data>
@@ -264,6 +192,48 @@
   <data name="&gt;&gt;chkIntersecciones.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="pbCamara.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="pbCamara.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pbCamara.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 60</value>
+  </data>
+  <data name="pbCamara.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="pbCamara.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>2000, 2000</value>
+  </data>
+  <data name="pbCamara.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>640, 480</value>
+  </data>
+  <data name="pbCamara.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="pbCamara.Size" type="System.Drawing.Size, System.Drawing">
+    <value>716, 546</value>
+  </data>
+  <data name="pbCamara.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pbCamara.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pbCamara.Name" xml:space="preserve">
+    <value>pbCamara</value>
+  </data>
+  <data name="&gt;&gt;pbCamara.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbCamara.Parent" xml:space="preserve">
+    <value>panCamara</value>
+  </data>
+  <data name="&gt;&gt;pbCamara.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="chkCorregirPerspectiva.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -300,6 +270,30 @@
   <data name="&gt;&gt;chkCorregirPerspectiva.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="panCamara.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panCamara.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 0</value>
+  </data>
+  <data name="panCamara.Size" type="System.Drawing.Size, System.Drawing">
+    <value>814, 662</value>
+  </data>
+  <data name="panCamara.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panCamara.Name" xml:space="preserve">
+    <value>panCamara</value>
+  </data>
+  <data name="&gt;&gt;panCamara.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panCamara.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panCamara.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="panRobots.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -308,6 +302,9 @@
   </data>
   <data name="lblNavegador.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="lblNavegador.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblNavegador.Location" type="System.Drawing.Point, System.Drawing">
     <value>100, 15</value>
@@ -414,6 +411,36 @@
   <data name="&gt;&gt;btnDesconectar.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="cboSeguridadApagado.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="cboSeguridadApagado.Items" xml:space="preserve">
+    <value>Más de 35ºC de temperatura</value>
+  </data>
+  <data name="cboSeguridadApagado.Items1" xml:space="preserve">
+    <value>Más de 40ºC de temperatura</value>
+  </data>
+  <data name="cboSeguridadApagado.Items2" xml:space="preserve">
+    <value>Más de 45ºC de temperatura</value>
+  </data>
+  <data name="cboSeguridadApagado.Items3" xml:space="preserve">
+    <value>Menos del 30% de batería</value>
+  </data>
+  <data name="cboSeguridadApagado.Items4" xml:space="preserve">
+    <value>Menos del 20% de batería</value>
+  </data>
+  <data name="cboSeguridadApagado.Items5" xml:space="preserve">
+    <value>Menos del 10% de batería</value>
+  </data>
+  <data name="cboSeguridadApagado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 78</value>
+  </data>
+  <data name="cboSeguridadApagado.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 26</value>
+  </data>
+  <data name="cboSeguridadApagado.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
   <data name="&gt;&gt;cboSeguridadApagado.Name" xml:space="preserve">
     <value>cboSeguridadApagado</value>
   </data>
@@ -425,6 +452,15 @@
   </data>
   <data name="&gt;&gt;cboSeguridadApagado.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="spinVelocidad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 26</value>
+  </data>
+  <data name="spinVelocidad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 22</value>
+  </data>
+  <data name="spinVelocidad.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="&gt;&gt;spinVelocidad.Name" xml:space="preserve">
     <value>spinVelocidad</value>
@@ -438,6 +474,27 @@
   <data name="&gt;&gt;spinVelocidad.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="lblVelocidad.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblVelocidad.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="lblVelocidad.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblVelocidad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 28</value>
+  </data>
+  <data name="lblVelocidad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 16</value>
+  </data>
+  <data name="lblVelocidad.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblVelocidad.Text" xml:space="preserve">
+    <value>Velocidad:</value>
+  </data>
   <data name="&gt;&gt;lblVelocidad.Name" xml:space="preserve">
     <value>lblVelocidad</value>
   </data>
@@ -449,6 +506,27 @@
   </data>
   <data name="&gt;&gt;lblVelocidad.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 56</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 16</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Apagado de seguridad:</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
@@ -552,6 +630,27 @@
   <data name="&gt;&gt;lblIdValor.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="lblBateriaValor.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblBateriaValor.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblBateriaValor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblBateriaValor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 28</value>
+  </data>
+  <data name="lblBateriaValor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 16</value>
+  </data>
+  <data name="lblBateriaValor.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblBateriaValor.Text" xml:space="preserve">
+    <value>100%</value>
+  </data>
   <data name="&gt;&gt;lblBateriaValor.Name" xml:space="preserve">
     <value>lblBateriaValor</value>
   </data>
@@ -563,6 +662,27 @@
   </data>
   <data name="&gt;&gt;lblBateriaValor.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="lblTemperaturaValor.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTemperaturaValor.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblTemperaturaValor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblTemperaturaValor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 56</value>
+  </data>
+  <data name="lblTemperaturaValor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 16</value>
+  </data>
+  <data name="lblTemperaturaValor.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblTemperaturaValor.Text" xml:space="preserve">
+    <value>18.5 ºC</value>
   </data>
   <data name="&gt;&gt;lblTemperaturaValor.Name" xml:space="preserve">
     <value>lblTemperaturaValor</value>
@@ -576,6 +696,27 @@
   <data name="&gt;&gt;lblTemperaturaValor.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="lblBateria.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblBateria.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="lblBateria.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblBateria.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 28</value>
+  </data>
+  <data name="lblBateria.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 16</value>
+  </data>
+  <data name="lblBateria.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblBateria.Text" xml:space="preserve">
+    <value>Batería:</value>
+  </data>
   <data name="&gt;&gt;lblBateria.Name" xml:space="preserve">
     <value>lblBateria</value>
   </data>
@@ -587,6 +728,27 @@
   </data>
   <data name="&gt;&gt;lblBateria.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="lblTemperatura.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTemperatura.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="lblTemperatura.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblTemperatura.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 56</value>
+  </data>
+  <data name="lblTemperatura.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 16</value>
+  </data>
+  <data name="lblTemperatura.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblTemperatura.Text" xml:space="preserve">
+    <value>Temperatura:</value>
   </data>
   <data name="&gt;&gt;lblTemperatura.Name" xml:space="preserve">
     <value>lblTemperatura</value>
@@ -713,309 +875,6 @@
   </data>
   <data name="&gt;&gt;panRobots.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="cboSeguridadApagado.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
-  </data>
-  <data name="cboSeguridadApagado.Items" xml:space="preserve">
-    <value>Más de 35ºC de temperatura</value>
-  </data>
-  <data name="cboSeguridadApagado.Items1" xml:space="preserve">
-    <value>Más de 40ºC de temperatura</value>
-  </data>
-  <data name="cboSeguridadApagado.Items2" xml:space="preserve">
-    <value>Más de 45ºC de temperatura</value>
-  </data>
-  <data name="cboSeguridadApagado.Items3" xml:space="preserve">
-    <value>Menos del 30% de batería</value>
-  </data>
-  <data name="cboSeguridadApagado.Items4" xml:space="preserve">
-    <value>Menos del 20% de batería</value>
-  </data>
-  <data name="cboSeguridadApagado.Items5" xml:space="preserve">
-    <value>Menos del 10% de batería</value>
-  </data>
-  <data name="cboSeguridadApagado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 78</value>
-  </data>
-  <data name="cboSeguridadApagado.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 26</value>
-  </data>
-  <data name="cboSeguridadApagado.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;cboSeguridadApagado.Name" xml:space="preserve">
-    <value>cboSeguridadApagado</value>
-  </data>
-  <data name="&gt;&gt;cboSeguridadApagado.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cboSeguridadApagado.Parent" xml:space="preserve">
-    <value>gbParametros</value>
-  </data>
-  <data name="&gt;&gt;cboSeguridadApagado.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="spinVelocidad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 26</value>
-  </data>
-  <data name="spinVelocidad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 22</value>
-  </data>
-  <data name="spinVelocidad.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;spinVelocidad.Name" xml:space="preserve">
-    <value>spinVelocidad</value>
-  </data>
-  <data name="&gt;&gt;spinVelocidad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;spinVelocidad.Parent" xml:space="preserve">
-    <value>gbParametros</value>
-  </data>
-  <data name="&gt;&gt;spinVelocidad.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblVelocidad.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblVelocidad.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="lblVelocidad.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblVelocidad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 28</value>
-  </data>
-  <data name="lblVelocidad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 16</value>
-  </data>
-  <data name="lblVelocidad.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="lblVelocidad.Text" xml:space="preserve">
-    <value>Velocidad:</value>
-  </data>
-  <data name="&gt;&gt;lblVelocidad.Name" xml:space="preserve">
-    <value>lblVelocidad</value>
-  </data>
-  <data name="&gt;&gt;lblVelocidad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblVelocidad.Parent" xml:space="preserve">
-    <value>gbParametros</value>
-  </data>
-  <data name="&gt;&gt;lblVelocidad.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 56</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 16</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Apagado de seguridad:</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>gbParametros</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lblBateriaValor.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblBateriaValor.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="lblBateriaValor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblBateriaValor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 28</value>
-  </data>
-  <data name="lblBateriaValor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 16</value>
-  </data>
-  <data name="lblBateriaValor.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="lblBateriaValor.Text" xml:space="preserve">
-    <value>100%</value>
-  </data>
-  <data name="&gt;&gt;lblBateriaValor.Name" xml:space="preserve">
-    <value>lblBateriaValor</value>
-  </data>
-  <data name="&gt;&gt;lblBateriaValor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblBateriaValor.Parent" xml:space="preserve">
-    <value>gbSensores</value>
-  </data>
-  <data name="&gt;&gt;lblBateriaValor.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblTemperaturaValor.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblTemperaturaValor.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="lblTemperaturaValor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblTemperaturaValor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 56</value>
-  </data>
-  <data name="lblTemperaturaValor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 16</value>
-  </data>
-  <data name="lblTemperaturaValor.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="lblTemperaturaValor.Text" xml:space="preserve">
-    <value>18.5 ºC</value>
-  </data>
-  <data name="&gt;&gt;lblTemperaturaValor.Name" xml:space="preserve">
-    <value>lblTemperaturaValor</value>
-  </data>
-  <data name="&gt;&gt;lblTemperaturaValor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTemperaturaValor.Parent" xml:space="preserve">
-    <value>gbSensores</value>
-  </data>
-  <data name="&gt;&gt;lblTemperaturaValor.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblBateria.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblBateria.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="lblBateria.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblBateria.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 28</value>
-  </data>
-  <data name="lblBateria.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 16</value>
-  </data>
-  <data name="lblBateria.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="lblBateria.Text" xml:space="preserve">
-    <value>Batería:</value>
-  </data>
-  <data name="&gt;&gt;lblBateria.Name" xml:space="preserve">
-    <value>lblBateria</value>
-  </data>
-  <data name="&gt;&gt;lblBateria.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblBateria.Parent" xml:space="preserve">
-    <value>gbSensores</value>
-  </data>
-  <data name="&gt;&gt;lblBateria.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblTemperatura.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblTemperatura.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="lblTemperatura.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblTemperatura.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 56</value>
-  </data>
-  <data name="lblTemperatura.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 16</value>
-  </data>
-  <data name="lblTemperatura.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lblTemperatura.Text" xml:space="preserve">
-    <value>Temperatura:</value>
-  </data>
-  <data name="&gt;&gt;lblTemperatura.Name" xml:space="preserve">
-    <value>lblTemperatura</value>
-  </data>
-  <data name="&gt;&gt;lblTemperatura.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTemperatura.Parent" xml:space="preserve">
-    <value>gbSensores</value>
-  </data>
-  <data name="&gt;&gt;lblTemperatura.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="pbCamara.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="pbCamara.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pbCamara.Location" type="System.Drawing.Point, System.Drawing">
-    <value>52, 60</value>
-  </data>
-  <data name="pbCamara.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 10, 10, 10</value>
-  </data>
-  <data name="pbCamara.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>2000, 2000</value>
-  </data>
-  <data name="pbCamara.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>640, 480</value>
-  </data>
-  <data name="pbCamara.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 10, 10, 10</value>
-  </data>
-  <data name="pbCamara.Size" type="System.Drawing.Size, System.Drawing">
-    <value>716, 546</value>
-  </data>
-  <data name="pbCamara.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="pbCamara.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pbCamara.Name" xml:space="preserve">
-    <value>pbCamara</value>
-  </data>
-  <data name="&gt;&gt;pbCamara.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbCamara.Parent" xml:space="preserve">
-    <value>panCamara</value>
-  </data>
-  <data name="&gt;&gt;pbCamara.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

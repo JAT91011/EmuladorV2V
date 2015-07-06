@@ -174,7 +174,7 @@ namespace EmuladorV2I
                 if (Globales.ListadoVertices != null && Globales.ListadoVertices.Count == 4)
                 {
                     Globales.ListadoVertices = Camara.ReordenarPuntos(Globales.ListadoVertices);
-                    Globales.ImagenCircuito = Camara.CorregirPerspectiva(imgOriginal, Globales.ListadoVertices);
+                    Globales.ImagenCircuito = imgOriginal.Clone();
                     imgOriginal = Camara.DibujarRectangulo(imgOriginal, Globales.ListadoVertices);
                 }
 
@@ -245,7 +245,7 @@ namespace EmuladorV2I
                     case 1:
                         if (Globales.ListadoVertices != null)
                         {
-                            DialogResult result = MessageBox.Show("A partir de este momento el circuito ni la cámara no se podrán mover." + Environment.NewLine + "¿Deseas continuar?", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            DialogResult result = MessageBox.Show("A partir de este momento la cámara y el escenario no se podrán mover." + Environment.NewLine + "¿Deseas continuar?", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                             if (result == DialogResult.Yes)
                             {
                                 intPagina = 2;
@@ -287,8 +287,6 @@ namespace EmuladorV2I
                         break;
                     case 4:
                         this.Close();
-                        //frmPanelPrincipal frmPrincipal = new frmPanelPrincipal();
-                        //frmPrincipal.Show();
                         break;
                 }
 

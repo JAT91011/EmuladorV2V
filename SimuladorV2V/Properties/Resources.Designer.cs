@@ -133,6 +133,16 @@ namespace EmuladorV2I.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ok_icon {
+            get {
+                object obj = ResourceManager.GetObject("ok_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pause_icon {
             get {
                 object obj = ResourceManager.GetObject("pause_icon", resourceCulture);

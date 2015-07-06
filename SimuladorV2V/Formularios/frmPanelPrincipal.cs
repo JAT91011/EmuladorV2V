@@ -25,6 +25,7 @@ namespace EmuladorV2I
         private Capture webCam = null;
         private Image<Bgr, Byte> imgOriginal;
         private List<Robot> robots = new List<Robot>();
+        private ContextMenu menuContextual = new ContextMenu();
         private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
         private int robotSeleccionado;
 
@@ -48,9 +49,20 @@ namespace EmuladorV2I
                     MessageBox.Show("No hay ninguna cámara conectada. Revisa las conexiones.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     String error = exception.Message;
                 }
+
+                MenuItem averiaIzquierda = new MenuItem();
+                averiaIzquierda.Text = "Crear robot virtual averiado a la izquierda";
+                menuContextual.MenuItems.Add(averiaIzquierda);
+
+                MenuItem averiaDerecha = new MenuItem();
+                averiaDerecha.Text = "Crear robot virtual averiado a la derecha";
+                menuContextual.MenuItems.Add(averiaDerecha);
+
+                pbCamara.ContextMenu = menuContextual;
+
                 Application.Idle += ProcesarImagen;
                 Bluetooth.Instancia.NuevoObservador(this);
-                timer.Interval = 1000;
+                timer.Interval = 2000;
                 timer.Tick += new EventHandler(ProcesadorDeTimer);
                 robotSeleccionado = -1;
                 timer.Enabled = true;
@@ -102,11 +114,11 @@ namespace EmuladorV2I
                     List<CircleF> circulos = Camara.BuscarCirculos(imgOriginal);
                     foreach (CircleF circulo in circulos)
                     {
-                        Bgr[] colores = Camara.ObtenerColoresMaximoMinimoMedio(imgOriginal, new Point((int)circulo.Center.X, (int)circulo.Center.Y), 20);
+                        Bgr[] colores = Camara.ObtenerColoresMaximoMinimoMedio(imgOriginal, new Point((int)circulo.Center.X, (int)circulo.Center.Y), 10);
                         if (colores != null)
                         {
                             // Se comprueba si es el robot actual para pintarlo
-                            if (Camara.ColorEntreColoresMaximoYMinimo(colores[2], robots[robotSeleccionado].ColorMaximo, robots[robotSeleccionado].ColorMinimo, 20))
+                            if (Camara.ColorEntreColoresMaximoYMinimo(colores[2], robots[robotSeleccionado].ColorMaximo, robots[robotSeleccionado].ColorMinimo, 50))
                             {
                                 imgOriginal = Camara.DibujarCirculo(imgOriginal, new CircleF(new PointF(circulo.Center.X, circulo.Center.Y), circulo.Radius + 5), colores[2]);
                             }
@@ -114,27 +126,28 @@ namespace EmuladorV2I
                             foreach (Robot robot in robots)
                             {
                                 // Se comprueba a que robot pertenece el círculo
-                                if (Camara.ColorEntreColoresMaximoYMinimo(colores[2], robot.ColorMaximo, robot.ColorMinimo, 20))
+                                if (Camara.ColorEntreColoresMaximoYMinimo(colores[2], robot.ColorMaximo, robot.ColorMinimo, 50))
                                 {
                                     foreach (CircleF interseccion in Globales.ListadoIntersecciones)
                                     {
                                         // Se comprueba si el robot esta dentro de una intersección
                                         if (Utilidades.Utilidades.CirculoContienePunto(interseccion, new Point((int)circulo.Center.X, (int)circulo.Center.Y)))
                                         {
+                                            Console.WriteLine("Intersección");
                                             Random random = new Random();
                                             int direccion = random.Next(2);
-                                            if (direccion == 0)  // Izquierda
+                                            if (direccion == 1)  // Izquierda
                                             {
                                                 timer.Stop();
-                                                Thread.Sleep(1200);
                                                 Bluetooth.Instancia.Enviar(robot.Id, "LEFT");
+                                                Console.WriteLine("Izquierda");
                                                 timer.Start();
                                             }
                                             else // Derecha
                                             {
                                                 timer.Stop();
-                                                Thread.Sleep(1200);
                                                 Bluetooth.Instancia.Enviar(robot.Id, "RIGHT");
+                                                Console.WriteLine("Derecha");
                                                 timer.Start();
                                             }
                                             break;
@@ -249,54 +262,66 @@ namespace EmuladorV2I
                 {
                     List<CircleF> circulos = Camara.BuscarCirculos(imgOriginal);
                     Boolean encontrado = true;
-                    //foreach (CircleF circulo in circulos)
-                    //{
-                    //    // Se obtiene el color medio de cada circulo
-                    //    colorMaximoMinimoMedio = Camara.ObtenerColoresMaximoMinimoMedio(imgOriginal, new Point((int)circulo.Center.X, (int)circulo.Center.Y), 10);
-                    //    Boolean robotExistente = false;
-                    //    foreach (Robot robot in Globales.ListadoRobots)
-                    //    {
-                    //        // Se comprueba que no exista ningun robot con ese color
-                    //        if (Camara.ColorEntreColoresMaximoYMinimo(colorMaximoMinimoMedio[2], robot.ColorMaximo, robot.ColorMinimo, 50))
-                    //        {
-                    //            robotExistente = true;
-                    //            break;
-                    //        }
-                    //    }
-                    //    if (!robotExistente)
-                    //    {
-                    //        encontrado = true;
-                    //        break;
-                    //    }
-                    //}
-
-                    if (!encontrado)
+                    foreach (CircleF circulo in circulos)
                     {
-                        // No se ha encontrado ninguno nuevo
-                        if (MessageBox.Show("No se ha encontrado ningun color nuevo. ¿Volver a intentar?", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        // Se obtiene el color medio de cada circulo
+                        colorMaximoMinimoMedio = Camara.ObtenerColoresMaximoMinimoMedio(imgOriginal, new Point((int)circulo.Center.X, (int)circulo.Center.Y), 10);
+                        Boolean robotExistente = false;
+                        foreach (Robot robot in Globales.ListadoRobots)
+                        {
+                            // Se comprueba que no exista ningun robot con ese color
+                            if (Camara.ColorEntreColoresMaximoYMinimo(colorMaximoMinimoMedio[2], robot.ColorMaximo, robot.ColorMinimo, 50))
+                            {
+                                robotExistente = true;
+                                break;
+                            }
+                        }
+                        if (!robotExistente)
+                        {
+                            encontrado = true;
+                            break;
+                        }
+                    }
+                    if(circulos.Count == 0)
+                    {
+                        if (MessageBox.Show("No se ha encontrado ningún robot. ¿Volver a intentar?", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             reintentar = true;
                         }
                         else
                         {
                             Bluetooth.Instancia.Enviar(Convert.ToInt32(datos[0]), "ERR");
-                            MessageBox.Show("No se ha añadido ningun robot.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("No se ha añadido ningún robot.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             return;
                         }
-                    }
-                    else
-                    {
-                        // Si se ha encontrado se añade y se inicializan todos
-                        //robots.Add(new Robot(id,colorMaximoMinimoMedio[0], colorMaximoMinimoMedio[1], colorMaximoMinimoMedio[2]));
-                        reintentar = false;
-                        Bluetooth.Instancia.Enviar(Convert.ToInt32(datos[0]), "OK");
-                        Thread.Sleep(2000);
-                        Bluetooth.Instancia.Enviar(Convert.ToInt32(datos[0]), "MODE_FREE");
-                        MessageBox.Show("El nuevo robot se ha añadido correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        robots.Add(new Robot(Convert.ToInt32(datos[0]), new Bgr(255, 0, 0), new Bgr(255, 0, 0), new Bgr(255, 0, 0)));
-                        lblMensaje.Visible = false;
-                        robotSeleccionado = robots.Count - 1;
-                        CargarInformacion();
+                    } else {
+                        if (!encontrado )
+                        {
+                            // No se ha encontrado ninguno nuevo
+                            if (MessageBox.Show("No se ha encontrado ningún color nuevo. ¿Volver a intentar?", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                reintentar = true;
+                            }
+                            else
+                            {
+                                Bluetooth.Instancia.Enviar(Convert.ToInt32(datos[0]), "ERR");
+                                MessageBox.Show("No se ha añadido ningún robot.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            // Si se ha encontrado se añade y se inicializan todos
+                            reintentar = false;
+                            Bluetooth.Instancia.Enviar(Convert.ToInt32(datos[0]), "OK");
+                            Thread.Sleep(2000);
+                            Bluetooth.Instancia.Enviar(Convert.ToInt32(datos[0]), "MODE_FREE");
+                            MessageBox.Show("El nuevo robot se ha añadido correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            robots.Add(new Robot(Convert.ToInt32(datos[0]), colorMaximoMinimoMedio[0], colorMaximoMinimoMedio[1], colorMaximoMinimoMedio[2]));
+                            lblMensaje.Visible = false;
+                            robotSeleccionado = robots.Count - 1;
+                            CargarInformacion();
+                        }
                     }
                 }
             }
@@ -314,12 +339,23 @@ namespace EmuladorV2I
                 {
                     if (robots[robotSeleccionado].Id == Convert.ToInt32(datos[0]))
                     {
-                        if (Convert.ToInt32(robots[robotSeleccionado].Bateria.Substring(0, robots[robotSeleccionado].Bateria.Length - 1)) > Convert.ToInt32(datos[1].Split(':')[0]))
+                        int bateriaActual = Convert.ToInt32(robots[robotSeleccionado].Bateria.Substring(0, robots[robotSeleccionado].Bateria.Length - 1));
+                        int bateria =  Convert.ToInt32(datos[1].Split(':')[0]);
+
+                        if (bateriaActual > bateria)
                         {
-                            robots[robotSeleccionado].Bateria = datos[1].Split(':')[0] + " %";
+                            if(bateria + 2 > bateriaActual)
+                            {
+                                robots[robotSeleccionado].Bateria = (bateria + 47) + " %";
+                            }
                         }
                         decimal temperatura = Math.Round(Convert.ToDecimal(datos[1].Split(':')[1].Replace('.', ',')), 2);
-                        robots[robotSeleccionado].Temperatura = temperatura + " ºC";
+
+                        decimal temperaturaActual = Convert.ToDecimal(robots[robotSeleccionado].Temperatura.Substring(0, robots[robotSeleccionado].Temperatura.Length - 2));
+                        if ((temperatura < temperaturaActual + 3 && temperatura > temperaturaActual - 3) || temperaturaActual == 0)
+                        {
+                            robots[robotSeleccionado].Temperatura = temperatura + " ºC";
+                        }
                     }
                 }
             }
@@ -397,7 +433,7 @@ namespace EmuladorV2I
                 if (cboModo.SelectedIndex == 0 && robots[robotSeleccionado].Modo != Robot.MODO_LIBRE)
                 {
                     timer.Stop();
-                    Thread.Sleep(1200);
+                    Thread.Sleep(2000);
                     robots[robotSeleccionado].Modo = Robot.MODO_LIBRE;
                     new Thread(CrearHiloComando).Start(Comandos.MODE_FREE);
                     timer.Start();
@@ -405,7 +441,7 @@ namespace EmuladorV2I
                 else if (cboModo.SelectedIndex == 1 && robots[robotSeleccionado].Modo != Robot.MODE_AVERIADO)
                 {
                     timer.Stop();
-                    Thread.Sleep(1200);
+                    Thread.Sleep(2000);
                     robots[robotSeleccionado].Modo = Robot.MODE_AVERIADO;
                     new Thread(CrearHiloComando).Start(Comandos.MODE_BROKEN);
                     timer.Start();
@@ -424,7 +460,7 @@ namespace EmuladorV2I
                 if (MessageBox.Show("Se va a proceder a desconectar el robot con ID: " + robots[robotSeleccionado].Id + Environment.NewLine + "¿Deseas continuar?", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     timer.Stop();
-                    Thread.Sleep(1100);
+                    Thread.Sleep(2000);
                     new Thread(CrearHiloComando).Start(Comandos.OFF);
                     timer.Start();
                 }
@@ -489,5 +525,21 @@ namespace EmuladorV2I
             }
         }
         #endregion
+
+        private void pbCamara_MouseClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                if (e.Button == System.Windows.Forms.MouseButtons.Right)
+                {
+                    //menuContextual.Show(Cursor.Position);
+                    Console.WriteLine(Cursor.Position);
+                }
+            }
+            catch (Exception exception)
+            {
+                Excepciones.EscribirError(this.Name, new StackTrace().GetFrame(0).GetMethod().Name, exception);
+            }
+        }
     }
 }
